@@ -1,19 +1,19 @@
 [
   {
     "path": "posts/welcome/",
-    "title": "Welcome to Harald Kliems",
-    "description": "Welcome to our new blog, Harald Kliems. We hope you enjoy \nreading what we have to say!",
+    "title": "First post",
+    "description": "Welcome to my blog! More to come soon.",
     "author": [
       {
-        "name": "Nora Jones",
-        "url": "https://example.com/norajones"
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
       }
     ],
     "date": "2020-12-20",
     "categories": [],
     "contents": "\r\n\r\n\r\n\r\n",
     "preview": {},
-    "last_modified": "2020-12-20T10:28:47-06:00",
-    "input_file": {}
+    "last_modified": "2020-12-20T10:34:08-06:00",
+    "input_file": "welcome.utf8.md"
   }
 ]
