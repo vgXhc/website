@@ -7,3 +7,20 @@ description: |
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+
+My name is Harald Kliems. I like bikes, cities, health, data, maps.
+
+# More information
+
+I’m president of the local bike advocacy non-profit [Madison Bikes](https://www.madisonbikes.org/), I work at the [University of Wisconsin School of Medicine and Public Health](https://www.pediatrics.wisc.edu/research/research-groups/cox/), I contribute to [OpenStreetMap](https://www.openstreetmap.org/)[https://www.openstreetmap.org/user/hobbesvsboyle]. I'm on the City of Madison Transportation Commission.
+
+All opinions here are my own.
+
+# Contact me
+
+[kliems@gmail.com](mailto:kliems@gmail.com)
+
+# Follow me on Twitter
+
+[https://twitter.com/HaraldKliems](https://twitter.com/HaraldKliems)
