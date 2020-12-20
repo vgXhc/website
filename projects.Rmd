@@ -6,6 +6,8 @@ description: |
 
 # Cyclists of Madison
 
+![Screenshot Cyclists of Madison](img/screenshot_cyclists_msn.png)
+
 [Cyclists of Madison](https://twitter.com/cyclists_of_msn) is a Twitter bot that posts portraits of people riding bikes in Madison. The idea behind the project is that there are many stereotypes and misconceptions about who does and doesn't ride bikes in Madison. While I'm an okay photographer and had a large pool of relevant photos, my programming skills were not good enough to take this from an idea to an actual bot. Fortunately, Ben Sandee took care of the coding part. It has some neat features, such as keeping track of which photos have already been posted, automatic resizing, and posting seasonally appropriate photos when available. The code is [available here](https://github.com/madisonbikes/cyclists_of_msn) under an open license. I'd love to see more Cyclists of ... accounts. Follow the bot on [Twitter](https://twitter.com/cyclists_of_msn)
 
 # Madison bike shop and repair station map
