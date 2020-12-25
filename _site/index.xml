@@ -18,5 +18,14 @@
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/getting-to-work-in-madison/article_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
+    <item>
+      <title>Bus boardings in Madison</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/bus-boardings-in-madison</link>
+      <description>&lt;p&gt;Using the &lt;code&gt;mapdeck&lt;/code&gt; package to visualize Metro Transit bus boardings in Madison (WI)&lt;/p&gt;
+</description>
+      <guid>https://haraldkliems.netlify.app/posts/bus-boardings-in-madison</guid>
+      <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
+    </item>
   </channel>
 </rss>
