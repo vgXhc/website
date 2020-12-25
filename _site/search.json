@@ -6,14 +6,14 @@
       "description": "More about Harald",
       "author": [],
       "contents": "\r\nMy name is Harald Kliems. I like bikes, cities, health, data, maps.\r\nMore information\r\nI’m president of the local bike advocacy non-profit Madison Bikes, I work at the University of Wisconsin School of Medicine and Public Health, I contribute to OpenStreetMap. I’m on the City of Madison Transportation Commission. I have a nerdy and infrequently updated bike blog.\r\nAll opinions here are my own.\r\nContact me\r\nkliems@gmail.com\r\nFollow me on Twitter\r\nhttps://twitter.com/HaraldKliems\r\n\r\n\r\n\r\n",
-      "last_modified": "2020-12-20T12:20:46-06:00"
+      "last_modified": "2020-12-20T17:27:29-06:00"
     },
     {
       "path": "index.html",
       "title": "Harald Kliems",
       "author": [],
       "contents": "\r\n\r\n\r\n\r\n",
-      "last_modified": "2020-12-20T12:20:49-06:00"
+      "last_modified": "2020-12-20T17:27:30-06:00"
     },
     {
       "path": "projects.html",
@@ -21,7 +21,7 @@
       "description": "Stuff I've (co)-created and am proud of\n",
       "author": [],
       "contents": "\r\n\r\nContents\r\nCyclists of Madison\r\nMadison bike shop and repair station map\r\n\r\nCyclists of Madison\r\nScreenshot Cyclists of MadisonCyclists of Madison is a Twitter bot that posts portraits of people riding bikes in Madison. The idea behind the project is that there are many stereotypes and misconceptions about who does and doesn’t ride bikes in Madison. While I’m an okay photographer and had a large pool of relevant photos, my programming skills were not good enough to take this from an idea to an actual bot. Fortunately, Ben Sandee took care of the coding part. It has some neat features, such as keeping track of which photos have already been posted, automatic resizing, and posting seasonally appropriate photos when available. The code is available here under an open license. I’d love to see more Cyclists of … accounts. Follow the bot on Twitter\r\nMadison bike shop and repair station map\r\n When the COVID-19 pandemic struck, bike shops were in high demand, but many had to temporarily close, change their hours, or the way they operate. Madison Bikes board member Heather Pape started a simple spreadsheet, keeping track on Madison bike shops and their status. I turned that spreadsheet in an interactive web map, and later we partnered with the Wisconsin Bike Fed to take the project statewide. At this point, the map is focused on Dane County again and in addition to all bike shops includes outdoor bike repair stations (taken from the City of Madison Open Data portal). Code for the map is using R Markdown with the leaflet and googlesheets libraries.\r\n\r\n\r\n\r\n",
-      "last_modified": "2020-12-20T12:40:58-06:00"
+      "last_modified": "2020-12-20T17:33:16-06:00"
     }
   ],
   "collections": ["posts/posts.json"]
