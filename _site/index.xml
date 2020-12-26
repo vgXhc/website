@@ -28,5 +28,15 @@
       <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/bus-boardings-in-madison/data/screenshot_red_dot_map.png" medium="image" type="image/png" width="1917" height="976"/>
     </item>
+    <item>
+      <title>How much of Madison allows only detached single-family housing?</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/how-much-of-madison-allows-only-detached-single-family-housing</link>
+      <description>&lt;p&gt;Recreating a &lt;em&gt;New York Times&lt;/em&gt; analysis of how much of Madison&amp;#39;s residential areas only allowed single-family detached homes&lt;/p&gt;
+</description>
+      <guid>https://haraldkliems.netlify.app/posts/how-much-of-madison-allows-only-detached-single-family-housing</guid>
+      <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/how-much-of-madison-allows-only-detached-single-family-housing/images/residential-zoning-map-madison.png" medium="image" type="image/png" width="3507" height="2480"/>
+    </item>
   </channel>
 </rss>
