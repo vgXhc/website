@@ -1,0 +1,23 @@
+City,Measure,Value
+New York,density,27751
+Washington,density,11367
+Minneapolis,density,7820.8
+Los Angeles,density,8483.02
+Portland (OR),density,4504.2
+Seattle,density,8642.42
+Charlotte (NC),density,2400
+Sandy Springs (GA),density,2707
+Arlington (TX),density,3810
+San Jose (CA),density,5776.3
+Madison,density,3232.56
+New York,sfr,0.15
+Washington,sfr,0.36
+Minneapolis,sfr,0.7
+Los Angeles,sfr,0.75
+Portland (OR),sfr,0.77
+Seattle,sfr,0.81
+Charlotte (NC),sfr,0.84
+Sandy Springs (GA),sfr,0.85
+Arlington (TX),sfr,0.89
+San Jose (CA),sfr,0.94
+Madison,sfr,0.75
