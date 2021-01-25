@@ -7,7 +7,17 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 25 Dec 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Visualizing commute flows in Wisconsin</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/commuteflowsinmadison</link>
+      <description>&lt;p&gt;LODES provides origin-destination data for connecting work and home. This article looks at patters in those flows in Wisconsin, and especially in Madison&lt;/p&gt;
+</description>
+      <guid>https://haraldkliems.netlify.app/posts/commuteflowsinmadison</guid>
+      <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/commuteflowsinmadison/images/preview.png" medium="image" type="image/png" width="1225" height="714"/>
+    </item>
     <item>
       <title>Getting to work in Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
