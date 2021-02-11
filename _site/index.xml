@@ -7,7 +7,16 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 25 Jan 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 11 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Race/ethnicity by ward</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/raceethnicity-by-ward</link>
+      <description>&lt;p&gt;What are the racial demographics of Madison&amp;#39;s aldermanic districts&lt;/p&gt;
+</description>
+      <guid>https://haraldkliems.netlify.app/posts/raceethnicity-by-ward</guid>
+      <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Visualizing commute flows in Wisconsin</title>
       <dc:creator>Harald Kliems</dc:creator>
