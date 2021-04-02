@@ -7,13 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 11 Feb 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Dane County Migration Flows</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/dane-county-migration-flows</link>
+      <description>The `tidycensus` package got an exciting new function</description>
+      <guid>https://haraldkliems.netlify.app/posts/dane-county-migration-flows</guid>
+      <pubDate>Fri, 02 Apr 2021 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Race demographics by aldermanic district</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/raceethnicity-by-ward</link>
-      <description>&lt;p&gt;What are the racial demographics of Madison&amp;#39;s aldermanic districts&lt;/p&gt;
-</description>
+      <description>What are the racial demographics of Madison's aldermanic districts</description>
       <guid>https://haraldkliems.netlify.app/posts/raceethnicity-by-ward</guid>
       <pubDate>Thu, 11 Feb 2021 00:00:00 +0000</pubDate>
     </item>
@@ -21,8 +28,7 @@
       <title>Visualizing commute flows in Wisconsin</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/commuteflowsinmadison</link>
-      <description>&lt;p&gt;LODES provides origin-destination data for connecting work and home. This article looks at patterns in those flows in Wisconsin, and especially in Madison&lt;/p&gt;
-</description>
+      <description>LODES provides origin-destination data for connecting work and home. This article looks at patterns in those flows in Wisconsin, and especially in Madison</description>
       <guid>https://haraldkliems.netlify.app/posts/commuteflowsinmadison</guid>
       <pubDate>Mon, 25 Jan 2021 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/commuteflowsinmadison/images/preview.png" medium="image" type="image/png" width="1225" height="714"/>
@@ -31,8 +37,7 @@
       <title>Getting to work in Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/getting-to-work-in-madison</link>
-      <description>&lt;p&gt;Commute mode share by minority status and income&lt;/p&gt;
-</description>
+      <description>Commute mode share by minority status and income</description>
       <guid>https://haraldkliems.netlify.app/posts/getting-to-work-in-madison</guid>
       <pubDate>Fri, 25 Dec 2020 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/getting-to-work-in-madison/article_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
@@ -41,8 +46,7 @@
       <title>Bus boardings in Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/bus-boardings-in-madison</link>
-      <description>&lt;p&gt;Using the &lt;code&gt;mapdeck&lt;/code&gt; package to visualize Metro Transit bus boardings in Madison (WI)&lt;/p&gt;
-</description>
+      <description>Using the `mapdeck` package to visualize Metro Transit bus boardings in Madison (WI)</description>
       <guid>https://haraldkliems.netlify.app/posts/bus-boardings-in-madison</guid>
       <pubDate>Sun, 18 Oct 2020 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/bus-boardings-in-madison/data/screenshot_red_dot_map.png" medium="image" type="image/png" width="1917" height="976"/>
@@ -51,8 +55,7 @@
       <title>Transportation funding in Wisconsin remains car centric</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/2020-03-05-transportation-funding-wisconsin</link>
-      <description>&lt;p&gt;A look at the 2020 Multimodal Local Supplement Awards in Wisconsin to assess how multimodal they really are&lt;/p&gt;
-</description>
+      <description>A look at the 2020 Multimodal Local Supplement Awards in Wisconsin to assess how multimodal they really are</description>
       <guid>https://haraldkliems.netlify.app/posts/2020-03-05-transportation-funding-wisconsin</guid>
       <pubDate>Thu, 05 Mar 2020 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/2020-03-05-transportation-funding-wisconsin/transportation-funding-wisconsin_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
@@ -61,8 +64,7 @@
       <title>Some furter zoning analyses for Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/2019-06-25-some-furter-zoning-analyses-for-madison</link>
-      <description>&lt;p&gt;A follow-up post on zoning and density in Madison and how it compares to other cities in the US.&lt;/p&gt;
-</description>
+      <description>A follow-up post on zoning and density in Madison and how it compares to other cities in the US.</description>
       <guid>https://haraldkliems.netlify.app/posts/2019-06-25-some-furter-zoning-analyses-for-madison</guid>
       <pubDate>Tue, 25 Jun 2019 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/2019-06-25-some-furter-zoning-analyses-for-madison/some-furter-zoning-analyses-for-madison_files/figure-html5/unnamed-chunk-6-1.png" medium="image" type="image/png" width="1248" height="768"/>
@@ -71,8 +73,7 @@
       <title>How much of Madison allows only detached single-family housing?</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/how-much-of-madison-allows-only-detached-single-family-housing</link>
-      <description>&lt;p&gt;Recreating a &lt;em&gt;New York Times&lt;/em&gt; analysis of how much of Madison&amp;#39;s residential areas only allowed single-family detached homes&lt;/p&gt;
-</description>
+      <description>Recreating a _New York Times_ analysis of how much of Madison's residential areas only allowed single-family detached homes</description>
       <guid>https://haraldkliems.netlify.app/posts/how-much-of-madison-allows-only-detached-single-family-housing</guid>
       <pubDate>Wed, 19 Jun 2019 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/how-much-of-madison-allows-only-detached-single-family-housing/images/residential-zoning-map-madison.png" medium="image" type="image/png" width="3507" height="2480"/>
