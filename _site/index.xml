@@ -7,7 +7,16 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 02 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Madison Common Council Advisory Referendum 2021</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/madison-common-council-advisory-referendum-2021</link>
+      <description>How precincts voted about the questions whether Madison Alder should be a full-time job and how long terms should be</description>
+      <guid>https://haraldkliems.netlify.app/posts/madison-common-council-advisory-referendum-2021</guid>
+      <pubDate>Wed, 07 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/madison-common-council-advisory-referendum-2021/screenshot_map.png" medium="image" type="image/png" width="927" height="569"/>
+    </item>
     <item>
       <title>Dane County Migration Flows</title>
       <dc:creator>Harald Kliems</dc:creator>
