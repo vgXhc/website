@@ -7,7 +7,16 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 07 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Scraping 4S</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/scraping-4s</link>
+      <description>Web scraping and text analysis of the Society of Social Studies of Science's 2021 annual meeting panels.</description>
+      <guid>https://haraldkliems.netlify.app/posts/scraping-4s</guid>
+      <pubDate>Sat, 10 Apr 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/scraping-4s/exploring_SSSS_panels_files/figure-html5/unnamed-chunk-23-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Madison Common Council Advisory Referendum 2021</title>
       <dc:creator>Harald Kliems</dc:creator>
