@@ -7,7 +7,16 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 10 Apr 2021 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 24 Jul 2021 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Where the shelter can't go: Using data to dissect city policy-making</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/where-the-shelter-cant-go-using-data-to-dissect-city-policy-making</link>
+      <description>Policymakers proposed criteria for a where a shelter for homeless men in Madison (Wisconsin) could and couldn't go. This post uses public data to visualize these criteria, showing that in the end the resolution would have meant that the shelter can't go anywhere.</description>
+      <guid>https://haraldkliems.netlify.app/posts/where-the-shelter-cant-go-using-data-to-dissect-city-policy-making</guid>
+      <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/where-the-shelter-cant-go-using-data-to-dissect-city-policy-making/where_shelter_cant_go_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Scraping 4S</title>
       <dc:creator>Harald Kliems</dc:creator>
