@@ -7,7 +7,15 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 27 Jan 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>A Vision Zero Twitter Bot for Madison</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/a-vision-zero-twitter-bot-for-madison</link>
+      <description>Using R, the rtweet package, and GitHub Actions to automate weekly tweets about traffic safety</description>
+      <guid>https://haraldkliems.netlify.app/posts/a-vision-zero-twitter-bot-for-madison</guid>
+      <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Do crashes have a history?</title>
       <dc:creator>Harald Kliems</dc:creator>
