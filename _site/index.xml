@@ -7,7 +7,16 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 18 Feb 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Boardings per bus per stop: A useful metric?</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/boardings-per-bus-per-stop-a-useful-metric</link>
+      <description>A follow-up on a post on Metro bus boardings per stop in Madison (WI)</description>
+      <guid>https://haraldkliems.netlify.app/posts/boardings-per-bus-per-stop-a-useful-metric</guid>
+      <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/boardings-per-bus-per-stop-a-useful-metric/img/boardings_per_departure_preview_map.png" medium="image" type="image/png" width="572" height="389"/>
+    </item>
     <item>
       <title>A Vision Zero Twitter Bot for Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
