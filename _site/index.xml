@@ -26,6 +26,9 @@
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/boardings-per-bus-per-stop-a-useful-metric</link>
       <description>A follow-up on a post on Metro bus boardings per stop in Madison (WI)</description>
+      <category>transit</category>
+      <category>Madison (WI)</category>
+      <category>map</category>
       <guid>https://haraldkliems.netlify.app/posts/boardings-per-bus-per-stop-a-useful-metric</guid>
       <pubDate>Sun, 06 Mar 2022 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/boardings-per-bus-per-stop-a-useful-metric/img/boardings_per_departure_preview_map.png" medium="image" type="image/png" width="572" height="389"/>
@@ -35,6 +38,9 @@
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/a-vision-zero-twitter-bot-for-madison</link>
       <description>Using R, the rtweet package, and GitHub Actions to automate weekly tweets about traffic safety</description>
+      <category>Vision Zero</category>
+      <category>Madison (WI)</category>
+      <category>Twitter</category>
       <guid>https://haraldkliems.netlify.app/posts/a-vision-zero-twitter-bot-for-madison</guid>
       <pubDate>Fri, 18 Feb 2022 00:00:00 +0000</pubDate>
     </item>
