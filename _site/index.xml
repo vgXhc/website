@@ -7,7 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 06 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 27 Mar 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Metro Madison ridership has not recovered from COVID</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/metro-madison-ridership-has-not-recovered-from-covid</link>
+      <description>A quick time series chart of Metro ridership going back to 2002</description>
+      <category>transit</category>
+      <category>Madison (WI)</category>
+      <category>time series</category>
+      <category>chart</category>
+      <guid>https://haraldkliems.netlify.app/posts/metro-madison-ridership-has-not-recovered-from-covid</guid>
+      <pubDate>Sun, 27 Mar 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/metro-madison-ridership-has-not-recovered-from-covid/quick-chart-metro-ridership_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Boardings per bus per stop: A useful metric?</title>
       <dc:creator>Harald Kliems</dc:creator>
