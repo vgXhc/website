@@ -58,6 +58,9 @@
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/where-the-shelter-cant-go-using-data-to-dissect-city-policy-making</link>
       <description>Policymakers proposed criteria for a where a shelter for homeless men in Madison (Wisconsin) could and couldn't go. This post uses public data to visualize these criteria, showing that in the end the resolution would have meant that the shelter can't go anywhere.</description>
+      <category>housing</category>
+      <category>Madison (WI)</category>
+      <category>map</category>
       <guid>https://haraldkliems.netlify.app/posts/where-the-shelter-cant-go-using-data-to-dissect-city-policy-making</guid>
       <pubDate>Sat, 24 Jul 2021 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/where-the-shelter-cant-go-using-data-to-dissect-city-policy-making/where_shelter_cant_go_files/figure-html5/unnamed-chunk-7-1.png" medium="image" type="image/png" width="1248" height="768"/>
