@@ -2,15 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://haraldkliems.netlify.app/about.html</loc>
-    <lastmod>2020-12-20T11:23:51-06:00</lastmod>
+    <lastmod>2020-12-20T18:23:51+01:00</lastmod>
   </url>
   <url>
     <loc>https://haraldkliems.netlify.app/</loc>
-    <lastmod>2020-12-20T10:28:39-06:00</lastmod>
+    <lastmod>2020-12-20T17:28:39+01:00</lastmod>
   </url>
   <url>
     <loc>https://haraldkliems.netlify.app/projects.html</loc>
-    <lastmod>2021-01-25T15:25:32-06:00</lastmod>
+    <lastmod>2021-01-25T22:25:32+01:00</lastmod>
+  </url>
+  <url>
+    <loc>https://haraldkliems.netlify.app/posts/how-much-housing-is-being-built-in-madison/</loc>
+    <lastmod>2022-08-06T13:53:32+02:00</lastmod>
   </url>
   <url>
     <loc>https://haraldkliems.netlify.app/posts/how-far-can-you-go/</loc>

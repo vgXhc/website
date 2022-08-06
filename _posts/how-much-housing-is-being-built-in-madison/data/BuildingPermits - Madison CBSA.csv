@@ -1,0 +1,1587 @@
+"Location","Year","Series","Series Code","Month","Permits"
+"Madison, WI",2001,"Total Units",1.0,1.0,301.0
+"Madison, WI",2001,"Total Units",1.0,2.0,434.0
+"Madison, WI",2001,"Total Units",1.0,3.0,288.0
+"Madison, WI",2001,"Total Units",1.0,4.0,391.0
+"Madison, WI",2001,"Total Units",1.0,5.0,455.0
+"Madison, WI",2001,"Total Units",1.0,6.0,273.0
+"Madison, WI",2001,"Total Units",1.0,7.0,512.0
+"Madison, WI",2001,"Total Units",1.0,8.0,449.0
+"Madison, WI",2001,"Total Units",1.0,9.0,403.0
+"Madison, WI",2001,"Total Units",1.0,10.0,476.0
+"Madison, WI",2001,"Total Units",1.0,11.0,573.0
+"Madison, WI",2001,"Total Units",1.0,12.0,281.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,1.0,176.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,2.0,165.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,3.0,231.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,4.0,230.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,5.0,254.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,6.0,205.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,7.0,212.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,8.0,219.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,9.0,189.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,10.0,182.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,11.0,184.0
+"Madison, WI",2001,"Units in Single-Family Structures",2.0,12.0,163.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,1.0,125.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,2.0,269.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,3.0,57.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,4.0,161.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,5.0,201.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,6.0,68.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,7.0,300.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,8.0,230.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,9.0,214.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,10.0,294.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,11.0,389.0
+"Madison, WI",2001,"Units in All Multi-Family Structures",3.0,12.0,118.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,1.0,14.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,2.0,16.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,3.0,30.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,4.0,22.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,5.0,26.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,6.0,18.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,7.0,12.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,8.0,28.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,9.0,32.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,10.0,26.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,11.0,12.0
+"Madison, WI",2001,"Units in 2-unit Multi-Family Structures",4.0,12.0,10.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,15.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,19.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,19.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,33.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,34.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,38.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,16.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,26.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,45.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,18.0
+"Madison, WI",2001,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,16.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,111.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,238.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,8.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,120.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,142.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,16.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,250.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,186.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,156.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,223.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,359.0
+"Madison, WI",2001,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,92.0
+"Madison, WI",2002,"Total Units",1.0,1.0,269.0
+"Madison, WI",2002,"Total Units",1.0,2.0,214.0
+"Madison, WI",2002,"Total Units",1.0,3.0,288.0
+"Madison, WI",2002,"Total Units",1.0,4.0,501.0
+"Madison, WI",2002,"Total Units",1.0,5.0,370.0
+"Madison, WI",2002,"Total Units",1.0,6.0,431.0
+"Madison, WI",2002,"Total Units",1.0,7.0,376.0
+"Madison, WI",2002,"Total Units",1.0,8.0,426.0
+"Madison, WI",2002,"Total Units",1.0,9.0,502.0
+"Madison, WI",2002,"Total Units",1.0,10.0,478.0
+"Madison, WI",2002,"Total Units",1.0,11.0,237.0
+"Madison, WI",2002,"Total Units",1.0,12.0,359.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,1.0,195.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,2.0,167.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,3.0,234.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,4.0,262.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,5.0,262.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,6.0,215.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,7.0,245.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,8.0,233.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,9.0,215.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,10.0,261.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,11.0,165.0
+"Madison, WI",2002,"Units in Single-Family Structures",2.0,12.0,169.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,1.0,74.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,2.0,47.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,3.0,54.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,4.0,239.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,5.0,108.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,6.0,216.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,7.0,131.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,8.0,193.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,9.0,287.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,10.0,217.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,11.0,72.0
+"Madison, WI",2002,"Units in All Multi-Family Structures",3.0,12.0,190.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,1.0,8.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,2.0,8.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,3.0,22.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,4.0,16.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,5.0,10.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,6.0,12.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,7.0,16.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,8.0,6.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,9.0,10.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,10.0,26.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,11.0,20.0
+"Madison, WI",2002,"Units in 2-unit Multi-Family Structures",4.0,12.0,16.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,3.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,16.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,20.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,32.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,19.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,26.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,38.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,22.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,30.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,16.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,15.0
+"Madison, WI",2002,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,21.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,63.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,23.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,12.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,191.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,79.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,178.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,77.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,165.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,247.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,175.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,37.0
+"Madison, WI",2002,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,153.0
+"Madison, WI",2003,"Total Units",1.0,1.0,399.0
+"Madison, WI",2003,"Total Units",1.0,2.0,424.0
+"Madison, WI",2003,"Total Units",1.0,3.0,377.0
+"Madison, WI",2003,"Total Units",1.0,4.0,519.0
+"Madison, WI",2003,"Total Units",1.0,5.0,386.0
+"Madison, WI",2003,"Total Units",1.0,6.0,382.0
+"Madison, WI",2003,"Total Units",1.0,7.0,456.0
+"Madison, WI",2003,"Total Units",1.0,8.0,380.0
+"Madison, WI",2003,"Total Units",1.0,9.0,464.0
+"Madison, WI",2003,"Total Units",1.0,10.0,604.0
+"Madison, WI",2003,"Total Units",1.0,11.0,563.0
+"Madison, WI",2003,"Total Units",1.0,12.0,473.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,1.0,223.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,2.0,160.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,3.0,204.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,4.0,258.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,5.0,238.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,6.0,298.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,7.0,286.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,8.0,205.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,9.0,243.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,10.0,305.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,11.0,238.0
+"Madison, WI",2003,"Units in Single-Family Structures",2.0,12.0,228.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,1.0,176.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,2.0,264.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,3.0,173.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,4.0,261.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,5.0,148.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,6.0,84.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,7.0,170.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,8.0,175.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,9.0,221.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,10.0,299.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,11.0,325.0
+"Madison, WI",2003,"Units in All Multi-Family Structures",3.0,12.0,245.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,1.0,26.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,2.0,16.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,3.0,12.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,4.0,38.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,5.0,26.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,6.0,8.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,7.0,0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,8.0,28.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,9.0,16.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,10.0,28.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,11.0,20.0
+"Madison, WI",2003,"Units in 2-unit Multi-Family Structures",4.0,12.0,20.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,19.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,8.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,19.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,63.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,26.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,7.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,8.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,24.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,33.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,24.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,15.0
+"Madison, WI",2003,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,16.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,131.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,240.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,142.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,160.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,96.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,69.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,162.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,123.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,172.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,247.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,290.0
+"Madison, WI",2003,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,209.0
+"Madison, WI",2004,"Total Units",1.0,1.0,400.0
+"Madison, WI",2004,"Total Units",1.0,2.0,338.0
+"Madison, WI",2004,"Total Units",1.0,3.0,411.0
+"Madison, WI",2004,"Total Units",1.0,4.0,490.0
+"Madison, WI",2004,"Total Units",1.0,5.0,413.0
+"Madison, WI",2004,"Total Units",1.0,6.0,515.0
+"Madison, WI",2004,"Total Units",1.0,7.0,530.0
+"Madison, WI",2004,"Total Units",1.0,8.0,466.0
+"Madison, WI",2004,"Total Units",1.0,9.0,641.0
+"Madison, WI",2004,"Total Units",1.0,10.0,489.0
+"Madison, WI",2004,"Total Units",1.0,11.0,384.0
+"Madison, WI",2004,"Total Units",1.0,12.0,460.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,1.0,174.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,2.0,209.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,3.0,304.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,4.0,359.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,5.0,316.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,6.0,349.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,7.0,313.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,8.0,311.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,9.0,306.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,10.0,281.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,11.0,240.0
+"Madison, WI",2004,"Units in Single-Family Structures",2.0,12.0,248.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,1.0,226.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,2.0,129.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,3.0,107.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,4.0,131.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,5.0,97.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,6.0,166.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,7.0,217.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,8.0,155.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,9.0,335.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,10.0,208.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,11.0,144.0
+"Madison, WI",2004,"Units in All Multi-Family Structures",3.0,12.0,212.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,1.0,4.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,2.0,16.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,3.0,20.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,4.0,38.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,5.0,34.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,6.0,30.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,7.0,26.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,8.0,22.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,9.0,36.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,10.0,18.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,11.0,26.0
+"Madison, WI",2004,"Units in 2-unit Multi-Family Structures",4.0,12.0,26.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,45.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,23.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,23.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,28.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,25.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,15.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,24.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,22.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,31.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,43.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,43.0
+"Madison, WI",2004,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,47.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,177.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,90.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,64.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,65.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,38.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,121.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,167.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,111.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,268.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,147.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,75.0
+"Madison, WI",2004,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,139.0
+"Madison, WI",2005,"Total Units",1.0,1.0,358.0
+"Madison, WI",2005,"Total Units",1.0,2.0,273.0
+"Madison, WI",2005,"Total Units",1.0,3.0,417.0
+"Madison, WI",2005,"Total Units",1.0,4.0,381.0
+"Madison, WI",2005,"Total Units",1.0,5.0,563.0
+"Madison, WI",2005,"Total Units",1.0,6.0,546.0
+"Madison, WI",2005,"Total Units",1.0,7.0,400.0
+"Madison, WI",2005,"Total Units",1.0,8.0,367.0
+"Madison, WI",2005,"Total Units",1.0,9.0,688.0
+"Madison, WI",2005,"Total Units",1.0,10.0,621.0
+"Madison, WI",2005,"Total Units",1.0,11.0,451.0
+"Madison, WI",2005,"Total Units",1.0,12.0,220.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,1.0,150.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,2.0,195.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,3.0,285.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,4.0,288.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,5.0,318.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,6.0,290.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,7.0,273.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,8.0,303.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,9.0,267.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,10.0,268.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,11.0,246.0
+"Madison, WI",2005,"Units in Single-Family Structures",2.0,12.0,127.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,1.0,208.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,2.0,78.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,3.0,132.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,4.0,93.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,5.0,245.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,6.0,256.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,7.0,127.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,8.0,64.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,9.0,421.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,10.0,353.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,11.0,205.0
+"Madison, WI",2005,"Units in All Multi-Family Structures",3.0,12.0,93.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,1.0,2.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,2.0,6.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,3.0,32.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,4.0,34.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,5.0,34.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,6.0,10.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,7.0,18.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,8.0,32.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,9.0,18.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,10.0,26.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,11.0,28.0
+"Madison, WI",2005,"Units in 2-unit Multi-Family Structures",4.0,12.0,30.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,6.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,8.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,32.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,38.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,25.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,22.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,15.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,16.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,26.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,25.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,26.0
+"Madison, WI",2005,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,18.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,200.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,64.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,68.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,21.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,186.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,224.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,94.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,16.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,377.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,302.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,151.0
+"Madison, WI",2005,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,45.0
+"Madison, WI",2006,"Total Units",1.0,1.0,287.0
+"Madison, WI",2006,"Total Units",1.0,2.0,470.0
+"Madison, WI",2006,"Total Units",1.0,3.0,330.0
+"Madison, WI",2006,"Total Units",1.0,4.0,406.0
+"Madison, WI",2006,"Total Units",1.0,5.0,314.0
+"Madison, WI",2006,"Total Units",1.0,6.0,327.0
+"Madison, WI",2006,"Total Units",1.0,7.0,278.0
+"Madison, WI",2006,"Total Units",1.0,8.0,287.0
+"Madison, WI",2006,"Total Units",1.0,9.0,212.0
+"Madison, WI",2006,"Total Units",1.0,10.0,413.0
+"Madison, WI",2006,"Total Units",1.0,11.0,243.0
+"Madison, WI",2006,"Total Units",1.0,12.0,164.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,1.0,168.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,2.0,146.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,3.0,239.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,4.0,252.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,5.0,231.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,6.0,201.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,7.0,171.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,8.0,175.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,9.0,122.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,10.0,155.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,11.0,140.0
+"Madison, WI",2006,"Units in Single-Family Structures",2.0,12.0,97.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,1.0,119.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,2.0,324.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,3.0,91.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,4.0,154.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,5.0,83.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,6.0,126.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,7.0,107.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,8.0,112.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,9.0,90.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,10.0,258.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,11.0,103.0
+"Madison, WI",2006,"Units in All Multi-Family Structures",3.0,12.0,67.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,1.0,20.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,2.0,16.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,3.0,18.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,4.0,24.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,5.0,16.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,6.0,4.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,7.0,16.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,8.0,14.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,9.0,12.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,10.0,10.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,11.0,10.0
+"Madison, WI",2006,"Units in 2-unit Multi-Family Structures",4.0,12.0,14.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,20.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,14.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,15.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,45.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,13.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,20.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,20.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,11.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,17.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,17.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,6.0
+"Madison, WI",2006,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,6.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,79.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,294.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,58.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,85.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,54.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,102.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,71.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,87.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,61.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,231.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,87.0
+"Madison, WI",2006,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,47.0
+"Madison, WI",2007,"Total Units",1.0,1.0,156.0
+"Madison, WI",2007,"Total Units",1.0,2.0,186.0
+"Madison, WI",2007,"Total Units",1.0,3.0,159.0
+"Madison, WI",2007,"Total Units",1.0,4.0,292.0
+"Madison, WI",2007,"Total Units",1.0,5.0,342.0
+"Madison, WI",2007,"Total Units",1.0,6.0,263.0
+"Madison, WI",2007,"Total Units",1.0,7.0,209.0
+"Madison, WI",2007,"Total Units",1.0,8.0,229.0
+"Madison, WI",2007,"Total Units",1.0,9.0,279.0
+"Madison, WI",2007,"Total Units",1.0,10.0,271.0
+"Madison, WI",2007,"Total Units",1.0,11.0,203.0
+"Madison, WI",2007,"Total Units",1.0,12.0,140.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,1.0,93.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,2.0,87.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,3.0,136.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,4.0,198.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,5.0,183.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,6.0,149.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,7.0,133.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,8.0,160.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,9.0,92.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,10.0,135.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,11.0,138.0
+"Madison, WI",2007,"Units in Single-Family Structures",2.0,12.0,81.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,1.0,63.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,2.0,99.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,3.0,23.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,4.0,94.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,5.0,159.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,6.0,114.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,7.0,76.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,8.0,69.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,9.0,187.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,10.0,136.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,11.0,65.0
+"Madison, WI",2007,"Units in All Multi-Family Structures",3.0,12.0,59.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,1.0,10.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,2.0,10.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,3.0,6.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,4.0,10.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,5.0,4.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,6.0,10.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,7.0,12.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,8.0,12.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,9.0,2.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,10.0,20.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,11.0,8.0
+"Madison, WI",2007,"Units in 2-unit Multi-Family Structures",4.0,12.0,2.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,4.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,11.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,19.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,7.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,4.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,11.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,8.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,12.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,18.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,22.0
+"Madison, WI",2007,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,7.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,49.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,89.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,6.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,65.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,148.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,100.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,53.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,49.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,173.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,98.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,35.0
+"Madison, WI",2007,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,50.0
+"Madison, WI",2008,"Total Units",1.0,1.0,114.0
+"Madison, WI",2008,"Total Units",1.0,2.0,90.0
+"Madison, WI",2008,"Total Units",1.0,3.0,191.0
+"Madison, WI",2008,"Total Units",1.0,4.0,154.0
+"Madison, WI",2008,"Total Units",1.0,5.0,259.0
+"Madison, WI",2008,"Total Units",1.0,6.0,128.0
+"Madison, WI",2008,"Total Units",1.0,7.0,172.0
+"Madison, WI",2008,"Total Units",1.0,8.0,355.0
+"Madison, WI",2008,"Total Units",1.0,9.0,248.0
+"Madison, WI",2008,"Total Units",1.0,10.0,87.0
+"Madison, WI",2008,"Total Units",1.0,11.0,120.0
+"Madison, WI",2008,"Total Units",1.0,12.0,58.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,1.0,68.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,2.0,61.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,3.0,56.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,4.0,125.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,5.0,76.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,6.0,96.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,7.0,75.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,8.0,83.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,9.0,83.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,10.0,69.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,11.0,43.0
+"Madison, WI",2008,"Units in Single-Family Structures",2.0,12.0,28.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,1.0,46.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,2.0,29.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,3.0,135.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,4.0,29.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,5.0,183.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,6.0,32.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,7.0,97.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,8.0,272.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,9.0,165.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,10.0,18.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,11.0,77.0
+"Madison, WI",2008,"Units in All Multi-Family Structures",3.0,12.0,30.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,1.0,2.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,2.0,6.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,3.0,10.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,4.0,8.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,5.0,16.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,6.0,0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,7.0,4.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,8.0,6.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,9.0,4.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,10.0,10.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,11.0,6.0
+"Madison, WI",2008,"Units in 2-unit Multi-Family Structures",4.0,12.0,0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,3.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,8.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,7.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,19.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,6.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,19.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,3.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,11.0
+"Madison, WI",2008,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,4.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,41.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,23.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,125.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,13.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,160.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,13.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,87.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,247.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,161.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,5.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,60.0
+"Madison, WI",2008,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,26.0
+"Madison, WI",2009,"Total Units",1.0,1.0,69.0
+"Madison, WI",2009,"Total Units",1.0,2.0,49.0
+"Madison, WI",2009,"Total Units",1.0,3.0,62.0
+"Madison, WI",2009,"Total Units",1.0,4.0,65.0
+"Madison, WI",2009,"Total Units",1.0,5.0,73.0
+"Madison, WI",2009,"Total Units",1.0,6.0,88.0
+"Madison, WI",2009,"Total Units",1.0,7.0,144.0
+"Madison, WI",2009,"Total Units",1.0,8.0,91.0
+"Madison, WI",2009,"Total Units",1.0,9.0,225.0
+"Madison, WI",2009,"Total Units",1.0,10.0,175.0
+"Madison, WI",2009,"Total Units",1.0,11.0,242.0
+"Madison, WI",2009,"Total Units",1.0,12.0,174.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,1.0,18.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,2.0,47.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,3.0,52.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,4.0,63.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,5.0,68.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,6.0,83.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,7.0,89.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,8.0,85.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,9.0,112.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,10.0,87.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,11.0,47.0
+"Madison, WI",2009,"Units in Single-Family Structures",2.0,12.0,67.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,1.0,51.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,2.0,2.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,3.0,10.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,4.0,2.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,5.0,5.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,6.0,5.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,7.0,55.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,8.0,6.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,9.0,113.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,10.0,88.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,11.0,195.0
+"Madison, WI",2009,"Units in All Multi-Family Structures",3.0,12.0,107.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,1.0,0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,2.0,2.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,3.0,2.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,4.0,2.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,5.0,0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,6.0,0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,7.0,2.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,8.0,2.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,9.0,4.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,10.0,2.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,11.0,2.0
+"Madison, WI",2009,"Units in 2-unit Multi-Family Structures",4.0,12.0,0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,4.0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,3.0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,4.0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,4.0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,4.0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,3.0
+"Madison, WI",2009,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,8.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,47.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,5.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,5.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,5.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,53.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,105.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,82.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,190.0
+"Madison, WI",2009,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,99.0
+"Madison, WI",2010,"Total Units",1.0,1.0,91.0
+"Madison, WI",2010,"Total Units",1.0,2.0,67.0
+"Madison, WI",2010,"Total Units",1.0,3.0,117.0
+"Madison, WI",2010,"Total Units",1.0,4.0,77.0
+"Madison, WI",2010,"Total Units",1.0,5.0,98.0
+"Madison, WI",2010,"Total Units",1.0,6.0,98.0
+"Madison, WI",2010,"Total Units",1.0,7.0,135.0
+"Madison, WI",2010,"Total Units",1.0,8.0,113.0
+"Madison, WI",2010,"Total Units",1.0,9.0,112.0
+"Madison, WI",2010,"Total Units",1.0,10.0,153.0
+"Madison, WI",2010,"Total Units",1.0,11.0,82.0
+"Madison, WI",2010,"Total Units",1.0,12.0,94.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,1.0,48.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,2.0,57.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,3.0,109.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,4.0,66.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,5.0,82.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,6.0,89.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,7.0,83.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,8.0,62.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,9.0,69.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,10.0,72.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,11.0,52.0
+"Madison, WI",2010,"Units in Single-Family Structures",2.0,12.0,44.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,1.0,43.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,2.0,10.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,3.0,8.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,4.0,11.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,5.0,16.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,6.0,9.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,7.0,52.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,8.0,51.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,9.0,43.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,10.0,81.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,11.0,30.0
+"Madison, WI",2010,"Units in All Multi-Family Structures",3.0,12.0,50.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,1.0,2.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,2.0,2.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,3.0,8.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,4.0,2.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,5.0,8.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,6.0,4.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,7.0,2.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,8.0,0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,9.0,0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,10.0,4.0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,11.0,0
+"Madison, WI",2010,"Units in 2-unit Multi-Family Structures",4.0,12.0,0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,4.0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,4.0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,3.0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,7.0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,3.0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,4.0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,0
+"Madison, WI",2010,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,37.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,8.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,5.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,5.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,5.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,43.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,48.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,43.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,73.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,30.0
+"Madison, WI",2010,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,50.0
+"Madison, WI",2011,"Total Units",1.0,1.0,111.0
+"Madison, WI",2011,"Total Units",1.0,2.0,76.0
+"Madison, WI",2011,"Total Units",1.0,3.0,105.0
+"Madison, WI",2011,"Total Units",1.0,4.0,108.0
+"Madison, WI",2011,"Total Units",1.0,5.0,188.0
+"Madison, WI",2011,"Total Units",1.0,6.0,109.0
+"Madison, WI",2011,"Total Units",1.0,7.0,112.0
+"Madison, WI",2011,"Total Units",1.0,8.0,183.0
+"Madison, WI",2011,"Total Units",1.0,9.0,122.0
+"Madison, WI",2011,"Total Units",1.0,10.0,103.0
+"Madison, WI",2011,"Total Units",1.0,11.0,147.0
+"Madison, WI",2011,"Total Units",1.0,12.0,94.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,1.0,38.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,2.0,56.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,3.0,64.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,4.0,77.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,5.0,72.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,6.0,70.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,7.0,75.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,8.0,72.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,9.0,67.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,10.0,51.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,11.0,46.0
+"Madison, WI",2011,"Units in Single-Family Structures",2.0,12.0,45.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,1.0,73.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,2.0,20.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,3.0,41.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,4.0,31.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,5.0,116.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,6.0,39.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,7.0,37.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,8.0,111.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,9.0,55.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,10.0,52.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,11.0,101.0
+"Madison, WI",2011,"Units in All Multi-Family Structures",3.0,12.0,49.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,1.0,2.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,2.0,0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,3.0,0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,4.0,4.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,5.0,8.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,6.0,0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,7.0,2.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,8.0,2.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,9.0,2.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,10.0,6.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,11.0,2.0
+"Madison, WI",2011,"Units in 2-unit Multi-Family Structures",4.0,12.0,2.0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,7.0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,4.0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,3.0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,4.0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,4.0
+"Madison, WI",2011,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,71.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,20.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,41.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,27.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,101.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,35.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,35.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,109.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,50.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,42.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,95.0
+"Madison, WI",2011,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,47.0
+"Madison, WI",2012,"Total Units",1.0,1.0,62.0
+"Madison, WI",2012,"Total Units",1.0,2.0,84.0
+"Madison, WI",2012,"Total Units",1.0,3.0,78.0
+"Madison, WI",2012,"Total Units",1.0,4.0,153.0
+"Madison, WI",2012,"Total Units",1.0,5.0,196.0
+"Madison, WI",2012,"Total Units",1.0,6.0,249.0
+"Madison, WI",2012,"Total Units",1.0,7.0,187.0
+"Madison, WI",2012,"Total Units",1.0,8.0,370.0
+"Madison, WI",2012,"Total Units",1.0,9.0,351.0
+"Madison, WI",2012,"Total Units",1.0,10.0,265.0
+"Madison, WI",2012,"Total Units",1.0,11.0,294.0
+"Madison, WI",2012,"Total Units",1.0,12.0,148.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,1.0,38.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,2.0,51.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,3.0,68.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,4.0,88.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,5.0,105.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,6.0,88.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,7.0,88.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,8.0,101.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,9.0,66.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,10.0,75.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,11.0,66.0
+"Madison, WI",2012,"Units in Single-Family Structures",2.0,12.0,64.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,1.0,24.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,2.0,33.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,3.0,10.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,4.0,65.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,5.0,91.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,6.0,161.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,7.0,99.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,8.0,269.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,9.0,285.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,10.0,190.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,11.0,228.0
+"Madison, WI",2012,"Units in All Multi-Family Structures",3.0,12.0,84.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,1.0,0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,2.0,0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,3.0,2.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,4.0,4.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,5.0,2.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,6.0,4.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,7.0,0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,8.0,6.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,9.0,6.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,10.0,4.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,11.0,4.0
+"Madison, WI",2012,"Units in 2-unit Multi-Family Structures",4.0,12.0,0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,3.0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,3.0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,3.0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,8.0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,8.0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,4.0
+"Madison, WI",2012,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,3.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,21.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,30.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,5.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,53.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,89.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,157.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,99.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,255.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,279.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,186.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,220.0
+"Madison, WI",2012,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,81.0
+"Madison, WI",2013,"Total Units",1.0,1.0,127.0
+"Madison, WI",2013,"Total Units",1.0,2.0,68.0
+"Madison, WI",2013,"Total Units",1.0,3.0,239.0
+"Madison, WI",2013,"Total Units",1.0,4.0,383.0
+"Madison, WI",2013,"Total Units",1.0,5.0,161.0
+"Madison, WI",2013,"Total Units",1.0,6.0,122.0
+"Madison, WI",2013,"Total Units",1.0,7.0,242.0
+"Madison, WI",2013,"Total Units",1.0,8.0,361.0
+"Madison, WI",2013,"Total Units",1.0,9.0,345.0
+"Madison, WI",2013,"Total Units",1.0,10.0,392.0
+"Madison, WI",2013,"Total Units",1.0,11.0,275.0
+"Madison, WI",2013,"Total Units",1.0,12.0,266.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,1.0,69.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,2.0,68.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,3.0,86.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,4.0,119.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,5.0,111.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,6.0,112.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,7.0,125.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,8.0,138.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,9.0,116.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,10.0,141.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,11.0,93.0
+"Madison, WI",2013,"Units in Single-Family Structures",2.0,12.0,67.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,1.0,58.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,2.0,0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,3.0,153.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,4.0,264.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,5.0,50.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,6.0,10.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,7.0,117.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,8.0,223.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,9.0,229.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,10.0,251.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,11.0,182.0
+"Madison, WI",2013,"Units in All Multi-Family Structures",3.0,12.0,199.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,1.0,0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,2.0,0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,3.0,8.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,4.0,10.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,5.0,4.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,6.0,0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,7.0,8.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,8.0,4.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,9.0,6.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,10.0,6.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,11.0,2.0
+"Madison, WI",2013,"Units in 2-unit Multi-Family Structures",4.0,12.0,6.0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,3.0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,4.0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,4.0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,3.0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,4.0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,16.0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,0
+"Madison, WI",2013,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,4.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,58.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,142.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,250.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,46.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,6.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,109.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,216.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,219.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,229.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,180.0
+"Madison, WI",2013,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,189.0
+"Madison, WI",2014,"Total Units",1.0,1.0,504.0
+"Madison, WI",2014,"Total Units",1.0,2.0,198.0
+"Madison, WI",2014,"Total Units",1.0,3.0,175.0
+"Madison, WI",2014,"Total Units",1.0,4.0,203.0
+"Madison, WI",2014,"Total Units",1.0,5.0,498.0
+"Madison, WI",2014,"Total Units",1.0,6.0,417.0
+"Madison, WI",2014,"Total Units",1.0,7.0,310.0
+"Madison, WI",2014,"Total Units",1.0,8.0,334.0
+"Madison, WI",2014,"Total Units",1.0,9.0,339.0
+"Madison, WI",2014,"Total Units",1.0,10.0,364.0
+"Madison, WI",2014,"Total Units",1.0,11.0,321.0
+"Madison, WI",2014,"Total Units",1.0,12.0,235.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,1.0,57.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,2.0,72.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,3.0,94.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,4.0,137.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,5.0,119.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,6.0,106.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,7.0,116.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,8.0,177.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,9.0,89.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,10.0,118.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,11.0,78.0
+"Madison, WI",2014,"Units in Single-Family Structures",2.0,12.0,63.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,1.0,447.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,2.0,126.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,3.0,81.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,4.0,66.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,5.0,379.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,6.0,311.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,7.0,194.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,8.0,157.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,9.0,250.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,10.0,246.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,11.0,243.0
+"Madison, WI",2014,"Units in All Multi-Family Structures",3.0,12.0,172.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,1.0,0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,2.0,2.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,3.0,12.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,4.0,6.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,5.0,2.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,6.0,6.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,7.0,4.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,8.0,2.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,9.0,6.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,10.0,4.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,11.0,2.0
+"Madison, WI",2014,"Units in 2-unit Multi-Family Structures",4.0,12.0,4.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,3.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,3.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,3.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,3.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,3.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,7.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,15.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,4.0
+"Madison, WI",2014,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,447.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,124.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,66.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,57.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,374.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,302.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,190.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,152.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,237.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,227.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,237.0
+"Madison, WI",2014,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,168.0
+"Madison, WI",2015,"Total Units",1.0,1.0,95.0
+"Madison, WI",2015,"Total Units",1.0,2.0,121.0
+"Madison, WI",2015,"Total Units",1.0,3.0,399.0
+"Madison, WI",2015,"Total Units",1.0,4.0,432.0
+"Madison, WI",2015,"Total Units",1.0,5.0,335.0
+"Madison, WI",2015,"Total Units",1.0,6.0,233.0
+"Madison, WI",2015,"Total Units",1.0,7.0,729.0
+"Madison, WI",2015,"Total Units",1.0,8.0,227.0
+"Madison, WI",2015,"Total Units",1.0,9.0,205.0
+"Madison, WI",2015,"Total Units",1.0,10.0,268.0
+"Madison, WI",2015,"Total Units",1.0,11.0,297.0
+"Madison, WI",2015,"Total Units",1.0,12.0,163.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,1.0,73.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,2.0,84.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,3.0,101.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,4.0,143.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,5.0,131.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,6.0,138.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,7.0,143.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,8.0,124.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,9.0,128.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,10.0,139.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,11.0,79.0
+"Madison, WI",2015,"Units in Single-Family Structures",2.0,12.0,118.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,1.0,22.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,2.0,37.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,3.0,298.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,4.0,289.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,5.0,204.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,6.0,95.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,7.0,586.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,8.0,103.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,9.0,77.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,10.0,129.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,11.0,218.0
+"Madison, WI",2015,"Units in All Multi-Family Structures",3.0,12.0,45.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,1.0,4.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,2.0,0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,3.0,2.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,4.0,6.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,5.0,8.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,6.0,0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,7.0,24.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,8.0,2.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,9.0,0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,10.0,0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,11.0,2.0
+"Madison, WI",2015,"Units in 2-unit Multi-Family Structures",4.0,12.0,2.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,3.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,10.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,8.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,12.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,3.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,16.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,7.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,19.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,4.0
+"Madison, WI",2015,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,15.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,27.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,288.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,271.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,193.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,95.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,546.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,101.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,70.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,110.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,212.0
+"Madison, WI",2015,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,43.0
+"Madison, WI",2016,"Total Units",1.0,1.0,544.0
+"Madison, WI",2016,"Total Units",1.0,2.0,238.0
+"Madison, WI",2016,"Total Units",1.0,3.0,404.0
+"Madison, WI",2016,"Total Units",1.0,4.0,331.0
+"Madison, WI",2016,"Total Units",1.0,5.0,517.0
+"Madison, WI",2016,"Total Units",1.0,6.0,448.0
+"Madison, WI",2016,"Total Units",1.0,7.0,401.0
+"Madison, WI",2016,"Total Units",1.0,8.0,377.0
+"Madison, WI",2016,"Total Units",1.0,9.0,471.0
+"Madison, WI",2016,"Total Units",1.0,10.0,507.0
+"Madison, WI",2016,"Total Units",1.0,11.0,382.0
+"Madison, WI",2016,"Total Units",1.0,12.0,310.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,1.0,71.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,2.0,98.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,3.0,146.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,4.0,152.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,5.0,161.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,6.0,148.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,7.0,125.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,8.0,127.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,9.0,131.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,10.0,131.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,11.0,199.0
+"Madison, WI",2016,"Units in Single-Family Structures",2.0,12.0,109.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,1.0,473.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,2.0,140.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,3.0,258.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,4.0,179.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,5.0,356.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,6.0,300.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,7.0,276.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,8.0,250.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,9.0,340.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,10.0,376.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,11.0,183.0
+"Madison, WI",2016,"Units in All Multi-Family Structures",3.0,12.0,201.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,1.0,4.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,2.0,6.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,3.0,8.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,4.0,2.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,5.0,8.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,6.0,10.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,7.0,6.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,8.0,14.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,9.0,8.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,10.0,10.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,11.0,32.0
+"Madison, WI",2016,"Units in 2-unit Multi-Family Structures",4.0,12.0,6.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,3.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,4.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,35.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,6.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,3.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,7.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,3.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,10.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,11.0
+"Madison, WI",2016,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,6.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,469.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,131.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,246.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,177.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,313.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,284.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,267.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,229.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,329.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,356.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,140.0
+"Madison, WI",2016,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,189.0
+"Madison, WI",2017,"Total Units",1.0,1.0,323.0
+"Madison, WI",2017,"Total Units",1.0,2.0,508.0
+"Madison, WI",2017,"Total Units",1.0,3.0,285.0
+"Madison, WI",2017,"Total Units",1.0,4.0,390.0
+"Madison, WI",2017,"Total Units",1.0,5.0,395.0
+"Madison, WI",2017,"Total Units",1.0,6.0,478.0
+"Madison, WI",2017,"Total Units",1.0,7.0,422.0
+"Madison, WI",2017,"Total Units",1.0,8.0,333.0
+"Madison, WI",2017,"Total Units",1.0,9.0,317.0
+"Madison, WI",2017,"Total Units",1.0,10.0,497.0
+"Madison, WI",2017,"Total Units",1.0,11.0,310.0
+"Madison, WI",2017,"Total Units",1.0,12.0,412.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,1.0,94.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,2.0,109.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,3.0,150.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,4.0,160.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,5.0,153.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,6.0,161.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,7.0,147.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,8.0,168.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,9.0,146.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,10.0,132.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,11.0,135.0
+"Madison, WI",2017,"Units in Single-Family Structures",2.0,12.0,90.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,1.0,229.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,2.0,399.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,3.0,135.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,4.0,230.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,5.0,242.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,6.0,317.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,7.0,275.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,8.0,165.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,9.0,171.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,10.0,365.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,11.0,175.0
+"Madison, WI",2017,"Units in All Multi-Family Structures",3.0,12.0,322.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,1.0,16.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,2.0,4.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,3.0,2.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,4.0,4.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,5.0,10.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,6.0,6.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,7.0,4.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,8.0,10.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,9.0,2.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,10.0,4.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,11.0,12.0
+"Madison, WI",2017,"Units in 2-unit Multi-Family Structures",4.0,12.0,8.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,3.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,3.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,3.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,3.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,7.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,11.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,7.0
+"Madison, WI",2017,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,11.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,213.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,392.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,133.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,226.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,229.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,311.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,268.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,152.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,162.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,350.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,156.0
+"Madison, WI",2017,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,303.0
+"Madison, WI",2018,"Total Units",1.0,1.0,228.0
+"Madison, WI",2018,"Total Units",1.0,2.0,291.0
+"Madison, WI",2018,"Total Units",1.0,3.0,292.0
+"Madison, WI",2018,"Total Units",1.0,4.0,384.0
+"Madison, WI",2018,"Total Units",1.0,5.0,480.0
+"Madison, WI",2018,"Total Units",1.0,6.0,521.0
+"Madison, WI",2018,"Total Units",1.0,7.0,350.0
+"Madison, WI",2018,"Total Units",1.0,8.0,217.0
+"Madison, WI",2018,"Total Units",1.0,9.0,208.0
+"Madison, WI",2018,"Total Units",1.0,10.0,271.0
+"Madison, WI",2018,"Total Units",1.0,11.0,178.0
+"Madison, WI",2018,"Total Units",1.0,12.0,202.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,1.0,81.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,2.0,115.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,3.0,140.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,4.0,167.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,5.0,170.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,6.0,159.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,7.0,137.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,8.0,169.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,9.0,117.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,10.0,131.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,11.0,108.0
+"Madison, WI",2018,"Units in Single-Family Structures",2.0,12.0,110.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,1.0,147.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,2.0,176.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,3.0,152.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,4.0,217.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,5.0,310.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,6.0,362.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,7.0,213.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,8.0,48.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,9.0,91.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,10.0,140.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,11.0,70.0
+"Madison, WI",2018,"Units in All Multi-Family Structures",3.0,12.0,92.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,1.0,10.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,2.0,4.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,3.0,10.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,4.0,4.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,5.0,14.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,6.0,20.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,7.0,14.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,8.0,4.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,9.0,6.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,10.0,0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,11.0,2.0
+"Madison, WI",2018,"Units in 2-unit Multi-Family Structures",4.0,12.0,12.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,4.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,26.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,3.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,6.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,7.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,3.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,8.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,11.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,4.0
+"Madison, WI",2018,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,4.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,133.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,146.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,139.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,213.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,290.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,335.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,196.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,44.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,77.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,129.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,64.0
+"Madison, WI",2018,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,76.0
+"Madison, WI",2019,"Total Units",1.0,1.0,166.0
+"Madison, WI",2019,"Total Units",1.0,2.0,268.0
+"Madison, WI",2019,"Total Units",1.0,3.0,224.0
+"Madison, WI",2019,"Total Units",1.0,4.0,595.0
+"Madison, WI",2019,"Total Units",1.0,5.0,253.0
+"Madison, WI",2019,"Total Units",1.0,6.0,255.0
+"Madison, WI",2019,"Total Units",1.0,7.0,415.0
+"Madison, WI",2019,"Total Units",1.0,8.0,403.0
+"Madison, WI",2019,"Total Units",1.0,9.0,298.0
+"Madison, WI",2019,"Total Units",1.0,10.0,287.0
+"Madison, WI",2019,"Total Units",1.0,11.0,309.0
+"Madison, WI",2019,"Total Units",1.0,12.0,263.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,1.0,86.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,2.0,88.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,3.0,123.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,4.0,165.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,5.0,119.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,6.0,129.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,7.0,157.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,8.0,129.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,9.0,155.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,10.0,164.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,11.0,112.0
+"Madison, WI",2019,"Units in Single-Family Structures",2.0,12.0,121.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,1.0,80.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,2.0,180.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,3.0,101.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,4.0,430.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,5.0,134.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,6.0,126.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,7.0,258.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,8.0,274.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,9.0,143.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,10.0,123.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,11.0,197.0
+"Madison, WI",2019,"Units in All Multi-Family Structures",3.0,12.0,142.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,1.0,12.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,2.0,8.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,3.0,10.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,4.0,22.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,5.0,4.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,6.0,6.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,7.0,12.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,8.0,2.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,9.0,12.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,10.0,8.0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,11.0,0
+"Madison, WI",2019,"Units in 2-unit Multi-Family Structures",4.0,12.0,8.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,3.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,6.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,8.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,6.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,7.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,7.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,3.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,3.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,3.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,3.0
+"Madison, WI",2019,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,65.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,166.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,83.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,402.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,130.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,113.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,239.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,269.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,128.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,112.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,194.0
+"Madison, WI",2019,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,134.0
+"Madison, WI",2020,"Total Units",1.0,1.0,177.0
+"Madison, WI",2020,"Total Units",1.0,2.0,382.0
+"Madison, WI",2020,"Total Units",1.0,3.0,479.0
+"Madison, WI",2020,"Total Units",1.0,4.0,184.0
+"Madison, WI",2020,"Total Units",1.0,5.0,471.0
+"Madison, WI",2020,"Total Units",1.0,6.0,282.0
+"Madison, WI",2020,"Total Units",1.0,7.0,559.0
+"Madison, WI",2020,"Total Units",1.0,8.0,599.0
+"Madison, WI",2020,"Total Units",1.0,9.0,566.0
+"Madison, WI",2020,"Total Units",1.0,10.0,410.0
+"Madison, WI",2020,"Total Units",1.0,11.0,186.0
+"Madison, WI",2020,"Total Units",1.0,12.0,348.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,1.0,101.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,2.0,134.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,3.0,142.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,4.0,84.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,5.0,128.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,6.0,158.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,7.0,136.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,8.0,167.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,9.0,143.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,10.0,168.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,11.0,127.0
+"Madison, WI",2020,"Units in Single-Family Structures",2.0,12.0,153.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,1.0,76.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,2.0,248.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,3.0,337.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,4.0,100.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,5.0,343.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,6.0,124.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,7.0,423.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,8.0,432.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,9.0,423.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,10.0,242.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,11.0,59.0
+"Madison, WI",2020,"Units in All Multi-Family Structures",3.0,12.0,195.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,1.0,10.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,2.0,4.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,3.0,6.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,4.0,8.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,5.0,2.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,6.0,12.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,7.0,14.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,8.0,14.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,9.0,18.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,10.0,10.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,11.0,2.0
+"Madison, WI",2020,"Units in 2-unit Multi-Family Structures",4.0,12.0,4.0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,3.0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,3.0
+"Madison, WI",2020,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,28.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,66.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,241.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,331.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,92.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,341.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,112.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,409.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,418.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,405.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,232.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,54.0
+"Madison, WI",2020,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,163.0
+"Madison, WI",2021,"Total Units",1.0,1.0,376.0
+"Madison, WI",2021,"Total Units",1.0,2.0,577.0
+"Madison, WI",2021,"Total Units",1.0,3.0,556.0
+"Madison, WI",2021,"Total Units",1.0,4.0,1064.0
+"Madison, WI",2021,"Total Units",1.0,5.0,854.0
+"Madison, WI",2021,"Total Units",1.0,6.0,420.0
+"Madison, WI",2021,"Total Units",1.0,7.0,664.0
+"Madison, WI",2021,"Total Units",1.0,8.0,316.0
+"Madison, WI",2021,"Total Units",1.0,9.0,645.0
+"Madison, WI",2021,"Total Units",1.0,10.0,418.0
+"Madison, WI",2021,"Total Units",1.0,11.0,235.0
+"Madison, WI",2021,"Total Units",1.0,12.0,1092.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,1.0,152.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,2.0,126.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,3.0,194.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,4.0,183.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,5.0,148.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,6.0,147.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,7.0,137.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,8.0,139.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,9.0,147.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,10.0,130.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,11.0,119.0
+"Madison, WI",2021,"Units in Single-Family Structures",2.0,12.0,138.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,1.0,224.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,2.0,451.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,3.0,362.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,4.0,881.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,5.0,706.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,6.0,273.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,7.0,527.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,8.0,177.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,9.0,498.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,10.0,288.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,11.0,116.0
+"Madison, WI",2021,"Units in All Multi-Family Structures",3.0,12.0,954.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,1.0,18.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,2.0,18.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,3.0,14.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,4.0,28.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,5.0,14.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,6.0,22.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,7.0,26.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,8.0,20.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,9.0,26.0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,10.0,0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,11.0,0
+"Madison, WI",2021,"Units in 2-unit Multi-Family Structures",4.0,12.0,12.0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,4.0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,8.0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,12.0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,0
+"Madison, WI",2021,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,206.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,429.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,348.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,853.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,692.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,251.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,493.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,145.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,472.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,288.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,116.0
+"Madison, WI",2021,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,942.0
+"Madison, WI",2022,"Total Units",1.0,1.0,162.0
+"Madison, WI",2022,"Total Units",1.0,2.0,375.0
+"Madison, WI",2022,"Total Units",1.0,3.0,667.0
+"Madison, WI",2022,"Total Units",1.0,4.0,488.0
+"Madison, WI",2022,"Total Units",1.0,5.0,607.0
+"Madison, WI",2022,"Total Units",1.0,6.0,376.0
+"Madison, WI",2022,"Total Units",1.0,7.0,0
+"Madison, WI",2022,"Total Units",1.0,8.0,0
+"Madison, WI",2022,"Total Units",1.0,9.0,0
+"Madison, WI",2022,"Total Units",1.0,10.0,0
+"Madison, WI",2022,"Total Units",1.0,11.0,0
+"Madison, WI",2022,"Total Units",1.0,12.0,0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,1.0,109.0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,2.0,113.0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,3.0,162.0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,4.0,156.0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,5.0,130.0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,6.0,169.0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,7.0,0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,8.0,0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,9.0,0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,10.0,0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,11.0,0
+"Madison, WI",2022,"Units in Single-Family Structures",2.0,12.0,0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,1.0,53.0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,2.0,262.0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,3.0,505.0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,4.0,332.0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,5.0,477.0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,6.0,207.0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,7.0,0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,8.0,0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,9.0,0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,10.0,0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,11.0,0
+"Madison, WI",2022,"Units in All Multi-Family Structures",3.0,12.0,0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,1.0,6.0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,2.0,8.0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,3.0,6.0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,4.0,30.0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,5.0,6.0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,6.0,24.0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,7.0,0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,8.0,0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,9.0,0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,10.0,0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,11.0,0
+"Madison, WI",2022,"Units in 2-unit Multi-Family Structures",4.0,12.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,1.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,2.0,4.0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,3.0,4.0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,4.0,7.0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,5.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,6.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,7.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,8.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,9.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,10.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,11.0,0
+"Madison, WI",2022,"Units in 3- and 4-unit Multi-Family Structures",5.0,12.0,0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,1.0,47.0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,2.0,250.0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,3.0,495.0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,4.0,295.0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,5.0,471.0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,6.0,183.0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,7.0,0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,8.0,0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,9.0,0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,10.0,0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,11.0,0
+"Madison, WI",2022,"Units in 5+ Unit Multi-Family Structures",6.0,12.0,0
+
+
