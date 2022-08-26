@@ -135,6 +135,8 @@ And this is what the output template looks like:
 This works nicely, with one exception: There were two `msg` files whose content was *another* `msg` file as an attachment (which in turn had attachments).
 `msgxtractor` currently [can't deal with these](https://github.com/hrbrmstr/msgxtractr/issues/13) and so I had to remove them from the dataset.
 
-Here's what the output looks like:
+Here's what the output:
 
 ![Screenshot of html output](screenshot%20html.png)
+
+Maybe this can be useful for others. The repository is [on Github](https://github.com/vgXhc/wisdot-orr)
