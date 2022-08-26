@@ -32,3 +32,5 @@ I've been bike blogging for over a decade. Sometimes more, sometimes less. [Ride
 For Madison Bike Week in 2020 Madison Bikes paid for a big ad on the side of a Metro bus. I built [a simple Shiny app](https://vgxhc.shinyapps.io/bus_tracker/) to track the bus so that I could stalk it and take pretty pictures:
 
 ![The Madison Bikes bus in front of the Wisconsin State Capitol](img/Madison_Bikes_bus.jpg)
+
+Since then, I have kept expanding the app, where now it allows you to track any Metro bus(es) based on their vehicle ID(s).
