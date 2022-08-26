@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 05 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 26 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Wrangling unwieldy open records data</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2022-08-26-using-r-markdown-and-msgxtractr-to-process-an-open-records-request</link>
+      <description>Using R, {msgxtractor}, and R Markdown to wrangle a set of msg files</description>
+      <category>open records</category>
+      <category>purrr</category>
+      <category>RMarkdown</category>
+      <guid>https://haraldkliems.netlify.app/posts/2022-08-26-using-r-markdown-and-msgxtractr-to-process-an-open-records-request</guid>
+      <pubDate>Fri, 26 Aug 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>How much housing is being built in Madison?</title>
       <dc:creator>Harald Kliems</dc:creator>
@@ -16,7 +27,7 @@
       <category>housing</category>
       <category>Madison (WI)</category>
       <guid>https://haraldkliems.netlify.app/posts/how-much-housing-is-being-built-in-madison</guid>
-      <pubDate>Fri, 05 Aug 2022 00:00:00 +0000</pubDate>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/how-much-housing-is-being-built-in-madison/new_housing_madison_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>

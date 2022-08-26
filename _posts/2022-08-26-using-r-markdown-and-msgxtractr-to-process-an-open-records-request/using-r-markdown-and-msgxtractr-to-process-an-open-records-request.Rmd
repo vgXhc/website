@@ -1,0 +1,140 @@
+---
+title: "Wrangling unwieldy open records data"
+description: |
+  Using R, {msgxtractor}, and R Markdown to wrangle a set of msg files
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: "`r Sys.Date()`"
+compare_updates_url:
+creative_commons: CC BY-SA
+categories:
+  - open records
+  - purrr
+  - RMarkdown
+output: 
+  distill::distill_article:
+    toc: true
+    code_folding: false
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+A friend recently asked for assistance with data she received from an open records request.
+
+<blockquote class="twitter-tweet" data-dnt="true">
+
+<p lang="en" dir="ltr">
+
+emotionally I was not prepared for WISDOT to send me a Box folder filled with documents that I can't figure out how to download in response to my obnoxious open records request from \~6 months ago
+
+</p>
+
+--- marybeth (unfortunately) (@marbeff) <a href="https://twitter.com/marbeff/status/1559628928184115200?ref_src=twsrc%5Etfw">August 16, 2022</a>
+
+</blockquote>
+
+```{=html}
+<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+```
+The data she received consisted of a zip file with 70-something `*.msg` files.
+This is a proprietary Microsoft file format used by Outlook for storing emails.
+I quickly checked if there was an R package for handling the data, and indeed there is: [`msgextractor`](https://github.com/hrbrmstr/msgxtractr).
+With this package and some R and RMarkdown I figured converting the files to something more convenient would not be too difficult.
+
+In the end it took me much longer than I had hoped, but it works.
+The process has two pieces: An `R` script with a function to read in a single email, extract some information, and save the email's attachments in a separate folder.
+The second piece: A RMarkdown `.Rmd` template that uses variables generated in the function to create an `HTML` file with email metadata, the body, and links to the attachments.
+The `R` then script then iterates the function over the list of `*.msg` files with the `walk` function from the [{purr}](https://purrr.tidyverse.org/) package.
+This creates one `HTML` file for each of the emails.
+
+Here's the R script:
+
+```{r eval=FALSE}
+library(msgxtractr) #install with devtools::install_github("hrbrmstr/msgxtractr") 
+library(tidyverse)
+library(here)
+
+# read list of msg files in folders
+files <- list.files("data/All Files/")
+
+# extract and save attachments and return paths
+write_msg_files <- function(msg_file){
+  msg <- read_msg(paste0("data/All Files/", msg_file))
+  dir_name <- paste0("output/", msg_file)
+  dir.create(dir_name)
+  save_attachments(msg_obj = msg, path = dir_name)
+  #return path and file names for attachments
+  attachment_names <- list.files(dir_name)
+  attachment_paths <- paste0(msg_file, "/", attachment_names)
+  # contents for output documents
+  email <- data_frame(email = msg_file,
+                   from = unlist(msg$headers$From),
+                   to = unlist(msg$headers$To),
+                   cc = unlist(msg$headers$CC),
+                   subject = unlist(msg$headers$Subject),
+                   date = unlist(msg$headers$Date),
+                   body = paste(msg$body$text, collapse = "\n"),
+                   attachments = list(attachment_paths))
+  
+  #render output document
+  rmarkdown::render(
+    input = "output_template.Rmd",
+    output_file = here("output", paste0(msg_file, ".html"))
+  )
+}
+
+
+# iterate over list of files
+walk(files, write_attachments)
+```
+
+And this is what the output template looks like:
+
+````{verbatim, lang = "markdown"}
+    ---
+    output: html_document
+    ---
+
+    ```{r setup, include=FALSE}
+    knitr::opts_chunk$set(echo = F)
+```
+
+    ```{r}
+    library(msgxtractr)
+    library(tidyverse)
+    ```
+    # `r email[1,]$email`
+
+    **From:** `r email[1,]$from`
+
+    **To:** `r email$to`
+
+    **CC:** `r email$cc`
+
+    **Date:** `r email$date`
+
+    **Subject:** `r email$subject`
+
+
+    ```{r results='asis'}
+    cat(email[1,]$body)
+    ```
+
+    ## Attachments
+    ```{r results='asis'}
+    #creates markdown links to attachments
+    map_chr(email$attachments[[1]], ~paste0("[", ., "](", ., ")"))
+    ```
+````
+
+This works nicely, with one exception: There were two `msg` files whose content was *another* `msg` file as an attachment (which in turn had attachments).
+`msgxtractor` currently [can't deal with these](https://github.com/hrbrmstr/msgxtractr/issues/13) and so I had to remove them from the dataset.
+
+Here's what the output looks like:
+
+![Screenshot of html output](screenshot%20html.png)
