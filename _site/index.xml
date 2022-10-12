@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 26 Aug 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 12 Oct 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What's the latest on commute mode share in Madison?</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/latest-commute-mode-share-madison-2021</link>
+      <description>Working from home has seen an unprecedented boom, while biking stagnates.</description>
+      <category>Madison (WI)</category>
+      <category>transportation</category>
+      <category>American Community Survey</category>
+      <guid>https://haraldkliems.netlify.app/posts/latest-commute-mode-share-madison-2021</guid>
+      <pubDate>Wed, 12 Oct 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/latest-commute-mode-share-madison-2021/analysis_2021_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1152" height="711"/>
+    </item>
     <item>
       <title>Wrangling unwieldy open records data</title>
       <dc:creator>Harald Kliems</dc:creator>
