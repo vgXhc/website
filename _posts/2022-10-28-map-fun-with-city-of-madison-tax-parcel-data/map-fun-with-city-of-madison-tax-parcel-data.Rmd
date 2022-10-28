@@ -1,0 +1,135 @@
+---
+title: "Map fun with City of Madison tax parcel data"
+description: |
+  Building age, property use, and architectural styles in Madison
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: "`r Sys.Date()`"
+creative_commons: CC BY-SA
+categories:
+  - Madison (WI)
+  - housing
+  - map
+output: 
+  distill::distill_article:
+    code_folding: TRUE
+    self_contained: false
+---
+
+
+The City of Madison's open data portal has a [tax parcel dataset](https://data-cityofmadison.opendata.arcgis.com/datasets/cityofmadison::tax-parcels-assessor-property-information/explore). Tax information, however, is not the only thing included in the dataset. There are over 140 variables and for this post we will look at three of them: The year the structure on the parcel was built, the use of the property, and the architectural style. 
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+
+
+library(sf)
+library(tidyverse)
+
+
+buildings <- read_sf("/Users/user1/Downloads/Tax_Parcels_(Assessor_Property_Information)/Tax_Parcels_(Assessor_Property_Information).shp")
+buildings <- buildings |> 
+  st_make_valid()
+```
+
+# Building age
+Let's start with the `YearBuilt` variable. This allows us a glimpse into the development of Madison over time. First, a static map:
+
+```{r, layout="l-page"}
+
+buildings2 <- buildings |> 
+  mutate(BuiltYear = na_if(YearBuilt, 0),
+         BuiltYear_labels = cut(BuiltYear,
+                                breaks = c(-Inf, 1900, 1945, 1980, 2000, 2010, Inf),
+                                labels = c("pre-1900", "1900 to 1944", "post-WWII to 1979", "1980 to 1999", "2000 to 2009", "2010 and newer"),
+                                ordered_result = T))
+
+library(tmap)
+tmap_mode("plot")
+p <- buildings2 |> 
+  select(BuiltYear_labels) |> 
+  tm_shape() +
+  tm_polygons(title = "", "BuiltYear_labels", border.alpha = 0,
+              colorNA = "ghostwhite") +
+  tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
+  tm_layout(title = "How old are Madison’s buildings?",
+            scale = .6)
+p
+```
+
+It'd be nice to have an interactive map, but the dataset is too large to not crash most browsers (stay tuned; I'm working on alternatives).
+
+In the static map it's not easy to see areas where parcels have redeveloped, such as along the East Washington Ave corridor, but we can make out some glimpses. We also see that a lot of parcels have missing data, and that missingness doesn't seem to be random. It'd be interesting to know why the city has better data on some properties/areas/eras than on others!
+
+# Property use
+The age of a structure only tells us part of a story. How is a building use, and how do these uses cluster? The property use data has many different categories, and to keep the map legible we need to lump a lot of them together. This is what we get for the 10 most common uses:
+
+
+
+```{r, layout="l-page"}
+
+
+  p2 <- buildings2 |>
+    select(PropertyUs) |>
+    mutate(PropertyUs = case_when(str_detect(PropertyUs, "Apartment$") ~ "Apartment",
+                                  str_detect(PropertyUs, "^Condominium") ~ "Condominium",
+                                  TRUE ~ PropertyUs)) |>
+    mutate(PropertyUs_collapsed = fct_lump_n(PropertyUs, 10)) |>
+    tm_shape() +
+    tm_polygons(title = "", "PropertyUs_collapsed",
+                border.alpha = 0,
+                colorNA = "ghostwhite") +
+    tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
+    tm_layout(title = "Property use for tax parcels in Madison",
+              scale = .6)
+
+tmap_mode("plot")
+p2
+
+
+```
+
+
+
+# Home style
+A third and final map looks at the "home style." 
+
+```{r, layout="l-page"}
+p3 <- buildings2 |>
+  select(HomeStyle) |>
+  mutate(HomeStyle = case_when(str_detect(HomeStyle, "^Ranch") ~ "Ranch",
+                               str_detect(HomeStyle, "^Townhouse") ~ "Townhouse",
+                               str_detect(HomeStyle, "^Garden") ~ "Garden",
+                               TRUE ~ HomeStyle),
+    HomeStyle_collapsed = fct_lump_n(HomeStyle, 10)) |>
+  tm_shape() +
+  tm_polygons("HomeStyle_collapsed",border.alpha = 0, colorNA = "ghostwhite") +
+      tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
+      tm_layout(title = "Architectural style of Madison buildings",
+              scale = .6)
+
+tmap_mode("plot")
+p3
+```
+
+Lumping together the less common styles under "Other" is a little unfortunate for this variable. It'll make use miss out on less common but interesting architectural styles such as "Spanish mediterranean" or "New style modern international". So let's at least have a table with all the styles and how common they are.
+
+```{r}
+buildings2 |> st_drop_geometry() |>
+  select(HomeStyle) |>
+  mutate(HomeStyle = case_when(str_detect(HomeStyle, "^Ranch") ~ "Ranch",
+                               str_detect(HomeStyle, "^Townhouse") ~ "Townhouse",
+                               str_detect(HomeStyle, "^Garden") ~ "Garden",
+                               TRUE ~ HomeStyle)) |>
+           group_by(HomeStyle) |>
+           tally(sort = T) |>
+  DT::datatable()
+
+```
+
+
