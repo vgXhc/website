@@ -57,8 +57,7 @@ tm_shape(walk_5min) +
   tm_shape(stops)+
   tm_dots(alpha = .5) +
   tm_layout(title = "5-minute walksheds around\nMadison Metro stops", 
-            title.position = c("LEFT", "TOP"),
-            fontfamily = "roboto") +
+            title.position = c("LEFT", "TOP")) +
   tm_credits("Basemap: OpenStreetMap Contributors, Stamen, Data: City of Madison, Visualization: Harald Kliems",
              position = c("right", "BOTTOM"),
              size = 200, align = "right", )
