@@ -1,0 +1,69 @@
+---
+title: "#30DayMapChallenge: 5-minute map"
+description: |
+  5-minute isochrones around Metro Transit bus stops
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: "2022-11-13"
+creative_commons: CC BY-SA
+categories:
+  - Madison (WI)
+  - transit
+  - map
+output: 
+  distill::distill_article:
+    code_folding: TRUE
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+Usually I don't have the time to participate in the [#30DayMapChallenge](https://30daymapchallenge.com/), but today I felt like putting together a map for challenge 13: 5-minute map. My interpretation of the prompt: How far can you walk within a 5 minutes from each of Madison Metro's ~2100 bus stops?
+
+```{r}
+library(tmap)
+library(sf)
+library(mapboxapi)
+library(tmaptools)
+
+# load bus stops from Madison Open Data portal
+# https://data-cityofmadison.opendata.arcgis.com/datasets/cityofmadison::metro-transit-bus-stops/explore
+stops <- st_read("www/data/Metro_Transit_Bus_Stops.geojson")
+
+# create isochrones. API key required
+# walk_5min <- mb_isochrone(stops,
+#                           profile = "walking",
+#                           time = 5)
+walk_5min <- readRDS("www/data/Metro_Transit_Bus_Stops.RDS")
+```
+
+```{r layout="l-body-outset"}
+# create bounding box around stop isochrones
+metro_bb <- bb(walk_5min)
+
+#download basemap
+basemap <- read_osm(metro_bb, zoom = 12, type = "stamen-watercolor")
+
+tmap_mode("plot")
+tmap_options(check.and.fix = TRUE)
+tm_shape(basemap)+
+  tm_rgb(alpha = .8) +
+tm_shape(walk_5min) +
+  tm_polygons(alpha = .3) +
+  tm_shape(stops)+
+  tm_dots(alpha = .5) +
+  tm_layout(title = "5-minute walksheds around\nMadison Metro stops", 
+            title.position = c("LEFT", "TOP"),
+            fontfamily = "roboto") +
+  tm_credits("Basemap: OpenStreetMap Contributors, Stamen, Data: City of Madison, Visualization: Harald Kliems",
+             position = c("right", "BOTTOM"),
+             size = 200, align = "right", )
+            # title.bg.color = "lightgrey",
+            # title.bg.alpha = .8, title.position = c("LEFT", "TOP"))
+
+```
+

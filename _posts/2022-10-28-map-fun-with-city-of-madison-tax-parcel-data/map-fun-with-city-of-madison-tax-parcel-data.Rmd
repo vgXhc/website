@@ -51,15 +51,22 @@ buildings2 <- buildings |>
 
 library(tmap)
 tmap_mode("plot")
+tmap_options(bg.color = "black", legend.text.color = "white", )
 p <- buildings2 |> 
-  select(BuiltYear_labels) |> 
+  select(BuiltYear) |> 
   tm_shape() +
-  tm_polygons(title = "", "BuiltYear_labels", border.alpha = 0,
-              colorNA = "ghostwhite") +
-  tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
+  tm_polygons(title = "", "BuiltYear", border.alpha = 0, style = "cont",
+              colorNA = "darkgrey") +
+  tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels", col = "white") +
   tm_layout(title = "How old are Madison’s buildings?",
-            scale = .6)
-p
+            scale = 1,
+            bg.color = "black",
+            legend.text.color = "white",
+            title.color = "white",
+            legend.title.color = "white")
+
+tmap_save(p, filename = "c:/Users/user1/Desktop/map.png", width = 12, height = 9, dpi = 600)
+
 ```
 
 It'd be nice to have an interactive map, but the dataset is too large to not crash most browsers (stay tuned; I'm working on alternatives).
