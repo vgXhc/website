@@ -49,13 +49,15 @@ establishments <- read_csv("data/Licensed_Establishment.csv")
 est_sf <- readRDS("data/licensed_establishment_geocoded.RDS")
 ```
 
-The dataset includes "all operational licensed establishments receiving routine inspections," that is, not just restaurants. A quick `tmap`:
+The dataset includes "all operational licensed establishments receiving routine inspections," that is, not just restaurants. A quick `tmap` (we have to filter out a food cart that's located in Milwaukee):
 
-```{r}
-tmap_mode("view")
+```{r fig.height=8, fig.width=6, layout="l-body-outset"}
+tmap_mode("plot")
 est_sf %>% 
+  filter(AddrCity != "MILWAUKEE") %>% 
   tm_shape() +
-  tm_dots("EstablishmentType")
+  tm_dots("EstablishmentType") +
+  tm_layout(legend.outside = T)
 ```
 
 
