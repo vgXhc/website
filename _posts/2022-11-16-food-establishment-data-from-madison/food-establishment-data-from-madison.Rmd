@@ -51,7 +51,7 @@ est_sf <- readRDS("data/licensed_establishment_geocoded.RDS")
 
 The dataset includes "all operational licensed establishments receiving routine inspections," that is, not just restaurants. A quick `tmap` (we have to filter out a food cart that's located in Milwaukee):
 
-```{r fig.height=8, fig.width=6, layout="l-body-outset"}
+```{r layout="l-body-outset"}
 tmap_mode("plot")
 est_sf %>% 
   filter(AddrCity != "MILWAUKEE") %>% 
@@ -63,7 +63,7 @@ est_sf %>%
 
 Now we filter to only establishments that are of the type "Primarily Restaurant" and create a heat map. Heat maps look cool, but I admittedly don't fully understand how `leaflet.extras` generates them under the hood -- certainly the map looks very different depending on the zoom level. 
 
-``` {r}
+``` {r layout="l-body-outset"}
 leaflet(est_sf %>% filter(EstablishmentType == "Primarily Restaurant")) %>% 
   addTiles() %>% 
   addHeatmap(radius = 6)
