@@ -21,6 +21,18 @@
       <media:content url="https://haraldkliems.netlify.app/posts/2022-11-13-30daymapchallenge-5-minute-map/30daymapchallenge-5-minute-map_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
     </item>
     <item>
+      <title>The color of roads</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2022-11-19-the-color-of-roads</link>
+      <description>What colors are most represented in the road names of Dane County?</description>
+      <category>Madison (WI)</category>
+      <category>Dane County (WI)</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2022-11-19-the-color-of-roads</guid>
+      <pubDate>Sun, 13 Nov 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2022-11-19-the-color-of-roads/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
+    <item>
       <title>Map fun with City of Madison tax parcel data</title>
       <dc:creator>Harald Kliems</dc:creator>
       <link>https://haraldkliems.netlify.app/posts/2022-10-28-map-fun-with-city-of-madison-tax-parcel-data</link>

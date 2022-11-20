@@ -1,0 +1,134 @@
+---
+title: "The color of roads"
+description: |
+  What colors are most represented in the road names of Dane County?
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: "2022-11-13"
+creative_commons: CC BY-SA
+categories:
+  - Madison (WI)
+  - Dane County (WI)
+  - map
+output: 
+  distill::distill_article:
+    code_folding: TRUE
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Sometimes you start a project and it ends up quite different from you had envisioned. I was going to do a quick and simple map for the [#30DayMapChallenge](https://30daymapchallenge.com/) theme "Blue." Pull road data for Dane County, filter for names that contain "blue," plot to a map with roads and road names. Sounds simple, right? Of course it is not. 
+
+
+Getting all the data in is straightforward with `tigris` and `tmaptools`.
+
+```{r}
+library(tigris)
+options(tigris_use_cache = TRUE)
+library(tmap)
+library(tmaptools)
+library(sf)
+library(tidyverse)
+library(extrafont)
+loadfonts(device = "all")
+
+wi_roads <- roads("WI", "Dane")
+
+# county shapefile to calculate bounding box for basemap download
+dane <- tigris::counties("WI", cb = T) %>% 
+  filter(NAME == "Dane")
+
+#get basemap from OSM
+dane_osm <- read_osm(bb(dane), zoom = 10, type = "stamen-toner", )
+
+blue_dane <- wi_roads |> 
+  mutate(blue = ifelse(str_detect(FULLNAME, "[Bb]lue"), "blue", "not blue")) |> 
+  filter(blue == "blue") #keep only blue roads
+
+blue_dane
+```
+
+But a map shows that more work is needed:
+
+```{r layout="l-body-outset"}
+tm_shape(dane_osm) +
+  tm_rgb() +
+  tm_shape(blue_dane) +
+  tm_lines("blue", lwd = 2) +
+  tm_text("FULLNAME", col = "blue")
+```
+
+Not good: The labels are too crowded, and you can see that a single way with the same name often is split into multiple segments, e.g. Blue Mounds Trail on the western edge of the map. I spent hours trying to fix these things through one of the various geometric or other tools from the `sf` package. But in the end, nothing worked. (If you have suggestions on how to combine adjoining ways, I'm all ears!) 
+
+Instead, I pivoted to making a map of _all_ the road name colors in Dane County. The colors are extracted with simple regular expressions. This works well for all colors except "red" -- RiveREDege Ct, LaREDo Ct, or EldRED St are just some of the false positives. For one county these can be cleaned manually, but for a larger dataset this would be a problem.
+
+```{r}
+# deal with false-positive reds
+not_red <- c("Riveredge Rd", 
+             "Laredo Ct",
+             "Eldred St", 
+             "Fredericksburg Ct", 
+             "Frederick Ct", 
+             "Arboredge Way", 
+             "Frederick Cir",
+             "Redan Dr",
+             "Meredith Way",
+             "Claredon Dr",
+             "Frederick St",
+             "Fredericksburg Ln",
+             "Meredithe Ave",
+             "Arboredge Way",
+             "Fredenberg Rd",
+             "Mildred Ct",
+             "Hubred Ln",
+             "Covered Bridge Trl",
+             "Saddle Bred Ln",
+             "Saddlebred Ln")
+
+blue_dane <- wi_roads |> 
+  mutate(blue = case_when(str_detect(FULLNAME, "[Bb]lue") ~ "blue",
+                          str_detect(FULLNAME, "[Bb]lack") ~ "black",
+                          str_detect(FULLNAME, "[Rr]ed") ~ "red",
+                          str_detect(FULLNAME, "[Yy]ellow") ~ "yellow",
+                          str_detect(FULLNAME, "[Bb]rown") ~ "brown",
+                          str_detect(FULLNAME, "[Gg]r[ae]y") ~ "grey",
+                          str_detect(FULLNAME, "[Gg]reen") ~ "green",
+                          T ~ NA_character_)) |> 
+  filter(!is.na(blue) & !blue %in% not_red)
+```
+
+Which color is most common?
+
+```{r}
+blue_dane |> 
+  st_drop_geometry() |>
+  group_by(blue) |> 
+  tally(sort = T) |> 
+  knitr::kable()
+```
+
+Green! And here are the two maps, one dynamic and one static:
+
+```{r}
+tmap_mode("view")
+tm_shape(blue_dane) +
+  tm_lines("blue",lwd = 3, alpha = .8,  id = "FULLNAME") +
+  tm_layout(title = "The Color of Dane County Road Names")
+   
+```
+
+
+```{r layout="l-body-outset"}
+tmap_mode("plot")
+tm_shape(dane_osm) +
+  tm_rgb(alpha = .7) +
+  tm_shape(blue_dane) +
+  tm_lines("blue",lwd = 3, alpha = .8) +
+  tm_layout(title = "The Color of Dane County Road Names", fontfamily = "Roboto Condensed", title.bg.color = "lightgrey", title.bg.alpha = .8)
+```
+
+
