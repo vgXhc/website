@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 13 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 16 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>#30DayMapChallenge: Restaurant heat map of Madison</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2022-11-16-food-establishment-data-from-madison</link>
+      <description>Challenge 15: Food/drink</description>
+      <category>Madison (WI)</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2022-11-16-food-establishment-data-from-madison</guid>
+      <pubDate>Wed, 16 Nov 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2022-11-16-food-establishment-data-from-madison/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>#30DayMapChallenge: 5-minute map</title>
       <dc:creator>Harald Kliems</dc:creator>

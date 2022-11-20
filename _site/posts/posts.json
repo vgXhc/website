@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2022-11-16-food-establishment-data-from-madison/",
+    "title": "#30DayMapChallenge: Restaurant heat map of Madison",
+    "description": "Challenge 15: Food/drink",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2022-11-16",
+    "categories": [
+      "Madison (WI)",
+      "map"
+    ],
+    "contents": "\r\n\r\n\r\nShow code\r\n\r\nlibrary(tidyverse)\r\nlibrary(sf)\r\nlibrary(tmap)\r\nlibrary(mapboxapi)\r\nlibrary(leaflet)\r\nlibrary(leaflet.extras)\r\n\r\n\r\nAnother quick #30DayMapChallenge post. The prompt for day 15: Food/drink. Public Health Madison & Dane County have a dataset on health inspections which includes all licensed restaurants in the county. The data are not geocoded, and so I use the mapboxapi package to geocode the locations:\r\n\r\n\r\nShow code\r\n\r\nestablishments <- read_csv(\"data/Licensed_Establishment.csv\")\r\n\r\n# geocode and save geocoded data\r\n# est_sf <- establishments %>% \r\n#   rowwise() %>% \r\n#   mutate(geometry = mb_geocode(AddressFull, output = \"sf\"),\r\n#          geometry = geometry$geometry)\r\n# \r\n# est_sf <- st_sf(est_sf)\r\n# \r\n# write_rds(est_sf, file = \"data/licensed_establishment_geocoded.RDS\")\r\nest_sf <- readRDS(\"data/licensed_establishment_geocoded.RDS\")\r\n\r\n\r\nThe dataset includes “all operational licensed establishments receiving routine inspections,” that is, not just restaurants. A quick tmap (we have to filter out a food cart that’s located in Milwaukee):\r\n\r\n\r\nShow code\r\n\r\ntmap_mode(\"plot\")\r\nest_sf %>% \r\n  filter(AddrCity != \"MILWAUKEE\") %>% \r\n  tm_shape() +\r\n  tm_dots(\"EstablishmentType\") +\r\n  tm_layout(legend.outside = T)\r\n\r\n\r\n\r\nNow we filter to only establishments that are of the type “Primarily Restaurant” and create a heat map. Heat maps look cool, but I admittedly don’t fully understand how leaflet.extras generates them under the hood – certainly the map looks very different depending on the zoom level.\r\n\r\n\r\nShow code\r\n\r\nleaflet(est_sf %>% filter(EstablishmentType == \"Primarily Restaurant\")) %>% \r\n  addTiles() %>% \r\n  addHeatmap(radius = 6)\r\n\r\n\r\n\r\n\r\n\r\n\r\n",
+    "preview": "posts/2022-11-16-food-establishment-data-from-madison/distill-preview.png",
+    "last_modified": "2022-11-19T19:43:55-06:00",
+    "input_file": {},
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2022-11-13-30daymapchallenge-5-minute-map/",
     "title": "#30DayMapChallenge: 5-minute map",
     "description": "5-minute isochrones around Metro Transit bus stops",
