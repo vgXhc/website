@@ -20,6 +20,6 @@ All opinions here are my own.
 
 [kliems@gmail.com](mailto:kliems@gmail.com)
 
-# Follow me on Twitter
+# Follow me on Mastodon
 
-[https://twitter.com/HaraldKliems](https://twitter.com/HaraldKliems)
+<a href="https://fosstodon.org/@HaraldKliems" rel="me">Follow me on Mastodon!</a>.
