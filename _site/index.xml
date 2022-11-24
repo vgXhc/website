@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 19 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Coffeeneuring Challenge 2022</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2022-11-23-coffeeneuring-challenge-2022</link>
+      <description>Making a map of this year's season</description>
+      <category>coffee</category>
+      <category>map</category>
+      <category>biking</category>
+      <guid>https://haraldkliems.netlify.app/posts/2022-11-23-coffeeneuring-challenge-2022</guid>
+      <pubDate>Wed, 23 Nov 2022 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2022-11-23-coffeeneuring-challenge-2022/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>The color of roads</title>
       <dc:creator>Harald Kliems</dc:creator>
