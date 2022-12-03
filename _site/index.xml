@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 23 Nov 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Bicycle and pedestrian intersection crashes in Madison</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2022-12-03-bicycle-and-pedestrian-intersection-crashes-in-madison</link>
+      <description>A quick look at crash data to support efforts to no longer allow right turns on red.</description>
+      <category>Madison (WI)</category>
+      <category>Vision Zero</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2022-12-03-bicycle-and-pedestrian-intersection-crashes-in-madison</guid>
+      <pubDate>Sat, 03 Dec 2022 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Coffeeneuring Challenge 2022</title>
       <dc:creator>Harald Kliems</dc:creator>

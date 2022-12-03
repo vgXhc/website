@@ -22,7 +22,7 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-Almost every year I participate in the [Coffeeneuring Challenge]. You can find out more what coffeeneuring is and check out my past adventures over on my [bike blog](http://ride-or-pie.blogspot.com/search/label/coffeeneuring). But basically you have to bike to seven different coffee locations over the course of about six weeks. Now that the 2022 season is over, it seemed like a good opportunity to use my coffeeneuring data for the [#30DayMapChallenge](https://30daymapchallenge.com/).
+Almost every year I participate in the [Coffeeneuring Challenge](https://chasingmailboxes.com/2022/09/24/coffeeneuring-challenge-year-12/). You can find out more what coffeeneuring is and check out my past adventures over on my [bike blog](http://ride-or-pie.blogspot.com/search/label/coffeeneuring). But basically you have to bike to seven different coffee locations over the course of about six weeks. Now that the 2022 season is over, it seemed like a good opportunity to use my coffeeneuring data for the [#30DayMapChallenge](https://30daymapchallenge.com/).
 
 ```{r}
 library(googlesheets4)
