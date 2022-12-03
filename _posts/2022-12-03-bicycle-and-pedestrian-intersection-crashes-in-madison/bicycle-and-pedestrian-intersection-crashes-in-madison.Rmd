@@ -22,10 +22,9 @@ knitr::opts_chunk$set(echo = FALSE)
 ```
 
 There are some efforts underway to no longer allow right turns on red in Madison.
-For people walking and biking, right-turning motor vehicles pose a threat, as is demonstrated in [this video](https://www.youtube.com/watch?v=AhLZXqmP9fw) of an intersection where I myself recently had a very close call.
+For people walking and biking, right-turning motor vehicles pose a threat, as is demonstrated in [this video](https://www.youtube.com/watch?v=AhLZXqmP9fw) of an intersection where I myself recently had a very close call. Other cities in the US, such as Washington (DC) or cambridge (MA) are in the process of eliminating right turns on red.
 
-I offered to help with some crash data analysis.
-It is difficult to determine how many crashes can be directly attributed to right on red, we can at least answer the question: How many crashes involving people walking and biking occur at signalized intersections?
+For our local effort, I offered to help with some crash data analysis. It is difficult to determine how many crashes can be directly attributed to right on red, we can at least answer the question: How many crashes involving people walking and biking occur at signalized intersections?
 
 # Crash data
 
@@ -139,9 +138,9 @@ all_crashes_sf <- st_as_sf(all_crashes, coords = c("LONGITUDE", "LATITUDE"))
 We map again to make sure it looks good:
 
 ```{r}
-
+tmap_mode("plot")
 tm_shape(all_crashes_sf) +
-  tm_dots("bike_ped")
+  tm_dots("bike_ped", size = 1)
 
 ```
 
@@ -172,22 +171,30 @@ crashes_at_signals <- all_crashes_sf[st_within(all_crashes_sf, st_buffer(signals
 
 ```
 
-Now we can map all crashes at signalized intersections:
+Now we can map all crashes at signalized intersections, separated into bike and bike crashes:
 
-```{r}
+## Bike crashes at signalized intersections
+
+```{r layout="l-body-outset", preview=TRUE}
 popup_vars <- c("DOCTNMBR", "bike_ped", "severity", "ACCDDATE","ACCDHOUR","ONRDWY","ONRDWYDIR","ATRDWY","INTDIS","INTDIR","TOTFATL","TOTINJ","TOTVEH","MNRCOLL","ACCDTYPE","AGGRFLAG","BUSFLAG","CMVFLAG","CONSZONE","DISTRCTD","IMPAIRED","INTRFLAG","LANEDP1U","LANEDP2U","SPEEDFLAG","TEENDRVR","65+DRVR")
 
-
-tm_shape(crashes_at_signals) +
+tmap_mode("view")
+tm_shape(crashes_at_signals |> filter(bike_ped == "bike")) +
   tm_dots("severity",
           popup.vars = popup_vars) +
-  tm_facets(by = "bike_ped")
+  tm_layout(main.title = "Bike intersection crashes")
+```
+## Ped crashes at signalized intersections
+```{r layout="l-body-outset"}
+tm_shape(crashes_at_signals |> filter(bike_ped == "ped")) +
+  tm_dots("severity",
+          popup.vars = popup_vars) +
+  tm_layout(main.title = "Pedestrian intersection crashes")
 ```
 
 Some summary statistics.
 Overall, there were `r nrow(all_crashes)` intersection crashes involving people walking and biking between January 2012 and now.
-Out of those, `r nrow(crashes_at_signals)` (`r round(nrow(crashes_at_signals)/nrow(all_crashes)*100, 0)`%) happened at signalized intersections.
-is the number of all intersection crashes, grouped by ped/bike and injury severity:
+Out of those, `r nrow(crashes_at_signals)` (`r round(nrow(crashes_at_signals)/nrow(all_crashes)*100, 0)`%) happened at signalized intersections. These are the numbers of all intersection crashes, grouped by ped/bike and injury severity:
 
 ```{r}
 all_crashes |> 
