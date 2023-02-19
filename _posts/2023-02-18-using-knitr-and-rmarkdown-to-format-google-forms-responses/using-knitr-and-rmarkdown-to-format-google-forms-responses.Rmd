@@ -1,0 +1,275 @@
+---
+title: "Candidate questionnaires for local elections"
+description: |
+  Using `knitr` and `RMarkdown` for formatting form responses
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2023-02-18
+creative_commons: CC BY-SA
+categories:
+  - Madison (WI)
+  - Google Forms
+  - Madison Bikes
+  - RMarkdown
+  - knitr
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The non-profit I am involved with, [Madison Bikes](https://www.madisonbikes.org), has been doing candidate questionnaires for local elections for several election cycles now.
+With each iteration, we learn some things about the best process to make this happen.
+How do you keep track of candidates?
+How do you best collect responses?
+And then how do you present those responses to your community?
+
+For the 2023 spring primary and general elections, we used a new process that takes some of those lessons learned and saved us a lot of work. In this post, I will describe the process with the goal of documenting for ourselves and also allowing others to adapt it to their own purposes. The first sections are about the logistics and of interest to anyone who wants to do candidate questionnaires. The second part gets into the technical process of using R programming to take the responses and format them.
+
+If you want to see what the end result looks like before reading the post, here's the [link](https://www.madisonbikes.org/madison-spring-elections-2023/).
+
+# Identifying candidates and their contact information
+
+The first step to a candidate questionnaire is to keep track of who is running.
+The timeline for filing for candidacy is short:
+
+|                   |                                                                                  |
+|------------------|------------------------------------------------------|
+| December 1, 2022  | First day nomination papers may be circulated.                                   |
+| December 23, 2022 | Deadline for incumbents not seeking re-election to file Notice of Non-Candidacy. |
+| January 3, 2023   | All papers and forms due in City Clerk's Office at 5 p.m.                        |
+| January 6, 2023   | Deadline to challenge nomination papers.                                         |
+
+: Source: [City of Madison Clerk's Office](https://www.cityofmadison.com/clerk/elections-voting/candidates-campaigns/running-for-local-office)
+
+I set up a [Google Sheet](https://docs.google.com/spreadsheets/d/1NkaCAyQDndqsleuJ4TnkbdzRc8cO5Tg4lrpr2VVt5J8/edit#gid=0) early on and manually kept it up to date as I saw new candidates announcing (or incumbents announcing their non-candidacy), mostly relying on the Clerk's Office's [candidate filings](https://www.cityofmadison.com/clerk/elections-voting/candidates-campaigns/candidate-filings) but also media coverage.
+As we got closer to the deadline, I also started collecting candidates' websites, social media links, and email addresses.
+This involved a lot of internet searching and was very time consuming.
+I later found out that candidates provide an email address to the Clerk's Office on their official paperwork.
+When we do this again for the next election cycle, I would no longer manually search and just wait until after the deadline.
+
+# Developing questions
+
+In previous years Madison Bikes did their own questionnaire.
+When we learned that [Madison is for People](https://www.madisonisforpeople.org/), a housing advocacy organization, was also interested in doing a questionnaire, we connected with them to coordinate efforts.
+We also got [Madison Area Bus Advocates](https://busadvocates.org/) on board and developed a joint questionnaire.
+Partnering with other organization has the advantage of being able to share some of the logistical work, but it also creates additional coordination work.
+Overall, this went very smoothly.
+We needed to make sure that the questionnaire didn't become too burdensome for the candidates, while still providing meaningful content for our organizations' respective audiences.
+In the end, each organization provided three to four questions, plus three short joint questions about how candidates get around the city.
+We had slightly different questions for mayoral candidates and candidate for the common council.
+
+# Distributing the questions, collecting answers
+
+We split up the work of emailing candidates between three people (Thanks, Connor, Will, and Jonathan!).
+Emails were sent individually, and I think this is something that in the future we could consider automating, e.g. by using Mailchimp or Qualtrics.[^1]
+We tracked the send-out in the same Google Sheet where we kept the contact information.
+
+[^1]: On the other hand, this may decrease response rates.
+
+We discussed several options for receiving candidate responses.
+Should they just sent their responses in an email?
+Put them into a Google Doc?
+Based on our prior experience we decided to go with a Google Form.
+With over 40 candidates total, anything else would likely have turned into a nightmare.
+The Google Form had a text field for the candidate's name, a dropdown menu for their district (don't use a text field for this!), and text fields for each candidate question.
+We carefully tested the survey, for example making sure that the respondents didn't need a Google account.
+Then a link to the survey was included in the emails.
+
+# Turning a form into HTML
+
+The deadline for candidates to respond was only a week before the primary election date.
+Turning the form responses into nicely formatted content for our website quickly was therefore very important.
+I ended up using `RMarkdown` and `knitr` as the main tools for this, relying heavily on the wonderful "[R Markdown: The Definitive Guide](https://bookdown.org/yihui/rmarkdown/)" and the "[R Markdown Cookbook](https://bookdown.org/yihui/rmarkdown-cookbook/)".
+It's very much possible that there are better/different tools for this out there, but RMarkdown is what I was familiar with and the final product turned out well.
+You can find the repository with all code on Github: <https://github.com/vgXhc/sheets-2-wp>
+
+The Madison Bikes website runs on WordPress, which limited our options of what we could do.
+In the last round of candidate questionnaires, [Ben](https://orangebikelabs.com/) had created [a script](https://github.com/madisonbikes/qa_generator) to create html tags around the responses read in from a csv file.
+We then copied that html into a WordPress custom html block.
+This seemed to work well enough and so I also aimed to create an html document to paste into WordPress, but instead of bare html it would be an html document generated by knitr.
+
+Let's walk through this step by step.
+There are three main files:
+
+-   [`combined-report.Rmd`](https://github.com/vgXhc/sheets-2-wp/blob/main/combined-report.Rmd): This is the file that eventually gets knitted and produces the html and pdf output
+
+-   [`output-council-child.Rmd`](https://github.com/vgXhc/sheets-2-wp/blob/main/output_council_child.Rmd): The template for generating content blocks within `combined-report.Rmd` for council candidates.
+
+-   [`outout-mayor-child.Rmd`](https://github.com/vgXhc/sheets-2-wp/blob/main/output_mayor_child.Rmd): Same, but for mayoral candidates
+
+`combined-report.Rmd` has a full `yaml` header, both for html and pdf output.[^2]
+
+[^2]: Using the knit button in RStudio only seems to produce the first specified output format.
+    So you may have to manually edit the `yaml` header.
+    
+```
+---
+title: "Candidate Q&A"
+output: 
+  pdf_document:
+    toc: TRUE
+    toc_depth: 1
+  html_document:
+    toc: TRUE
+    toc_depth: 1
+    toc_float: true
+documentclass: scrreport
+---
+```
+
+One thing we didn't have last time was a table of contents (TOC), which made it difficult to navigate through the Q&A.
+The `toc: true` option easily generates the TOC.
+A floating TOC would have been even better (it really helps to keep track of where in the document you are) , but since that relies on Bootstrap and jQuery, it doesn't work in a WordPress html block.
+Since Madison is for People and Madison Area Bus Advocates use different content management systems, I rendered a version with and without the floating TOC.
+For the pdf version, I specified the LaTeX document class `scrreport` from the KOMA-Script bundle.
+
+After the `yaml` header there is a bunch of code to prep the data.
+The form responses are read in with the [`googlesheets4`](https://googlesheets4.tidyverse.org/) package.
+They come in as wide data, with one row for each candidate and one column for each question.
+The code then transforms the data into a long format, with one row for each question and answer.
+To help with formatting, the question is split into a "topic" (everything before the colon) and the actual question.[^3]
+There's some duplication in the code that could be cleaned up with a function.
+
+[^3]: For the next iteration, it may make sense to fix this in the form itself.
+
+```{r echo=TRUE}
+library(tidyverse)
+library(googlesheets4)
+library(here)
+library(knitr)
+responses_council <-
+  read_sheet(
+    "https://docs.google.com/spreadsheets/d/1zMTl2BQzQ231SFjN8RRKvZm3PidXSoS2tVDFXSn5AwU/",
+    col_types = "cccccccccccccccc"
+  ) |>
+  mutate(
+    district = factor(
+      `Which district are you running for?`,
+      c(
+        "District 1",
+        "District 2",
+        "District 3",
+        "District 4",
+        "District 5",
+        "District 6",
+        "District 7",
+        "District 8",
+        "District 9",
+        "District 10",
+        "District 11",
+        "District 12",
+        "District 13",
+        "District 14",
+        "District 15",
+        "District 16",
+        "District 17",
+        "District 18",
+        "District 19",
+        "District 20"
+      )
+    ),
+    district_short = str_remove(district, "istrict ")
+  ) |>
+  arrange(district, `Your name`)
+responses_mayor <-
+  read_sheet(
+    "https://docs.google.com/spreadsheets/d/1T3hQ20IDetkjQ71qj5nZqRiZ8fZ8XHoKDCiUKaIPs9Y/"
+  )
+responses_council_long <- responses_council |>
+  pivot_longer(
+    cols = 6:ncol(responses_council) - 2,
+    names_to = "question",
+    values_to = "answer"
+  ) |>
+  rename(name = `Your name`) |>
+  mutate(
+    topic = str_extract(question, "^(.*?)\\:"),
+    # everything before the colon
+    question = if_else(is.na(topic), question, str_remove(question, topic))
+  )
+responses_mayor_long <- responses_mayor |>
+  mutate(district = "Mayoral candidate",
+         district_short = "mayoral cand.") |>
+  pivot_longer(
+    cols = 3:ncol(responses_mayor),
+    names_to = "question",
+    values_to = "answer"
+  ) |>
+  rename(name = `Your name`) |>
+  mutate(
+    topic = str_extract(question, "^(.*?)\\:"),
+    # everything before the colon
+    question = if_else(is.na(topic), question, str_remove(question, topic))
+  )
+
+```
+
+```{r echo=TRUE}
+str(responses_council)
+str(responses_council_long)
+```
+
+The next step took me a while to figure out: How can I use the long data frame and iterate both over each candidate but also over each question to produce the desired markdown content?
+I first tried rendering separate html documents for each candidate, but the downside of that approach is that then I'd have to set up separate pages on WordPress and copy-and-paste dozens of html files.
+Rendering a single html file required a different approach: the `knitr::knit_child` function.
+The [documentation in the "R Markdown Cookbook"](https://bookdown.org/yihui/rmarkdown-cookbook/child-document.html) wasn't super easy to follow, but eventually I got it!
+
+First we define a function that take the candidate name as its input.
+The responses are then filtered to just those of that candidate.
+The `district` and `district_short` variables for that candidate are created--those are used for formatting the output.
+Then comes the key piece: we ask knitr to knit a child document using the `output_council_child.Rmd` template.
+
+```{r}
+knit_answer_child <- function(x){
+  responses <- responses_council_long |> 
+    filter(name == x)
+  district <- responses$district[[1]]
+  district_short <- responses$district_short[[1]]
+  knitr::knit_child(
+    'output_council_child.Rmd', envir = environment(), quiet = TRUE
+  )
+}
+```
+
+The child template is pretty simple: No `yaml` header and just a bunch of markdown plus inline R code to format the output.
+Here are the first few lines.
+
+```{r eval=FALSE, include=FALSE}
+# `r paste0(district, ": ", x)`
+
+## How candidates move around the city
+
+### `r responses$question[1]`
+_`r paste0(x, " (", district_short, "):")`_ `r responses$answer[1]`
+
+### `r responses$question[2]`
+_`r paste0(x, " (", district_short, "):")`_ `r responses$answer[2]`
+
+### `r responses$question[3]`
+_`r paste0(x, " (", district_short, "):")`_ `r responses$answer[3]`
+```
+
+Now that we have the function to knit the child document defined, we can just iterate over all the candidate names with `lapply` and then turn the list output into simple text separated by line breaks (the `\n`).
+Because of the chunk option `results='asis'` the Markdown generated just gets inserted into the rest of the Markdown in `combined-report.Rmd` and then knitted into html (or pdf).
+
+```
+{r results='asis', echo=FALSE}
+res <- lapply(responses_mayor$`Your name`, knit_answer_child_mayor)
+cat(unlist(res), sep = '\n')
+```
+
+Now we just do the same for the common council candidates (different child template because the number of questions is different) and that's it!
+Now you can open the generated html file in your text editor (or your web browser's source viewer) and copy the content into the custom html block in WordPress!
+And this is what the end result looks like: <https://www.madisonbikes.org/madison-spring-elections-2023/>
+
+# Enhancements
+
+One key enhancement would be to automate the publishing to WordPress.
+Rather than copying-and-pasting the html into WordPress, wouldn't it be nice if the content could be pushed through the WordPress API?
+There are some packages and tutorials on how to do this within R, but the packages are very old and I didn't have much luck with the tutorials.

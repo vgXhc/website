@@ -7,7 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 03 Dec 2022 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 18 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Candidate questionnaires for local elections</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-02-18-using-knitr-and-rmarkdown-to-format-google-forms-responses</link>
+      <description>Using `knitr` and `RMarkdown` for formatting form responses</description>
+      <category>Madison (WI)</category>
+      <category>Google Forms</category>
+      <category>Madison Bikes</category>
+      <category>RMarkdown</category>
+      <category>knitr</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-02-18-using-knitr-and-rmarkdown-to-format-google-forms-responses</guid>
+      <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Bicycle and pedestrian intersection crashes in Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
