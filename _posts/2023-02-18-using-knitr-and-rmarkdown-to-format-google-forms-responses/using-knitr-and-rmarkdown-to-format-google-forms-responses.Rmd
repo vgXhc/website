@@ -17,11 +17,14 @@ categories:
 output:
   distill::distill_article:
     self_contained: false
+    fig_caption: FALSE
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
+
+![A blue yard sign saying "Vote" with an arrow pointing right in front of Memorial Union. The arrow appears to be pointing at a number of bike racks covered in snow but still well occupied with bikes.](https://i0.wp.com/www.madisonbikes.org/wp-content/uploads/2023/02/IMG_20190219_114607777-scaled.jpg)
 
 The non-profit I am involved with, [Madison Bikes](https://www.madisonbikes.org), has been doing candidate questionnaires for local elections for several election cycles now.
 With each iteration, we learn some things about the best process to make this happen.
