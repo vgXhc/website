@@ -19,7 +19,12 @@ output:
 ---
 
 
+
 The City of Madison's open data portal has a [tax parcel dataset](https://data-cityofmadison.opendata.arcgis.com/datasets/cityofmadison::tax-parcels-assessor-property-information/explore). Tax information, however, is not the only thing included in the dataset. There are over 140 variables and for this post we will look at three of them: The year the structure on the parcel was built, the use of the property, and the architectural style. 
+
+<aside>
+Correction 2023-02-21: The [originally published version of this post](https://github.com/vgXhc/website/commit/e6957b5a5899c6e80b607ab9ac6c007590451c78#diff-652bca41092cef0f9b4c86bde658259b75eaf2acabeda75faa614822b30faafb) used the `BuiltYear` variable for the map of the age of buildings. Jim Kreft [pointed out](https://social.coop/@jimkreft/109897130750862067) that there is another variable in the dataset, `Maxconstru`, which has more complete data. The code and map have been updated accordingly.
+</aside>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
@@ -43,19 +48,19 @@ Let's start with the `YearBuilt` variable. This allows us a glimpse into the dev
 ```{r, layout="l-page"}
 
 buildings2 <- buildings |> 
-  mutate(BuiltYear = na_if(YearBuilt, 0),
-         BuiltYear_labels = cut(BuiltYear,
+  mutate(MaxConstru = na_if(MaxConstru, 0),
+         MaxConstru_labels = cut(MaxConstru,
                                 breaks = c(-Inf, 1900, 1945, 1980, 2000, 2010, Inf),
                                 labels = c("pre-1900", "1900 to 1944", "post-WWII to 1979", "1980 to 1999", "2000 to 2009", "2010 and newer"),
                                 ordered_result = T))
 
 library(tmap)
 tmap_mode("plot")
-tmap_options(bg.color = "black", legend.text.color = "white", )
+tmap_options(bg.color = "black", legend.text.color = "white")
 p <- buildings2 |> 
-  select(BuiltYear) |> 
+  select(MaxConstru_labels) |> 
   tm_shape() +
-  tm_polygons(title = "", "BuiltYear", border.alpha = 0, style = "cont",
+  tm_polygons(title = "", "MaxConstru_labels", border.alpha = 0, style = "cont",
               colorNA = "darkgrey") +
   tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels", col = "white") +
   tm_layout(title = "How old are Madison’s buildings?",
@@ -65,8 +70,8 @@ p <- buildings2 |>
             title.color = "white",
             legend.title.color = "white")
 
-tmap_save(p, filename = "c:/Users/user1/Desktop/map.png", width = 12, height = 9, dpi = 600)
-
+# tmap_save(p, filename = "c:/Users/user1/Desktop/map.png", width = 12, height = 9, dpi = 600)
+p
 ```
 
 It'd be nice to have an interactive map, but the dataset is too large to not crash most browsers (stay tuned; I'm working on alternatives).
@@ -81,19 +86,30 @@ The age of a structure only tells us part of a story. How is a building use, and
 ```{r, layout="l-page"}
 
 
-  p2 <- buildings2 |>
-    select(PropertyUs) |>
-    mutate(PropertyUs = case_when(str_detect(PropertyUs, "Apartment$") ~ "Apartment",
-                                  str_detect(PropertyUs, "^Condominium") ~ "Condominium",
-                                  TRUE ~ PropertyUs)) |>
-    mutate(PropertyUs_collapsed = fct_lump_n(PropertyUs, 10)) |>
-    tm_shape() +
-    tm_polygons(title = "", "PropertyUs_collapsed",
-                border.alpha = 0,
-                colorNA = "ghostwhite") +
-    tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
-    tm_layout(title = "Property use for tax parcels in Madison",
-              scale = .6)
+p2 <- buildings2 |>
+  select(PropertyUs) |>
+  mutate(PropertyUs = case_when(
+    str_detect(PropertyUs, "Apartment$") ~ "Apartment",
+    str_detect(PropertyUs, "^Condominium") ~ "Condominium",
+    TRUE ~ PropertyUs
+  )) |>
+  mutate(PropertyUs_collapsed = fct_lump_n(PropertyUs, 10)) |>
+  tm_shape() +
+  tm_polygons(
+    title = "",
+    "PropertyUs_collapsed",
+    border.alpha = 0,
+    colorNA = "ghostwhite"
+  ) +
+  tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
+  tm_layout(
+    title = "Property use for tax parcels in Madison",
+    scale = .6,
+    bg.color = "black",
+    legend.text.color = "white",
+    title.color = "white",
+    legend.title.color = "white"
+  )
 
 tmap_mode("plot")
 p2
@@ -109,16 +125,28 @@ A third and final map looks at the "home style."
 ```{r, layout="l-page"}
 p3 <- buildings2 |>
   select(HomeStyle) |>
-  mutate(HomeStyle = case_when(str_detect(HomeStyle, "^Ranch") ~ "Ranch",
-                               str_detect(HomeStyle, "^Townhouse") ~ "Townhouse",
-                               str_detect(HomeStyle, "^Garden") ~ "Garden",
-                               TRUE ~ HomeStyle),
-    HomeStyle_collapsed = fct_lump_n(HomeStyle, 10)) |>
+  mutate(
+    HomeStyle = case_when(
+      str_detect(HomeStyle, "^Ranch") ~ "Ranch",
+      str_detect(HomeStyle, "^Townhouse") ~ "Townhouse",
+      str_detect(HomeStyle, "^Garden") ~ "Garden",
+      TRUE ~ HomeStyle
+    ),
+    HomeStyle_collapsed = fct_lump_n(HomeStyle, 10)
+  ) |>
   tm_shape() +
-  tm_polygons("HomeStyle_collapsed",border.alpha = 0, colorNA = "ghostwhite") +
-      tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
-      tm_layout(title = "Architectural style of Madison buildings",
-              scale = .6)
+  tm_polygons("HomeStyle_collapsed",
+              border.alpha = 0,
+              colorNA = "ghostwhite") +
+  tm_credits("Map: @HaraldKliems. Data: City of Madison Tax Parcels") +
+  tm_layout(
+    title = "Architectural style of Madison buildings",
+    scale = .6,
+    bg.color = "black",
+    legend.text.color = "white",
+    title.color = "white",
+    legend.title.color = "white"
+  )
 
 tmap_mode("plot")
 p3
