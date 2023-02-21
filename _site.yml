@@ -14,8 +14,6 @@ navbar:
       href: projects.html
     - icon: fa fa-mastodon
       href: https://fosstodon.org/@haraldkliems
-    - icon: fa fa-twitter
-      href: https://twitter.com/HaraldKliems/
     - icon: fa fa-rss
       href: index.xml
 output: distill::distill_article
