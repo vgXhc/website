@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Understanding Raw and Adjusted Data in the National Transit Database</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-03-26-understanding-adjusted-data-in-the-national-transit-database</link>
+      <description>A comparison of Madison Metro ridership data released in the National Transit Database at different points in time.</description>
+      <category>Madison (WI)</category>
+      <category>transit</category>
+      <category>National Transit Database</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-03-26-understanding-adjusted-data-in-the-national-transit-database</guid>
+      <pubDate>Thu, 06 Apr 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2023-03-26-understanding-adjusted-data-in-the-national-transit-database/understanding-adjusted-data-in-the-national-transit-database_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Map fun with City of Madison tax parcel data</title>
       <dc:creator>Harald Kliems</dc:creator>
