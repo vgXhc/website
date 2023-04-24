@@ -7,7 +7,21 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 06 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 24 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Before and after the Metro Network Redesign</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/before-and-after-the-metro-network-redesign</link>
+      <description>Comparing transit accessibility with the r5r package</description>
+      <category>Madison (WI)</category>
+      <category>transit</category>
+      <category>GTFS</category>
+      <category>accessibility</category>
+      <category>r5r</category>
+      <guid>https://haraldkliems.netlify.app/posts/before-and-after-the-metro-network-redesign</guid>
+      <pubDate>Mon, 24 Apr 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/before-and-after-the-metro-network-redesign/img/metro_image.png" medium="image" type="image/png" width="819" height="482"/>
+    </item>
     <item>
       <title>Understanding Raw and Adjusted Data in the National Transit Database</title>
       <dc:creator>Harald Kliems</dc:creator>
