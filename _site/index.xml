@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 24 Apr 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 23 May 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Rent and rent burden in Madison, Wisconsin</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-05-23-rent-and-rent-burden-in-madison</link>
+      <description>Some quick charts for Madison and how it compares to other US cities</description>
+      <category>housing</category>
+      <category>Madison (WI)</category>
+      <category>American Community Survey</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-05-23-rent-and-rent-burden-in-madison</guid>
+      <pubDate>Tue, 23 May 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2023-05-23-rent-and-rent-burden-in-madison/rent-and-rent-burden-in-madison_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Before and after the Metro Network Redesign</title>
       <dc:creator>Harald Kliems</dc:creator>
