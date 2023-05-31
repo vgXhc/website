@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 23 May 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 31 May 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>`ntdr 0.3.0`: Now available on CRAN</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-05-31-ntdr-an-r-package-for-transit-data</link>
+      <description>An R package for National Transit Database data</description>
+      <category>transit</category>
+      <category>National Transit Database</category>
+      <category>ntdr</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-05-31-ntdr-an-r-package-for-transit-data</guid>
+      <pubDate>Wed, 31 May 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2023-05-31-ntdr-an-r-package-for-transit-data/ntdr-an-r-package-for-transit-data_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Rent and rent burden in Madison, Wisconsin</title>
       <dc:creator>Harald Kliems</dc:creator>

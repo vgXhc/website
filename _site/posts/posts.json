@@ -1,5 +1,28 @@
 [
   {
+    "path": "posts/2023-05-31-ntdr-an-r-package-for-transit-data/",
+    "title": "`ntdr 0.3.0`: Now available on CRAN",
+    "description": "An R package for National Transit Database data",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2023-05-31",
+    "categories": [
+      "transit",
+      "National Transit Database",
+      "ntdr"
+    ],
+    "contents": "\r\nFor the past few months I have been working on my first R package. Like with many packages, my motivation came from repeatedly doing the same data cleaning operations, getting annoyed by it, and then writing code to make it less annoying. Now the package is available on CRAN and it’s time for a brief post about the package.\r\nWhat the package does\r\nntdr currently only has one purpose: Retrieve the latest monthly National Transit Database ridership data and provide it in a tidy data format. Rather than downloading an unwieldy Excel file with hundreds of columns, just use the get_ntd() command to get data on ridership and related metrics.\r\nHow do I use the package\r\nThe best place to start is the package’s website, especially the “Get Started” article. The package itself is simple, but the article provides some useful information about the NTD data and its quirks and limitations. Here’s a very simple example to install the package, retrieve bus ridership in Madison, and plot the data:\r\n\r\n\r\n\r\nFeedback appreciated\r\nThis is my very first package, and I appreciate feedback, feature requests and bug reports!\r\nAcknowledgments\r\nThis package would not exist or be on CRAN without the wonderful “R Packages” book by Hadley Wickham and Jennifer Bryan. Writing a package was intimidating for me, but the book systematically walks you through every step of the process and the tools that make the process quite straightforward in the end. Even the submission to CRAN – about which you can read many frustrating stories – turned out to be easy. Just follow the process outlined in the book!\r\n\r\n\r\n\r\n",
+    "preview": "posts/2023-05-31-ntdr-an-r-package-for-transit-data/ntdr-an-r-package-for-transit-data_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2023-05-31T07:47:13-05:00",
+    "input_file": "ntdr-an-r-package-for-transit-data.knit.md",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2023-05-23-rent-and-rent-burden-in-madison/",
     "title": "Rent and rent burden in Madison, Wisconsin",
     "description": "Some quick charts for Madison and how it compares to other US cities",

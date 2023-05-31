@@ -1,0 +1,55 @@
+---
+title: "`ntdr 0.3.0`: Now available on CRAN"
+description: |
+  An R package for National Transit Database data
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2023-05-31
+creative_commons: CC BY-SA
+categories:
+  - transit
+  - National Transit Database
+  - ntdr
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+For the past few months I have been working on my first R package. Like with many packages, my motivation came from repeatedly doing the same data cleaning operations, getting annoyed by it, and then writing code to make it less annoying. Now the package is [available on CRAN](https://cran.r-project.org/web/packages/ntdr/) and it's time for a brief post about the package.
+
+# What the package does
+`ntdr` currently only has one purpose: Retrieve the latest monthly [National Transit Database](https://www.transit.dot.gov/ntd) ridership data and provide it in a tidy data format. Rather than downloading an unwieldy Excel file with hundreds of columns, just use the [`get_ntd()`](https://vgxhc.github.io/ntdr/reference/get_ntd.html) command to get data on ridership and related metrics.
+
+
+
+# How do I use the package
+The best place to start is the package's [website](https://vgxhc.github.io/ntdr/index.html), especially the ["Get Started"](https://vgxhc.github.io/ntdr/articles/ntdr.html) article. The package itself is simple, but the article provides some useful information about the NTD data and its quirks and limitations. Here's a very simple example to install the package, retrieve bus ridership in Madison, and plot the data:
+
+```{r}
+# install.packages("ntdr")
+library(ntdr)
+library(tidyverse)
+madison_ridership <- get_ntd(
+  agency = "City of Madison",
+  modes = "MB" #only regular buses
+)
+madison_ridership |>
+  ggplot(aes(month, value)) +
+  geom_line() +
+  labs(title = "Monthly unlinked passenger bus trips for Madison Metro Transit")
+```
+
+
+# Feedback appreciated
+This is my very first package, and I appreciate [feedback, feature requests and bug reports](https://github.com/vgXhc/ntdr/issues)! 
+
+# Acknowledgments
+This package would not exist or be on CRAN without the wonderful ["R Packages" book](https://r-pkgs.org/) by Hadley Wickham and Jennifer Bryan. Writing a package was intimidating for me, but the book systematically walks you through every step of the process and the tools that make the process quite straightforward in the end. Even the submission to CRAN -- about which you can read many frustrating stories -- turned out to be easy. Just follow the process outlined in the book!
