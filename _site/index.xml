@@ -7,7 +7,21 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 28 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Quick post: Job growth in Dane County</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-10-29-quick-post-job-growth-in-dane-county</link>
+      <description>Some maps and charts of 2015 and 2019 LEHD data</description>
+      <category>Madison (WI)</category>
+      <category>LEHD</category>
+      <category>jobs</category>
+      <category>maps</category>
+      <category>quick post</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-10-29-quick-post-job-growth-in-dane-county</guid>
+      <pubDate>Sun, 29 Oct 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2023-10-29-quick-post-job-growth-in-dane-county/quick-post-job-growth-in-dane-county_files/figure-html5/distance-scatterplot-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>The State of Biking in Madison 2022</title>
       <dc:creator>Harald Kliems</dc:creator>
