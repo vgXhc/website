@@ -117,7 +117,7 @@ jobs_distances |>
   theme_minimal() +
   xlab("Distance to Capitol (miles)") +
   ylab("Job gain/loss 2015-2019") +
-  labs(title = "Job growth versus block group centroid distance from the Wisconsin State Capitol")
+  labs(title = "Job growth by distance from Wisconsin State Capitol")
 ```
 It looks like the block groups with the largest changes in either direction are less than five miles from the Capitol, and past 10 miles there aren't really any block groups that saw large job growth or decline over that time period.
 
