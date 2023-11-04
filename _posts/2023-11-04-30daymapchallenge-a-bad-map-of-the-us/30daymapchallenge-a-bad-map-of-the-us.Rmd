@@ -86,19 +86,16 @@ tmap_mode("view")
 tm_shape(bad_places) +
   tm_dots("feature_class", id = "feature_name",
           popup.vars = c("Type of feature" = "feature_class")) +
-  tm_layout(title = "\"Bad\" Places in the United States")
+  tm_layout(title = "Bad Places in the United States")
 ```
 
-You can click on the points to display the name. We could add the names right on the map, but as bad places cluster together (and in the case of rivers and streams, the same feature shows up multiple times), this makes for a rather messy map:
+You can click on the points to display the name. We could add the names right on the map, but as bad places cluster together (and in the case of rivers and streams, the same feature shows up multiple times), this makes for a messy map:
 
 ```{r}
-tmap_mode("view")
 tm_shape(bad_places) +
   tm_dots("feature_class", id = "feature_name",
           popup.vars = c("Type of feature" = "feature_class")) +
   tm_text("feature_name")
 ```
-
-This also shows that the number of bad streams is inflated.
 
 That's all for today.
