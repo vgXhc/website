@@ -7,7 +7,17 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 29 Oct 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 04 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>#30DayMapChallenge: A "bad" map of the US</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-11-04-30daymapchallenge-a-bad-map-of-the-us</link>
+      <description>Places that start with "bad" (but not "badger"!)</description>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-11-04-30daymapchallenge-a-bad-map-of-the-us</guid>
+      <pubDate>Sat, 04 Nov 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2023-11-04-30daymapchallenge-a-bad-map-of-the-us/map_screenshot.png" medium="image" type="image/png" width="500" height="314"/>
+    </item>
     <item>
       <title>Quick post: Job growth in Dane County</title>
       <dc:creator>Harald Kliems</dc:creator>

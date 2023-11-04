@@ -1,0 +1,104 @@
+---
+title: "#30DayMapChallenge: A \"bad\" map of the US"
+description: |
+  Places that start with "bad" (but not "badger"!)
+preview: map_screenshot.png
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2023-11-04
+categories:
+  - map
+output: 
+  distill::distill_article:
+    code_folding: TRUE
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The theme for today's [#30DayMapChallenge](https://30daymapchallenge.com/): Bad maps. Inspired by [this map of German town's starting with "Bad" (designating a spa town)](https://mapstodon.space/@studiohaverstraat/111351602118703893), I thought I'd do something similar for the US. 
+
+We get places names from the [USGS Gazetteer files](https://prd-tnm.s3.amazonaws.com/index.html?prefix=StagedProducts/GeographicNames/FullModel/). Be warned that these are large files that will take a while to download and read.
+
+```{r}
+library(tidyverse)
+library(sf)
+library(tmap)
+url <- "https://prd-tnm.s3.amazonaws.com/StagedProducts/GeographicNames/FullModel/Gazetteer_National_GDB.zip"
+zip_file <- tempfile(fileext = ".zip")
+options(timeout=180) #file is large and times out with default timeout
+download.file(url, zip_file, mode = "wb")
+temp_dir <- tempdir()
+places_dir <- unzip(zipfile = zip_file, exdir = temp_dir)
+
+gazetteer_places <- st_read(paste0(temp_dir, "\\Gazetteer_National_GDB.gdb"), layer = "Gaz_Names") #layer with names
+
+gazetteer_geo <- st_read(paste0(temp_dir, "\\Gazetteer_National_GDB.gdb"), layer = "Gaz_Features")
+
+all_places <- gazetteer_geo |> right_join(gazetteer_places, by = "feature_id")
+```
+
+Now we start filtering for places starting with "Bad":
+
+```{r}
+
+bad_places <- all_places |> 
+  filter(str_detect(feature_name, "^[Bb]ad"))
+```
+
+This gives us 640 places, but just looking at the names of the first few shows that they're not all "bad" places:
+
+```{r}
+head(bad_places$feature_name)
+```
+
+Two out of the 6 are not "bad" but "Badger." After browsing through the full list of included names, I came with this heuristic to eliminate most "non-bad" names, such as "Baden," "Badoff," or "Badito."
+
+```{r}
+bad_places <- bad_places |> 
+  filter(!str_detect(feature_name, "^[Bb]ad[degiou]"))
+bad_places |> 
+  st_drop_geometry() |> 
+  select(feature_name, feature_class) |> 
+  DT::datatable()
+```
+
+What type of places are most commonly bad?
+
+```{r}
+bad_places |> 
+  st_drop_geometry() |> 
+  group_by(feature_class) |> 
+  tally(sort = T) |> 
+  DT::datatable()
+```
+
+Streams!
+
+Let's map all the 209 bad places:
+
+```{r}
+tmap_mode("view")
+tm_shape(bad_places) +
+  tm_dots("feature_class", id = "feature_name",
+          popup.vars = c("Type of feature" = "feature_class")) +
+  tm_layout(title = "\"Bad\" Places in the United States")
+```
+
+You can click on the points to display the name. We could add the names right on the map, but as bad places cluster together (and in the case of rivers and streams, the same feature shows up multiple times), this makes for a rather messy map:
+
+```{r}
+tmap_mode("view")
+tm_shape(bad_places) +
+  tm_dots("feature_class", id = "feature_name",
+          popup.vars = c("Type of feature" = "feature_class")) +
+  tm_text("feature_name")
+```
+
+This also shows that the number of bad streams is inflated.
+
+That's all for today.
