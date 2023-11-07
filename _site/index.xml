@@ -7,7 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 04 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 07 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Quick post: Commute time in Madison</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-11-07-quick-post-commute-time-in-madison</link>
+      <description>How long does it take Madisonians to get to work?</description>
+      <category>Madison (WI)</category>
+      <category>American Community Survey</category>
+      <category>transportation</category>
+      <category>quick post</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-11-07-quick-post-commute-time-in-madison</guid>
+      <pubDate>Tue, 07 Nov 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2023-11-07-quick-post-commute-time-in-madison/quick-post-commute-time-in-madison_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>#30DayMapChallenge: A "bad" map of the US</title>
       <dc:creator>Harald Kliems</dc:creator>

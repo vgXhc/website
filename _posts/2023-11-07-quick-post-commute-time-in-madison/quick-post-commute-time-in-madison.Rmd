@@ -1,0 +1,81 @@
+---
+title: "Quick post: Commute time in Madison"
+description: |
+  How long does it take Madisonians to get to work?
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2023-11-07
+categories:
+  - Madison (WI)
+  - American Community Survey
+  - transportation
+  - quick post
+output: 
+  distill::distill_article:
+    code_folding: TRUE
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The New York Times had an interesting article on how commutes have changed during the COVID-19 pandemic and after: "[Most Americans still have to commute every day. Here’s how that experience has changed.](https://www.nytimes.com/interactive/2023/11/06/business/economy/commuting-change-covid.html)"
+
+The article includes data only on 20 metro areas in the US. The following chart looks at the average commute length in Madison and compares it with the US trend. Whereas nationally, commutes had gotten longer before the pandemic and then saw a drop and a rebound, in Madison average commute times stay roughly the same before then experiencing a similar drop and rebound. Overall, Madison commuters have a much shorter average commute, with 19.3 minutes compared to the national average of 26.4 minutes in 2022.
+
+```{r}
+library(tidycensus)
+library(tidyverse)
+library(hrbrthemes)
+library(extrafont)
+
+get_msn_travel_time <- function(year) {
+  acs_data <- get_acs(year = year, survey = "acs1", table = "S0801", geography = "place", state = 55, cache_table = T)
+  acs_data |>
+    filter(NAME == "Madison city, Wisconsin") |>
+    mutate(year = year)
+}
+
+get_national_travel_time <- function(year) {
+  acs_data <- get_acs(year = year, survey = "acs1", table = "S0801", geography = "us", cache_table = T)
+  acs_data |>
+    mutate(year = year)
+}
+
+variables <- load_variables(2022, dataset = "acs1/subject")
+msn_travel_time <- map_dfr(c(2010:2019, 2021:2022), get_msn_travel_time)
+us_travel_time <- map_dfr(c(2010:2019, 2021:2022), get_national_travel_time)
+
+travel_time <- rbind(us_travel_time |> mutate(location = "national"), msn_travel_time |> mutate(location = "Madison"))
+
+
+travel_time |>
+  filter(variable == "S0801_C01_046") |>
+  mutate(
+    estimate_min = estimate - moe,
+    estimate_max = estimate + moe,
+    plot_label = if_else(year == max(year), location, NA_character_)
+  ) |>
+  ggplot(aes(year, estimate, color = location)) +
+  geom_line() +
+  geom_point() +
+  geom_ribbon(aes(ymin = estimate_min, ymax = estimate_max),
+    alpha = .2, linewidth = 0
+  ) +
+  geom_text(aes(label = plot_label), nudge_y = 1.5) +
+  scale_color_ipsum() +
+  scale_x_continuous(breaks = seq(2010, 2022, 2), limits = c(2010, 2022.5)) +
+  xlab("year") +
+  ylab("Commute time (minutes)") +
+  labs(
+    title = "Average commute time for Madison (WI)\nresidents compared to national average",
+    subtitle = "Grey band shows margin of error",
+    caption = "Data: American Community Survey 1-year estimates, Table S0801\nNo estimate for 2020 available\nVisualization: Harald Kliems"
+  ) +
+  hrbrthemes::theme_ipsum_rc() +
+  theme(legend.position = "none")
+```
