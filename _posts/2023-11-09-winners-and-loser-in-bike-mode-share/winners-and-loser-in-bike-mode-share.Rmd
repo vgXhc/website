@@ -151,6 +151,7 @@ library(gt)
 winners_losers |>
   mutate(NAME = str_replace(NAME, " city", "")) |>
   select(NAME, estimate_2016, estimate_2021, bike_change) |>
+  mutate(bike_change_abs = (estimate_2021-estimate_2016)/abs(estimate_2016)) |> 
   arrange(desc(bike_change)) |>
   gt() |>
   data_color(
@@ -162,7 +163,8 @@ winners_losers |>
     NAME = "",
     estimate_2016 = "2012-2016",
     estimate_2021 = "2017-2021",
-    bike_change = "Change"
+    bike_change = "Change (%pt.)",
+    bike_change_abs = "Change (absolute)"
   ) |>
   tab_spanner(
     label = "Bike commute mode share",
@@ -173,6 +175,8 @@ winners_losers |>
     scale_value = F, decimals = 1
   ) |>
   fmt_percent(columns = bike_change, force_sign = T, scale_values = F, decimals = 1) |>
+  fmt_percent(columns = bike_change_abs,
+              force_sign = T, scale_values = T, decimals = 0) |> 
   tab_source_note(
     source_note = md(
       "Data: American Community Survey 5-year estimates, Table S0801"
