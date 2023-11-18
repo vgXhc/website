@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 07 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Winners and losers in bike mode share</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-11-09-winners-and-loser-in-bike-mode-share</link>
+      <description>Where did bike commuting grow, where did it shrink.</description>
+      <category>American Community Survey</category>
+      <category>transportation</category>
+      <category>biking</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-11-09-winners-and-loser-in-bike-mode-share</guid>
+      <pubDate>Thu, 09 Nov 2023 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>Quick post: Commute time in Madison</title>
       <dc:creator>Harald Kliems</dc:creator>

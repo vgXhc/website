@@ -1,0 +1,192 @@
+---
+title: "Winners and losers in bike mode share"
+description: |
+  Where did bike commuting grow, where did it shrink.
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2023-11-09
+categories:
+  - American Community Survey
+  - transportation
+  - biking
+output: 
+  distill::distill_article:
+    self_contained: false
+    code_folding: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![[Miami Beach Life style](https://www.flickr.com/photos/prayitnophotography/32930787228) (Credit: prayitnophotography CC-BY)](img/Miami Beach.jpg)
+
+
+
+Bike commuting in Madison [isn't doing so well](https://haraldkliems.netlify.app/posts/the-state-of-biking-in-madison-2022/).
+In my previous post, using American Community Survey (ACS) one-year estimates, we saw that commuting by bike and other cycling metrics have declined in Madison over the last 10 or so years.
+The post also presented some comparisons with national trends and a few other US cities.
+I picked those particular cities based on my personal curiosity rather than on a particular metric.
+
+Lately I was wondering, though: Are there places where bike commuting actually has *grown*, and is there something we can learn from those places?
+So this post is a first step in this work.
+
+Rather than using one-year estimates, we'll use five-year estimates because they have smaller margins of errors.
+These estimates aren't available yet for the [2022 ACS data (they'll be released in December)](https://www.census.gov/programs-surveys/acs/news/data-releases/2022/release-schedule.html), and so we'll compare the 2017-2021 period with 2012-2016.
+The geographic level of analysis will be at the city (or in ACS terminology: [place](https://www.census.gov/newsroom/blogs/random-samplings/2014/07/understanding-geographic-relationships-counties-places-tracts-and-more.html)) level.
+
+Places can be small, and so there are a lot of them and downloading the data takes a bit of time.
+
+```{r libraries-functions}
+library(tidycensus)
+library(tidyverse)
+get_places_mode_share <- function(year) {
+  acs_data <- get_acs(
+    year = year,
+    survey = "acs5",
+    table = "S0801",
+    geography = "place",
+    cache_table = T
+  )
+  acs_data |>
+    mutate(year = year)
+}
+```
+
+```{r get-data, eval=FALSE}
+places_mode_share <- map_dfr(c(2016, 2021), get_places_mode_share)
+```
+
+We'll exclude small cities and towns, defined by having fewer than 30,000 workers, from the analysis.
+
+```{r filter-large-places, eval=FALSE}
+large_places <- places_mode_share |>
+  filter(variable == "S0801_C01_001" & estimate >= 30000) |>
+  pull(NAME)
+
+places_mode_share_large <- places_mode_share |>
+  filter(NAME %in% large_places)
+
+saveRDS(places_mode_share_large, file = "_posts/2023-11-09-winners-and-loser-in-bike-mode-share/data/places_mode_share_large.RDS")
+```
+
+Next we focus only on the bike commuting variable and do some data manipulations.
+Importantly, we make sure to only include cities where the change in bike commuting is [statistically significant at the 90% level](https://www2.census.gov/programs-surveys/acs/tech_docs/statistical_testing/2020_Instructions_for_Stat_Testing_ACS.pdf).
+
+```{r significance-testing}
+places_mode_share_large <- readRDS("data/places_mode_share_large.RDS")
+places_mode_share_large <- places_mode_share_large |>
+  filter(variable == "S0801_C01_011") |> # bike commute share
+  pivot_wider(id_cols = c(GEOID, NAME), names_from = year, values_from = c(estimate, moe)) |>
+  mutate(
+    bike_change = estimate_2021 - estimate_2016,
+    se_2021 = moe_2021 / 1.645, # convert moe to se
+    se_2016 = moe_2016 / 1.645, # convert moe to se
+    z_value = (estimate_2021 - estimate_2016) / sqrt(se_2016^2 + se_2021^2), # calculate z score from se
+    significant = if_else(abs(z_value) > 1.645, "yes", "no")
+  ) |>
+  filter(significant == "yes")
+```
+
+Now we pick the top and bottom 15 from the remaining list:
+
+```{r top-bottom}
+winners <- places_mode_share_large |>
+  filter(bike_change > 0) |>
+  slice_max(bike_change, n = 15)
+
+losers <- places_mode_share_large |>
+  slice_min(bike_change, n = 15)
+```
+
+Well, actually it turns out that there aren't 15 cities where the bike mode share has grown over this time period, and so we'll include the bottom 15 and the cities where there has been growth.
+
+Let's map the winners and losers:
+
+```{r add-geography, message=FALSE, results=FALSE, cache=TRUE}
+winners_losers <- rbind(winners, losers)
+
+states <- winners_losers |>
+  mutate(state = str_trunc(GEOID, 2, side = "right", ellipsis = "")) |>
+  distinct(state) |>
+  pull(state)
+
+places <- tigris::places(state = states)
+
+winners_losers_sf <- places |> inner_join(winners_losers, by = "GEOID")
+```
+
+```{r create-map, layout="l-body-outset"}
+library(tmap)
+tmap_mode("view")
+winners_losers_sf |>
+  tm_shape() +
+  tm_dots(
+    title = "Bike mode share change",
+    col = "bike_change",
+    size = "estimate_2016",
+    id = "NAME.x",
+    popup.vars = c(
+      "Bike to work share 2017-2021" = "estimate_2021",
+      "Bike to work share 2011-2016" = "estimate_2016",
+      "Change" = "bike_change"
+    ),
+    alpha = .5,
+    legend.format = list(fun = function(x) scales::label_percent(scale = 1, suffix = "%pt.")(x))
+  )
+```
+
+The size of the dots represents the bike mode share in the 2012-2016 period; the color represents the change in mode share.[^1]
+A lot of the losers are on the west coast, and there are several ones that started out with a large mode share. For example, Davis dropped from about 21 to about 14%. Madison also makes an appearance on the map, with its decrease of 1.6 percentage points. The few winners, on the other hand, are mostly on the east coast, didn't make huge gains, and most of them both started and ended low.
+
+[^1]: Unfortunately `tmap` can't display two legends in interactive maps.
+
+Here's a table of the data:
+
+```{r create-table}
+library(gt)
+winners_losers |>
+  mutate(NAME = str_replace(NAME, " city", "")) |>
+  select(NAME, estimate_2016, estimate_2021, bike_change) |>
+  arrange(desc(bike_change)) |>
+  gt() |>
+  data_color(
+    columns = bike_change,
+    method = "numeric",
+    palette = "BrBG"
+  ) |>
+  cols_label(
+    NAME = "",
+    estimate_2016 = "2012-2016",
+    estimate_2021 = "2017-2021",
+    bike_change = "Change"
+  ) |>
+  tab_spanner(
+    label = "Bike commute mode share",
+    columns = c(estimate_2016, estimate_2021, bike_change)
+  ) |>
+  fmt_percent(
+    columns = starts_with("estimate"),
+    scale_value = F, decimals = 1
+  ) |>
+  fmt_percent(columns = bike_change, force_sign = T, scale_values = F, decimals = 1) |>
+  tab_source_note(
+    source_note = md(
+      "Data: American Community Survey 5-year estimates, Table S0801"
+    )
+  )
+```
+
+To come back to my initial question: Is there something to be learned from the communities that managed to grow their bike mode share?
+Based on what we're seeing here, I think the only city worth taking a closer look at is Miami Beach.
+The city's bike commute mode share grew from `r winners_losers |> filter(NAME == "Miami Beach") |> dplyr::pull(estimate_2016)` in 2012-2016 to `r winners_losers |> filter(NAME == "Miami Beach") |> dplyr::pull(estimate_2021)`% in the 2017-2021 period.
+All other cities that saw growth in bike commute share had an increase below 1 percentage point, and the 2021 mode share is below 1.5% for all of them.
+
+A quick web search about Miami Beach shows that they adopted a [Bicycle Pedestrian Master Plan and Street Design Guide](https://street-plans.com/bike-miami-beach-master-plan-street-design-guide-miami-beach-fl/) and, at least according to the city website, "the city has been aggressively implementing lanes ever since. In 2017 Street Plans started working closely with the City of Miami Beach to further design and implement priority 'quick build' projects." The Places for Bikes rating has Miami Beach [at 46 points](https://bna.peopleforbikes.org/#/places/4e8d318f-0421-4800-8e30-a6a5b03f573a/), which is a decent but not outstanding score.
+Madison, for example, scores a 58.
+Other factors may include Miami Beach's unique geography on a narrow strip of land, and its character as a resort town dominated by the tourism sector.
+
+We will see what the most current estimates will bring---based on what I've seen with the 2022 one-year estimates, I wouldn't be surprised if the five-year estimates including 2022 will further reduce the number of cities that have seen growth.
+Stay tuned: the data will be out soon.
