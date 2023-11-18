@@ -2,6 +2,7 @@
 title: "Winners and losers in bike mode share"
 description: |
   Where did bike commuting grow, where did it shrink.
+preview: img/Miami Beach.jpg
 author:
   - name: Harald Kliems 
     orcid_id: 0000-0003-2542-0047
