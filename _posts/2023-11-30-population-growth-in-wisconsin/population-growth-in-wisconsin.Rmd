@@ -1,14 +1,20 @@
 ---
 title: "Population growth in Wisconsin"
 description: |
-  A short description of the post.
+  Mapping population growth since the 2020 census
 author:
-  - name: Harald Kliems
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
     url: https://haraldkliems.netlify.app/
 date: 2023-11-30
+categories:
+  - Wisconsin
+  - population
+  - map
 output:
   distill::distill_article:
     self_contained: false
+    code_folding: true
 ---
 
 
@@ -16,17 +22,20 @@ output:
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-The Wisconsin State Journal ran an article on population growth (or the lack thereof) yesterday. Conviently, yesterday's #30DayMapChallenge also happened to be "population," and the WSJ article didn't include any maps. So let's create a map of the population change figures.
+The Journal Sentinel recently ran [an article on population growth (or the lack thereof) yesterday](https://www.jsonline.com/story/news/local/wisconsin/2023/11/28/is-wisconsins-population-growing-or-shrinking/71514945007/). Conveniently, that day's [#30DayMapChallenge](https://30daymapchallenge.com/) also happened to be "population," and the JS article didn't include any maps. So let's create a map of the population change figures.
 
 # The data
 
-Population estimates are produced by the [Wisconsin Department of Administration](https://doa.wi.gov/Pages/LocalGovtsGrants/Population_Estimates.aspx). The WSJ article uses the "Municipality Final Population Estimates, Alphabetical List" file, and so will we.
+Population estimates are produced by the [Wisconsin Department of Administration](https://doa.wi.gov/Pages/LocalGovtsGrants/Population_Estimates.aspx), and they compare current estimates with the 2020 decennial census numbers. The WSJ article uses the "Municipality Final Population Estimates, Alphabetical List" file, and so will we.
 
 ```{r}
 library(tidyverse)
 library(tigris)
+options(tigris_use_cache = TRUE)
+library(leaflet)
 library(tmap)
 library(readxl)
+library(sf)
 
 growth <- read_excel("data/Final_Ests_Muni_2023.xlsx", skip = 2) %>% 
   janitor::clean_names()
@@ -34,11 +43,11 @@ glimpse(growth)
 ```
 
 
-The article excludes cities with fewer than 30,000 residents, but we'll set the threshold a little lower for now, at 25,000 residents
+The article excludes cities with fewer than 30,000 residents. Setting thresholds is always a balancing act, but a threshold of 30,000 residents is quite high. For example, Verona or Middleton, both sizable suburbs of Madison, continue to see large population growth, but their total populations are only about 15,000 and 23,000, respectively. So let's set a threshold of 15,000 for now and see how it goes.
 
 ```{r}
 growth <- growth %>% 
-  filter(final_estimate_2023 >= 25000) # could also filter on census_2020, but doesn't make a difference
+  filter(final_estimate_2023 >= 15000) # could also filter on census_2020, but doesn't make a difference
 ```
 
 Note that the `municipality_name` variable has some strange numbers after some names. If we look back at the spreadsheet, those are footnotes. This will cause problems when joining the `growth` data with geographic datasets, and so we'll either have to clean those names or use the `fips_5` variable instead. We will do the latter, as that may also help avoid issues caused by duplicate names or differences in spelling.
@@ -49,20 +58,64 @@ Next we need geographic data. As per usual, the `tigris` package should be easie
 wi_places <- places(state = "WI", cb = TRUE)
 glimpse(wi_places)
 ```
-Let's try a join:
+
+Let's do a join.
 
 ```{r}
 growth_sf <- wi_places %>% 
-  inner_join(growth, by = join_by(PLACEFP ==fips_5))
+  inner_join(growth, by = join_by(PLACEFP == fips_5))
 ```
 
-Looks good! Let's do a map.
+Looks good! Now we can start mapping, starting with something simple
 
 ```{r}
-tmap_mode("view")
-tm_shape(growth_sf) +
-  tm_bubbles(col = "percent_change") +
-  tm_text("NAME")
+# get Wisconsin county map
+wi_counties <- counties(state = "WI", cb = TRUE)
+
+tm_shape(wi_counties) +
+  tm_polygons() +
+  tm_shape(growth_sf) +
+  tm_bubbles(col = "percent_change", size = "percent_change", style = "jenks") +
+  tm_text("NAME", auto.placement = TRUE, size = .5) +
+  tmap::tm_layout(legend.outside = TRUE)
 ```
 
+That's a good start, but there are too many cities, the breaks don't quite work and the labeling needs work. I spent a good amount of time trying out different options, but I'll [rest-of-the-f'ing-owl](https://knowyourmeme.com/memes/how-to-draw-an-owl) that process. Here's a decent looking panel of two maps, one for the fastest growing and one for shrinking Wisconsin municipalities.
 
+```{r layout = "l-page", fig.width=7, fig.height=9}
+shrunk_lg_growth <- growth_sf |> 
+  filter(percent_change >= 0.04 | percent_change < -0.01) |> 
+  mutate(abs_percent_change = abs(percent_change),
+         shrink_grow = if_else(percent_change < 0, "shrink", "grow"),
+         name_label = paste0(NAME, " ", scales::label_percent(accuracy = 0.1)(percent_change)))
+
+bbox_new <- st_bbox(wi_counties) # current bounding box
+
+xrange <- bbox_new$xmax - bbox_new$xmin # range of x values
+yrange <- bbox_new$ymax - bbox_new$ymin # range of y values
+
+  bbox_new[1] <- bbox_new[1] - (0.1 * xrange) # xmin - left
+ bbox_new[3] <- bbox_new[3] + (0.1 * xrange) # xmax - right
+ bbox_new[2] <- bbox_new[2] - (0.02 * yrange) # ymin - bottom
+ # bbox_new[4] <- bbox_new[4] + (0.5 * yrange) # ymax - top
+
+bbox_new <- bbox_new %>%  # take the bounding box ...
+  st_as_sfc() # ... and make it a sf polygon
+
+
+
+tm_shape(wi_counties, bbox = bbox_new ) +
+    tm_polygons()+
+  tm_shape(shrunk_lg_growth) +
+  tm_bubbles(col = "shrink_grow", size = "abs_percent_change") +
+  tm_text("name_label", 
+          size = .7,
+          auto.placement = TRUE) +
+  tmap::tm_layout(legend.show = FALSE,
+    legend.outside = TRUE, 
+                  legend.outside.position = "bottom",
+                  panel.labels = c("Municipalities with > 4% growth", "Municipalities that lost > 1% population"))  +
+    tm_facets(by = "shrink_grow", ncol = 1)
+```
+
+As you can see, the included municipalities differ from the ones highlighted in the article. This is because of the different population and growth/shrinkage cut-offs. And yet, the overall conclusion of the article can be seen in these maps as well: "A shrinking population in Milwaukee, and other large cities, has been counterbalanced by a growing population in Madison, which is one of the few areas in the state to experience such an increase since 2020."

@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 09 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 30 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Population growth in Wisconsin</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2023-11-30-population-growth-in-wisconsin</link>
+      <description>Mapping population growth since the 2020 census</description>
+      <category>Wisconsin</category>
+      <category>population</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2023-11-30-population-growth-in-wisconsin</guid>
+      <pubDate>Thu, 30 Nov 2023 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2023-11-30-population-growth-in-wisconsin/population-growth-in-wisconsin_files/figure-html5/unnamed-chunk-5-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Winners and losers in bike mode share</title>
       <dc:creator>Harald Kliems</dc:creator>
