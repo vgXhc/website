@@ -1,0 +1,68 @@
+---
+title: "Population growth in Wisconsin"
+description: |
+  A short description of the post.
+author:
+  - name: Harald Kliems
+    url: https://haraldkliems.netlify.app/
+date: 2023-11-30
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The Wisconsin State Journal ran an article on population growth (or the lack thereof) yesterday. Conviently, yesterday's #30DayMapChallenge also happened to be "population," and the WSJ article didn't include any maps. So let's create a map of the population change figures.
+
+# The data
+
+Population estimates are produced by the [Wisconsin Department of Administration](https://doa.wi.gov/Pages/LocalGovtsGrants/Population_Estimates.aspx). The WSJ article uses the "Municipality Final Population Estimates, Alphabetical List" file, and so will we.
+
+```{r}
+library(tidyverse)
+library(tigris)
+library(tmap)
+library(readxl)
+
+growth <- read_excel("data/Final_Ests_Muni_2023.xlsx", skip = 2) %>% 
+  janitor::clean_names()
+glimpse(growth)
+```
+
+
+The article excludes cities with fewer than 30,000 residents, but we'll set the threshold a little lower for now, at 25,000 residents
+
+```{r}
+growth <- growth %>% 
+  filter(final_estimate_2023 >= 25000) # could also filter on census_2020, but doesn't make a difference
+```
+
+Note that the `municipality_name` variable has some strange numbers after some names. If we look back at the spreadsheet, those are footnotes. This will cause problems when joining the `growth` data with geographic datasets, and so we'll either have to clean those names or use the `fips_5` variable instead. We will do the latter, as that may also help avoid issues caused by duplicate names or differences in spelling.
+
+Next we need geographic data. As per usual, the `tigris` package should be easiest.
+
+```{r}
+wi_places <- places(state = "WI", cb = TRUE)
+glimpse(wi_places)
+```
+Let's try a join:
+
+```{r}
+growth_sf <- wi_places %>% 
+  inner_join(growth, by = join_by(PLACEFP ==fips_5))
+```
+
+Looks good! Let's do a map.
+
+```{r}
+tmap_mode("view")
+tm_shape(growth_sf) +
+  tm_bubbles(col = "percent_change") +
+  tm_text("NAME")
+```
+
+
