@@ -7,7 +7,16 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 30 Nov 2023 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Comparing counts from Strava Metro and loop counters</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2024-01-19-strava-vs-eco-counter</link>
+      <description>Can Strava Metro data in Madison be a good indicator of overall bike traffic?</description>
+      <guid>https://haraldkliems.netlify.app/posts/2024-01-19-strava-vs-eco-counter</guid>
+      <pubDate>Fri, 19 Jan 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2024-01-19-strava-vs-eco-counter/strava-vs-eco-counter_files/figure-html5/unnamed-chunk-3-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Population growth in Wisconsin</title>
       <dc:creator>Harald Kliems</dc:creator>
