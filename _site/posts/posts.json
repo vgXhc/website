@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2024-02-28-madisons-largest-temperature-swings/",
+    "title": "Madison's largest temperature swings",
+    "description": "From 67 to 15 F overnight??",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2024-02-28",
+    "categories": [
+      "Madison (WI)",
+      "climate"
+    ],
+    "contents": "\r\nThe weather forecast for February 27 and 28 promised a wild temperature swing: From a record-scratching 67 F (19° C) on the 27th to a more seasonally appropriate low of 15 F (-9° C) the next day. Would this constitute the largest temperature swing ever recorded in Madison_ I already had some code to get the daily GHCN weather data (shout-out to JD Johnson and his Milwaukee weather graphs). Calculating the numbers and producing a chart was straightforward. First we get data from the Madison Truax location, which is the station with the longest-running temperature records, going back to 1939.\r\n\r\n\r\nShow code\r\n\r\nlibrary(tidyverse)\r\n\r\n\r\n# station readme\r\n#   https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_station/readme-by_station.txt\r\n\r\n# # data readme\r\n# #   https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/readme.txt\r\n\r\n# download the zipped file\r\ntemp <- tempfile()\r\ndownload.file(\"https://www1.ncdc.noaa.gov/pub/data/ghcn/daily/by_station/USW00014837.csv.gz\", temp)\r\n\r\n# unzip and read\r\nghcn <- read_csv(temp,\r\n  col_names = c(\r\n    \"id\", \"yearmoda\", \"element\", \"value\",\r\n    \"mflag\", \"qflag\", \"sflag\", \"obs_time\"\r\n  ),\r\n  col_types = \"cccncccc\"\r\n)\r\n\r\n# delete the zipped file\r\nunlink(temp)\r\n\r\n# subset and format\r\nghcn.wide <- ghcn %>%\r\n  select(yearmoda, element, value) %>%\r\n  filter(element %in% c(\"PRCP\", \"SNOW\", \"SNWD\", \"TMAX\", \"TMIN\")) %>%\r\n  separate(col = yearmoda, sep = c(4, 6), into = c(\"year\", \"month\", \"day\")) %>%\r\n  pivot_wider(names_from = element, values_from = value) %>%\r\n  # convert from tenths of mm to inches\r\n  mutate(\r\n    PRCP = PRCP * 0.00393701,\r\n    SNOW = SNOW * 0.00393701,\r\n    SNWD = SNWD * 0.00393701\r\n  ) %>%\r\n  # convert from tenths of degrees C to F\r\n  mutate(\r\n    TMAX = ((TMAX / 10) * (9 / 5)) + 32,\r\n    TMIN = ((TMIN / 10) * (9 / 5)) + 32\r\n  ) %>%\r\n  mutate(\r\n    date = as.Date(paste(year, month, day, sep = \"-\")),\r\n    day_of_year = case_when(\r\n      lubridate::leap_year(date) & lubridate::yday(date) == 60 ~ NA_real_,\r\n      lubridate::leap_year(date) & lubridate::yday(date) > 60 ~ lubridate::yday(date) - 1,\r\n      TRUE ~ lubridate::yday(date)\r\n    )\r\n  ) %>%\r\n  select(\r\n    year, month, day, date, day_of_year, PRCP, SNOW, SNWD,\r\n    TMAX, TMIN\r\n  )\r\n\r\n\r\nAnd now we calculate the relevant temperature difference and produce a chart:\r\n\r\n\r\nShow code\r\n\r\nghcn.wide |>\r\n  mutate(tmin_next_day = lead(TMIN)) |>\r\n  mutate(max_min_diff = abs(TMAX - tmin_next_day)) |>\r\n  arrange(desc(max_min_diff)) |>\r\n  head(10) |>\r\n  mutate(\r\n    rank_diff = row_number(max_min_diff),\r\n    mid_point = TMAX - ((TMAX - tmin_next_day) / 2),\r\n    date_label = fct_reorder(as.factor(format(date, \"%b %d, %Y\")), rank_diff)\r\n  ) |>\r\n  select(date_label, TMAX, tmin_next_day, max_min_diff, rank_diff, mid_point) |>\r\n  ggplot() +\r\n  geom_segment(aes(x = date_label, xend = date_label, y = TMAX, yend = tmin_next_day)) +\r\n  geom_point(aes(x = date_label, y = TMAX), color = \"red\") +\r\n  geom_point(aes(x = date_label, y = tmin_next_day), color = \"blue\") +\r\n  geom_text(aes(x = date_label, y = mid_point, label = round(max_min_diff, 0)), nudge_x = .4) +\r\n  geom_text(aes(x = date_label, y = tmin_next_day, label = round(tmin_next_day, 0)), color = \"blue\", alpha = .3, nudge_y = -3) +\r\n  geom_text(aes(x = date_label, y = TMAX, label = round(TMAX, 0)), color = \"red\", alpha = .3, nudge_y = 3) +\r\n  coord_flip() +\r\n  scale_y_continuous(name = \"Temperature (F)\") +\r\n  xlab(element_blank()) +\r\n  hrbrthemes::theme_ipsum_rc() +\r\n  theme(\r\n    panel.grid.major = element_blank(),\r\n    panel.grid.minor = element_blank(),\r\n    axis.text.x = element_blank()\r\n  ) +\r\n  labs(\r\n    title = \"Largest temperature swings in Madison, Wisconsin\",\r\n    subtitle = \"Maximum temperature compared with next day's minimum temperature\",\r\n    caption = \"Data: GHCN data for Madison Truax Airport (GHCND:USW00014837). Records begin on Jan 10, 1939.\\nVisualization: Harald Kliems\"\r\n  )\r\n\r\n\r\n\r\nIt’s February 28 now, and it’s very cold. And yesterday may have been warmer than initially predicted. GHCN records lag a few days behind, but I’ll certainly check back to see if we broke the top ten.\r\n\r\n\r\n\r\n",
+    "preview": "posts/2024-02-28-madisons-largest-temperature-swings/madisons-largest-temperature-swings_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2024-02-28T08:34:49-06:00",
+    "input_file": "madisons-largest-temperature-swings.knit.md",
+    "preview_width": 1536,
+    "preview_height": 844
+  },
+  {
     "path": "posts/2024-01-19-strava-vs-eco-counter/",
     "title": "Comparing counts from Strava Metro and loop counters",
     "description": "Can Strava Metro data in Madison be a good indicator of overall bike traffic?",

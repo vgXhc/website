@@ -2,15 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" version="1.0">
   <url>
     <loc>https://haraldkliems.netlify.app/about.html</loc>
-    <lastmod>2023-11-30T08:05:35-06:00</lastmod>
+    <lastmod>2022-11-21T18:38:48-06:00</lastmod>
   </url>
   <url>
     <loc>https://haraldkliems.netlify.app/</loc>
-    <lastmod>2023-11-30T08:05:35-06:00</lastmod>
+    <lastmod>2023-10-28T13:36:59-05:00</lastmod>
   </url>
   <url>
     <loc>https://haraldkliems.netlify.app/projects.html</loc>
-    <lastmod>2022-11-16T12:46:07-06:00</lastmod>
+    <lastmod>2022-08-26T09:24:14-05:00</lastmod>
+  </url>
+  <url>
+    <loc>https://haraldkliems.netlify.app/posts/2024-02-28-madisons-largest-temperature-swings/</loc>
+    <lastmod>2024-02-28T08:34:49-06:00</lastmod>
   </url>
   <url>
     <loc>https://haraldkliems.netlify.app/posts/2024-01-19-strava-vs-eco-counter/</loc>
