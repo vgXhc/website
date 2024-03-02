@@ -8,8 +8,9 @@ author:
     url: https://haraldkliems.netlify.app/
 date: 2024-02-28
 categories:
-  - Madison (WI)
-  - climate
+  - American Community Survey
+  - maps
+  - transportation
 output:
   distill::distill_article:
     self_contained: false
@@ -18,7 +19,7 @@ output:
 
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
 ```
 
 Sometimes you get sucked into a data rabbit hole. For reasons I don't exactly remember, I got interested in households with a lot of cars. Here's a quick blog post about households with 4 or more vehicles available, based on data from the American Community Survey. We limit the analysis to the 100 cities with the largest population (my preferred way of doing it because it includes the city I live in, Madison, Wisconsin). 
@@ -105,8 +106,6 @@ top_bottom_table |>
   cols_label(NAME = "City", estimate = "number", cars_4_pct = "percent") |> 
   tab_source_note("American Community Survey, 5-year estimates, 2017-2021. Table B08201") |> 
     opt_table_font(stack = "industrial")
-
-
 
 ```
 
@@ -206,3 +205,43 @@ transit |>
 High transit cities have few high-car households; but within low transit cities, there's still a lot of variability. 
 
 If this weren't just a quick post, I'd probably try building a model that takes income, household size, and transit mode share together. But I'll leave that for another day or someone else.
+
+
+# Bonus table (revised: 2024-03-02)
+
+After publishing this article, I received feedback. Given the chart about household sizes, it would be interesting to look at the number of vehicles by household size. That makes sense: There's a difference between a one-person household having 4+ cars and a four-person household doing so. The data is available, and we can calculate the percentage of households that have more cars than people in it. Here's the new top/bottom ten table:
+
+```{r}
+over_car_vars <- c(10, 11, 12, 17, 18, 24)
+
+filter_vars <- map_chr(over_car_vars, function(x){paste0("B08201_0", x)})
+
+
+over_cars <- cars |> 
+  sf::st_drop_geometry() |> 
+  filter(NAME %in% pop_100_cities) |>
+  pivot_wider(id_cols = c(GEOID, NAME), names_from = "variable", values_from = "estimate") |> 
+  rowwise() |> 
+  mutate(over_car = sum(!!!syms(filter_vars)) / B08201_001)
+
+
+top_bottom <- over_cars |> arrange(desc(over_car))
+
+top <- head(top_bottom, 10) |> mutate(top_bottom = "Highest %")
+bottom <- tail(top_bottom, 10) |> mutate(top_bottom = "Lowest %")
+
+top_bottom_table <- rbind(top, bottom)
+
+top_bottom_table |> 
+  group_by(top_bottom) |> 
+  select(NAME, over_car, top_bottom) |> 
+  mutate(NAME = str_remove(NAME, " city| municipality")) |> 
+  gt() |> 
+  tab_header(title = "US cities with the highest and lowest % households with more cars than people",
+             subtitle = "100 most populous cities") |> 
+  fmt_percent(columns = over_car, decimals = 1) |> 
+  cols_label(NAME = "City", over_car = "percentage of households") |> 
+  tab_source_note("American Community Survey, 5-year estimates, 2017-2021. Table B08201") |> 
+    opt_table_font(stack = "industrial")
+```
+
