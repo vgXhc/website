@@ -1585,45 +1585,58 @@ Show code
 Show code
 </summary>
 <div class="sourceCode">
-<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>get_pop</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>state</span><span class='op'>)</span><span class='op'>{</span></span>
+<pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>get_pop</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>state</span><span class='op'>)</span> <span class='op'>{</span></span>
 <span>  <span class='fu'><a href='https://walker-data.com/tidycensus/reference/get_acs.html'>get_acs</a></span><span class='op'>(</span><span class='st'>"place"</span>, table <span class='op'>=</span> <span class='st'>"B01003"</span>, state <span class='op'>=</span> <span class='va'>state</span>, cache_table <span class='op'>=</span> <span class='cn'>TRUE</span><span class='op'>)</span></span>
 <span><span class='op'>}</span></span>
 <span></span>
 <span><span class='va'>pop</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://purrr.tidyverse.org/reference/map_dfr.html'>map_dfr</a></span><span class='op'>(</span><span class='fu'>datasets</span><span class='fu'>::</span><span class='va'><a href='https://rdrr.io/r/datasets/state.html'>state.abb</a></span>, <span class='va'>get_pop</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>pop_100_states</span> <span class='op'>&lt;-</span> <span class='va'>pop</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='op'>(</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span><span class='op'>(</span><span class='va'>estimate</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fl'>100</span><span class='op'>)</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>state <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_sub.html'>str_sub</a></span><span class='op'>(</span><span class='va'>GEOID</span>, start <span class='op'>=</span> <span class='fl'>0</span>, end <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/distinct.html'>distinct</a></span><span class='op'>(</span><span class='va'>state</span><span class='op'>)</span></span>
+<span><span class='va'>pop_100_states</span> <span class='op'>&lt;-</span> <span class='va'>pop</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='op'>(</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span><span class='op'>(</span><span class='va'>estimate</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fl'>100</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>state <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_sub.html'>str_sub</a></span><span class='op'>(</span><span class='va'>GEOID</span>, start <span class='op'>=</span> <span class='fl'>0</span>, end <span class='op'>=</span> <span class='fl'>2</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/distinct.html'>distinct</a></span><span class='op'>(</span><span class='va'>state</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>pop_100_cities</span> <span class='op'>&lt;-</span> <span class='va'>pop</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='op'>(</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span><span class='op'>(</span><span class='va'>estimate</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fl'>100</span><span class='op'>)</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/pull.html'>pull</a></span><span class='op'>(</span><span class='va'>NAME</span><span class='op'>)</span></span>
+<span><span class='va'>pop_100_cities</span> <span class='op'>&lt;-</span> <span class='va'>pop</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='op'>(</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span><span class='op'>(</span><span class='va'>estimate</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='fl'>100</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/pull.html'>pull</a></span><span class='op'>(</span><span class='va'>NAME</span><span class='op'>)</span></span>
 <span></span>
 <span></span>
-<span><span class='va'>get_cars</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>state</span><span class='op'>)</span><span class='op'>{</span></span>
-<span>  <span class='fu'><a href='https://walker-data.com/tidycensus/reference/get_acs.html'>get_acs</a></span><span class='op'>(</span><span class='st'>"place"</span>, table <span class='op'>=</span> <span class='st'>"B08201"</span>, </span>
-<span>                     summary_var <span class='op'>=</span> <span class='st'>"B08201_001"</span>,</span>
-<span>                     state <span class='op'>=</span> <span class='va'>state</span>, cache_table <span class='op'>=</span> <span class='cn'>TRUE</span>, geometry <span class='op'>=</span> <span class='cn'>T</span><span class='op'>)</span></span>
+<span><span class='va'>get_cars</span> <span class='op'>&lt;-</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>state</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://walker-data.com/tidycensus/reference/get_acs.html'>get_acs</a></span><span class='op'>(</span><span class='st'>"place"</span>,</span>
+<span>    table <span class='op'>=</span> <span class='st'>"B08201"</span>,</span>
+<span>    summary_var <span class='op'>=</span> <span class='st'>"B08201_001"</span>,</span>
+<span>    state <span class='op'>=</span> <span class='va'>state</span>, cache_table <span class='op'>=</span> <span class='cn'>TRUE</span>, geometry <span class='op'>=</span> <span class='cn'>T</span></span>
+<span>  <span class='op'>)</span></span>
 <span><span class='op'>}</span></span>
 <span></span>
 <span><span class='va'>cars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://purrr.tidyverse.org/reference/map_dfr.html'>map_dfr</a></span><span class='op'>(</span><span class='va'>pop_100_states</span>, <span class='va'>get_cars</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tmap_mode.html'>tmap_mode</a></span><span class='op'>(</span><span class='st'>"view"</span><span class='op'>)</span></span>
-<span><span class='va'>cars</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>variable</span> <span class='op'>==</span> <span class='st'>"B08201_006"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>cars_4_pct <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>/</span><span class='va'>summary_est</span>,</span>
-<span>         cars_4_pct_label <span class='op'>=</span> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org/reference/percent_format.html'>percent</a></span><span class='op'>(</span><span class='va'>cars_4_pct</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='op'>(</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span><span class='op'>(</span><span class='va'>cars_4_pct</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span><span class='va'>cars</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>variable</span> <span class='op'>==</span> <span class='st'>"B08201_006"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    cars_4_pct <span class='op'>=</span> <span class='va'>estimate</span> <span class='op'>/</span> <span class='va'>summary_est</span>,</span>
+<span>    cars_4_pct_label <span class='op'>=</span> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org/reference/percent_format.html'>percent</a></span><span class='op'>(</span><span class='va'>cars_4_pct</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='op'>(</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span><span class='op'>(</span><span class='va'>cars_4_pct</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tm_shape.html'>tm_shape</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tm_symbols.html'>tm_dots</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"4+-car households"</span>, </span>
-<span>          col <span class='op'>=</span> <span class='st'>"cars_4_pct"</span>, </span>
-<span>          id <span class='op'>=</span> <span class='st'>"NAME"</span>, </span>
-<span>          popup.vars <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Share of 4+-car households"</span> <span class='op'>=</span> <span class='st'>"cars_4_pct_label"</span><span class='op'>)</span>,</span>
-<span>          legend.format<span class='op'>=</span><span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span> <span class='op'>(</span>fun<span class='op'>=</span><span class='kw'>function</span> <span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span> <span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/formatc.html'>formatC</a></span> <span class='op'>(</span><span class='va'>x</span><span class='op'>*</span><span class='fl'>100</span>, digits<span class='op'>=</span><span class='fl'>0</span>, format<span class='op'>=</span><span class='st'>"f"</span><span class='op'>)</span>, <span class='st'>" %"</span><span class='op'>)</span><span class='op'>)</span>,</span>
-<span>          style <span class='op'>=</span> <span class='st'>"jenks"</span><span class='op'>)</span> <span class='op'>+</span></span>
+<span>  <span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tm_symbols.html'>tm_dots</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"4+-car households"</span>,</span>
+<span>    col <span class='op'>=</span> <span class='st'>"cars_4_pct"</span>,</span>
+<span>    id <span class='op'>=</span> <span class='st'>"NAME"</span>,</span>
+<span>    popup.vars <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='st'>"Share of 4+-car households"</span> <span class='op'>=</span> <span class='st'>"cars_4_pct_label"</span><span class='op'>)</span>,</span>
+<span>    legend.format <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/list.html'>list</a></span><span class='op'>(</span>fun <span class='op'>=</span> <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/formatc.html'>formatC</a></span><span class='op'>(</span><span class='va'>x</span> <span class='op'>*</span> <span class='fl'>100</span>, digits <span class='op'>=</span> <span class='fl'>0</span>, format <span class='op'>=</span> <span class='st'>"f"</span><span class='op'>)</span>, <span class='st'>" %"</span><span class='op'>)</span><span class='op'>)</span>,</span>
+<span>    style <span class='op'>=</span> <span class='st'>"jenks"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tm_layout.html'>tm_layout</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"High-car ownership in US cities"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tm_credits.html'>tm_credits</a></span><span class='op'>(</span><span class='st'>"100 largest US cities. Data: American Community Survey"</span><span class='op'>)</span></span></code></pre>
 </div>
 </details>
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-b9468f19176faa818ac1" style="width:960px;height:672px;"></div>
-<script type="application/json" data-for="htmlwidget-b9468f19176faa818ac1">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,"Esri.WorldGrayCanvas",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"OpenStreetMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,"Esri.WorldTopoMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addCircleMarkers","args":[[33.73668574175737,33.93811998024469,32.62812361729222,33.83899376523969,37.30115434133985,34.41750650095204,37.97632694073214,32.91003659576952,27.56250333260357,37.52642621337357,36.67776432555858,35.35295895757427,32.69976425696682,33.57658816851006,39.70814831041123,33.3100206724443,36.28882499548357,31.84757692636297,61.15058988984839,37.68952121826518,36.73340588132972,43.60045698912432,33.57183777780278,36.78293732417337,32.83111186253227,38.86757596237147,40.80993157593991,33.79773856233187,38.56761050597088,33.40145478036121,34.1139586734455,32.78159139621236,35.46764688151405,39.54938861815098,32.8582714531759,33.05021956661165,41.26276665886316,33.28238503168998,36.01325135768931,41.08874041151504,36.23331076035736,21.32935758476245,33.67718101002752,47.66706471357834,29.46280647742562,35.10535666833892,36.17139622340661,38.16627294208585,36.10299203319108,27.72541640162573,33.6870677242502,36.1281907186281,32.79349318301151,44.94779524027245,36.09544239152025,36.89451002636938,32.15404638720514,35.2083046406381,37.79042089380948,35.83231911897222,33.56568447363426,38.04227499291947,29.78595462665648,39.12354165794479,35.10872689981957,39.77707603232622,30.33216770657513,39.7619723885791,45.5371273654989,41.66374083813695,30.30042304875053,35.97880657498421,30.44191868484907,39.98609856386611,37.52944396761383,27.99440543401781,39.14131827053626,47.62104402254737,44.96348011505727,41.47638880747827,27.7929155184028,43.06422129710068,25.78397930545188,28.47727214648143,43.08227957457326,42.38339577499016,38.87856405519993,37.75575770679899,41.83739158827741,30.06867539127083,33.76277521420702,38.63582461677353,39.30506561441118,40.43962121326688,42.90178864992857,40.00763454438651,42.31875522348152,40.72448581651862,40.71842732049961,40.69426284102404],[-117.8818120011267,-117.3948968541049,-117.0144486379277,-117.857488624258,-121.8479126882112,-118.4963878143819,-121.3105297515951,-96.63037893052643,-99.48750440235327,-121.9840328962012,-76.30236445082109,-119.0359832611523,-97.12506910256054,-112.2399588807268,-104.7239578474532,-111.7462613064889,-115.087545889164,-106.4299542724048,-149.1082809892198,-97.34426511202864,-76.04337767860447,-116.2308046296747,-112.0892150758828,-119.793405610312,-117.1222323544032,-104.760522254627,-96.67838524531014,-118.1670234101838,-121.4685003804414,-111.7177537933532,-118.4065727798212,-97.34791797726908,-97.51358941274395,-119.847932521168,-96.97016096288036,-96.74864158537464,-96.05380823051803,-111.8512721901228,-115.0382571590804,-85.14364670678908,-115.2653845988266,-157.8459909054747,-117.7738366683766,-117.433017462204,-98.5242208267446,-106.6464250990214,-86.78411271265281,-85.64873063487599,-80.26098906738409,-97.37655062028209,-111.8650894011206,-95.904308341207,-96.76674332658597,-93.10387338352695,-79.82696474147477,-76.25900366385314,-110.8786704327646,-80.83034700393,-122.2165929232094,-78.64293943866133,-101.8879831061429,-84.45868090705558,-95.38860584540468,-94.553921123406,-89.96772409297398,-86.14577519287243,-81.67498170981717,-104.8760380920924,-122.6499988726078,-83.58279590272113,-97.75218918631646,-78.90134716176378,-91.13107435015117,-82.98551536939459,-77.47555864972867,-82.44507345156472,-84.50600288588959,-122.3243561344525,-93.26779448174284,-81.68057297775356,-82.66523695875621,-87.96744389681808,-80.21012653010732,-81.33687858768732,-89.39299340202764,-83.10237073738959,-77.10106013530272,-122.4449332845752,-87.68638884644967,-89.92890346560642,-84.42206723866352,-90.24511187164218,-76.6144301277656,-79.97630742762236,-78.84869750206597,-75.13399430504757,-71.08520032015866,-74.17254908700774,-74.06857555526607,-73.925051083352],[2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619],["Santa.Ana.city..California","Riverside.city..California","Chula.Vista.city..California","Anaheim.city..California","San.Jose.city..California","Santa.Clarita.city..California","Stockton.city..California","Garland.city..Texas","Laredo.city..Texas","Fremont.city..California","Chesapeake.city..Virginia","Bakersfield.city..California","Arlington.city..Texas","Glendale.city..Arizona","Aurora.city..Colorado","Gilbert.town..Arizona","North.Las.Vegas.city..Nevada","El.Paso.city..Texas","Anchorage.municipality..Alaska","Wichita.city..Kansas","Virginia.Beach.city..Virginia","Boise.City.city..Idaho","Phoenix.city..Arizona","Fresno.city..California","San.Diego.city..California","Colorado.Springs.city..Colorado","Lincoln.city..Nebraska","Long.Beach.city..California","Sacramento.city..California","Mesa.city..Arizona","Los.Angeles.city..California","Fort.Worth.city..Texas","Oklahoma.City.city..Oklahoma","Reno.city..Nevada","Irving.city..Texas","Plano.city..Texas","Omaha.city..Nebraska","Chandler.city..Arizona","Henderson.city..Nevada","Fort.Wayne.city..Indiana","Las.Vegas.city..Nevada","Urban.Honolulu.CDP..Hawaii","Irvine.city..California","Spokane.city..Washington","San.Antonio.city..Texas","Albuquerque.city..New.Mexico","Nashville.Davidson.metropolitan.government..balance...Tennessee","Louisville.Jefferson.County.metro.government..balance...Kentucky","Winston.Salem.city..North.Carolina","Corpus.Christi.city..Texas","Scottsdale.city..Arizona","Tulsa.city..Oklahoma","Dallas.city..Texas","St..Paul.city..Minnesota","Greensboro.city..North.Carolina","Norfolk.city..Virginia","Tucson.city..Arizona","Charlotte.city..North.Carolina","Oakland.city..California","Raleigh.city..North.Carolina","Lubbock.city..Texas","Lexington.Fayette.urban.county..Kentucky","Houston.city..Texas","Kansas.City.city..Missouri","Memphis.city..Tennessee","Indianapolis.city..balance...Indiana","Jacksonville.city..Florida","Denver.city..Colorado","Portland.city..Oregon","Toledo.city..Ohio","Austin.city..Texas","Durham.city..North.Carolina","Baton.Rouge.city..Louisiana","Columbus.city..Ohio","Richmond.city..Virginia","Tampa.city..Florida","Cincinnati.city..Ohio","Seattle.city..Washington","Minneapolis.city..Minnesota","Cleveland.city..Ohio","St..Petersburg.city..Florida","Milwaukee.city..Wisconsin","Miami.city..Florida","Orlando.city..Florida","Madison.city..Wisconsin","Detroit.city..Michigan","Arlington.CDP..Virginia","San.Francisco.city..California","Chicago.city..Illinois","New.Orleans.city..Louisiana","Atlanta.city..Georgia","St..Louis.city..Missouri","Baltimore.city..Maryland","Pittsburgh.city..Pennsylvania","Buffalo.city..New.York","Philadelphia.city..Pennsylvania","Boston.city..Massachusetts","Newark.city..New.Jersey","Jersey.City.city..New.Jersey","New.York.city..New.York"],"arrange(mutate(filter(filter(cars, NAME %in% pop_100_cities), ",{"interactive":true,"className":"","pane":"tmap401","stroke":true,"color":"#666666","weight":1,"opacity":0.5,"fill":true,"fillColor":["#B74202","#B74202","#B74202","#B74202","#B74202","#B74202","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4"],"fillOpacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},null,null,["<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Santa Ana city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>16.6449%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Riverside city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>13.2250%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chula Vista city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>12.9393%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Anaheim city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>12.2912%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Jose city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>11.3328%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Santa Clarita city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>11.1633%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Stockton city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>10.1698%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Garland city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>9.9326%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Laredo city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>9.8250%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fremont city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>9.0997%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chesapeake city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.9696%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Bakersfield city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.8508%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Arlington city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.1622%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Glendale city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.1400%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Aurora city, Colorado<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.1343%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Gilbert town, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.8992%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>North Las Vegas city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.7833%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>El Paso city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.7699%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Anchorage municipality, Alaska<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.1531%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Wichita city, Kansas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.0993%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Virginia Beach city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.0660%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Boise City city, Idaho<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.9713%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Phoenix city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.8085%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fresno city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.7958%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Diego city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.7795%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Colorado Springs city, Colorado<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.6656%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lincoln city, Nebraska<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.6456%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Long Beach city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.5004%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Sacramento city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.4885%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Mesa city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.3321%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Los Angeles city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.1742%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fort Worth city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.0285%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Oklahoma City city, Oklahoma<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.9178%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Reno city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.8199%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Irving city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.7601%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Plano city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.7356%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Omaha city, Nebraska<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.7013%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chandler city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.6957%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Henderson city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.6526%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fort Wayne city, Indiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.6033%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Las Vegas city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.4727%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Urban Honolulu CDP, Hawaii<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.3278%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Irvine city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.2526%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Spokane city, Washington<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.2420%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Antonio city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.2202%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Albuquerque city, New Mexico<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.1268%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Nashville-Davidson metropolitan government (balance), Tennessee<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.1065%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Louisville/Jefferson County metro government (balance), Kentucky<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.9965%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Winston-Salem city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.9842%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Corpus Christi city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.9535%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Scottsdale city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.7086%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Tulsa city, Oklahoma<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.7003%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Dallas city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.6065%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>St. Paul city, Minnesota<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5864%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Greensboro city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5709%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Norfolk city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5566%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Tucson city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5386%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Charlotte city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.4724%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Oakland city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.4368%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Raleigh city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.3844%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lubbock city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.3819%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lexington-Fayette urban county, Kentucky<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.2837%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Houston city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.2485%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Kansas City city, Missouri<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.2297%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Memphis city, Tennessee<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.1987%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Indianapolis city (balance), Indiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.1563%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Jacksonville city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.1382%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Denver city, Colorado<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.0124%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Portland city, Oregon<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.9782%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Toledo city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.9155%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Austin city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.8803%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Durham city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.6706%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Baton Rouge city, Louisiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.5822%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Columbus city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.5390%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Richmond city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.1471%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Tampa city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.0575%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Cincinnati city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.9415%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Seattle city, Washington<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.9334%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Minneapolis city, Minnesota<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.8665%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Cleveland city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.6267%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>St. Petersburg city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.6104%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Milwaukee city, Wisconsin<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.4552%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Miami city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.4351%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Orlando city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.4336%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Madison city, Wisconsin<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.3439%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Detroit city, Michigan<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.2351%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Arlington CDP, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.1045%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Francisco city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0832%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chicago city, Illinois<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0578%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>New Orleans city, Louisiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0462%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Atlanta city, Georgia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0197%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>St. Louis city, Missouri<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.8567%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Baltimore city, Maryland<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.8269%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Pittsburgh city, Pennsylvania<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.5616%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Buffalo city, New York<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.5152%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Philadelphia city, Pennsylvania<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.4022%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Boston city, Massachusetts<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.2616%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Newark city, New Jersey<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.2484%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Jersey City city, New Jersey<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>0.8871%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>New York city, New York<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>0.8098%<\/nobr><\/td><\/tr><\/table><\/div>"],null,["Santa Ana city, California","Riverside city, California","Chula Vista city, California","Anaheim city, California","San Jose city, California","Santa Clarita city, California","Stockton city, California","Garland city, Texas","Laredo city, Texas","Fremont city, California","Chesapeake city, Virginia","Bakersfield city, California","Arlington city, Texas","Glendale city, Arizona","Aurora city, Colorado","Gilbert town, Arizona","North Las Vegas city, Nevada","El Paso city, Texas","Anchorage municipality, Alaska","Wichita city, Kansas","Virginia Beach city, Virginia","Boise City city, Idaho","Phoenix city, Arizona","Fresno city, California","San Diego city, California","Colorado Springs city, Colorado","Lincoln city, Nebraska","Long Beach city, California","Sacramento city, California","Mesa city, Arizona","Los Angeles city, California","Fort Worth city, Texas","Oklahoma City city, Oklahoma","Reno city, Nevada","Irving city, Texas","Plano city, Texas","Omaha city, Nebraska","Chandler city, Arizona","Henderson city, Nevada","Fort Wayne city, Indiana","Las Vegas city, Nevada","Urban Honolulu CDP, Hawaii","Irvine city, California","Spokane city, Washington","San Antonio city, Texas","Albuquerque city, New Mexico","Nashville-Davidson metropolitan government (balance), Tennessee","Louisville/Jefferson County metro government (balance), Kentucky","Winston-Salem city, North Carolina","Corpus Christi city, Texas","Scottsdale city, Arizona","Tulsa city, Oklahoma","Dallas city, Texas","St. Paul city, Minnesota","Greensboro city, North Carolina","Norfolk city, Virginia","Tucson city, Arizona","Charlotte city, North Carolina","Oakland city, California","Raleigh city, North Carolina","Lubbock city, Texas","Lexington-Fayette urban county, Kentucky","Houston city, Texas","Kansas City city, Missouri","Memphis city, Tennessee","Indianapolis city (balance), Indiana","Jacksonville city, Florida","Denver city, Colorado","Portland city, Oregon","Toledo city, Ohio","Austin city, Texas","Durham city, North Carolina","Baton Rouge city, Louisiana","Columbus city, Ohio","Richmond city, Virginia","Tampa city, Florida","Cincinnati city, Ohio","Seattle city, Washington","Minneapolis city, Minnesota","Cleveland city, Ohio","St. Petersburg city, Florida","Milwaukee city, Wisconsin","Miami city, Florida","Orlando city, Florida","Madison city, Wisconsin","Detroit city, Michigan","Arlington CDP, Virginia","San Francisco city, California","Chicago city, Illinois","New Orleans city, Louisiana","Atlanta city, Georgia","St. Louis city, Missouri","Baltimore city, Maryland","Pittsburgh city, Pennsylvania","Buffalo city, New York","Philadelphia city, Pennsylvania","Boston city, Massachusetts","Newark city, New Jersey","Jersey City city, New Jersey","New York city, New York"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#FFF8C4","#FEDE86","#FEAA38","#EA6E13","#B74202"],"labels":["1 % to 3 %","3 % to 5 %","5 % to 7 %","7 % to 10 %","10 % to 17 %"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"unknown","title":"4+-car households","extra":null,"layerId":"legend401","className":"info legend arrange(mutate(filter(filter(cars,NAME%in%pop_100_cities),","group":"arrange(mutate(filter(filter(cars, NAME %in% pop_100_cities), "}]},{"method":"addLayersControl","args":[["Esri.WorldGrayCanvas","OpenStreetMap","Esri.WorldTopoMap"],"arrange(mutate(filter(filter(cars, NAME %in% pop_100_cities), ",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]}],"limits":{"lat":[21.32935758476245,61.15058988984839],"lng":[-157.8459909054747,-71.08520032015866]},"fitBounds":[21.25503885038633,-157.9493283146047,61.484027,-70.92259799999999,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n\t\t\t\t\t\tfunction(el, x) {\n\t\t\t\t\t\t\tvar tldiv = el.getElementsByClassName(\"leaflet-top leaflet-left\")[0];\n\t\t\t\t\t\t\tvar titlediv = document.createElement('div');\n\t\t\t\t\t\t\ttitlediv.className = \"info legend leaflet-control\";\n\t\t\t\t\t\t\ttitlediv.innerHTML = \"<b>High-car ownership in US cities<\/b>\";\n\t\t\t\t\t\t\ttldiv.insertBefore(titlediv, tldiv.childNodes[0]);\n\t\t\t\t\t\t}).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
+<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-26054b8b5477306b7662" style="width:960px;height:672px;"></div>
+<script type="application/json" data-for="htmlwidget-26054b8b5477306b7662">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"createMapPane","args":["tmap401",401]},{"method":"addProviderTiles","args":["Esri.WorldGrayCanvas",null,"Esri.WorldGrayCanvas",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["OpenStreetMap",null,"OpenStreetMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addProviderTiles","args":["Esri.WorldTopoMap",null,"Esri.WorldTopoMap",{"minZoom":0,"maxZoom":18,"tileSize":256,"subdomains":"abc","errorTileUrl":"","tms":false,"noWrap":false,"zoomOffset":0,"zoomReverse":false,"opacity":1,"zIndex":1,"detectRetina":false,"pane":"tilePane"}]},{"method":"addCircleMarkers","args":[[33.73668574175737,33.93811998024469,32.62812361729222,33.83899376523969,37.30115434133985,34.41750650095204,37.97632694073214,32.91003659576952,27.56250333260357,37.52642621337357,36.67776432555858,35.35295895757427,32.69976425696682,33.57658816851006,39.70814831041123,33.3100206724443,36.28882499548357,31.84757692636297,61.15058988984839,37.68952121826518,36.73340588132972,43.60045698912432,33.57183777780278,36.78293732417337,32.83111186253227,38.86757596237147,40.80993157593991,33.79773856233187,38.56761050597088,33.40145478036121,34.1139586734455,32.78159139621236,35.46764688151405,39.54938861815098,32.8582714531759,33.05021956661165,41.26276665886316,33.28238503168998,36.01325135768931,41.08874041151504,36.23331076035736,21.32935758476245,33.67718101002752,47.66706471357834,29.46280647742562,35.10535666833892,36.17139622340661,38.16627294208585,36.10299203319108,27.72541640162573,33.6870677242502,36.1281907186281,32.79349318301151,44.94779524027245,36.09544239152025,36.89451002636938,32.15404638720514,35.2083046406381,37.79042089380948,35.83231911897222,33.56568447363426,38.04227499291947,29.78595462665648,39.12354165794479,35.10872689981957,39.77707603232622,30.33216770657513,39.7619723885791,45.5371273654989,41.66374083813695,30.30042304875053,35.97880657498421,30.44191868484907,39.98609856386611,37.52944396761383,27.99440543401781,39.14131827053626,47.62104402254737,44.96348011505727,41.47638880747827,27.7929155184028,43.06422129710068,25.78397930545188,28.47727214648143,43.08227957457326,42.38339577499016,38.87856405519993,37.75575770679899,41.83739158827741,30.06867539127083,33.76277521420702,38.63582461677353,39.30506561441118,40.43962121326688,42.90178864992857,40.00763454438651,42.31875522348152,40.72448581651862,40.71842732049961,40.69426284102404],[-117.8818120011267,-117.3948968541049,-117.0144486379277,-117.857488624258,-121.8479126882112,-118.4963878143819,-121.3105297515951,-96.63037893052643,-99.48750440235327,-121.9840328962012,-76.30236445082109,-119.0359832611523,-97.12506910256054,-112.2399588807268,-104.7239578474532,-111.7462613064889,-115.087545889164,-106.4299542724048,-149.1082809892198,-97.34426511202864,-76.04337767860447,-116.2308046296747,-112.0892150758828,-119.793405610312,-117.1222323544032,-104.760522254627,-96.67838524531014,-118.1670234101838,-121.4685003804414,-111.7177537933532,-118.4065727798212,-97.34791797726908,-97.51358941274395,-119.847932521168,-96.97016096288036,-96.74864158537464,-96.05380823051803,-111.8512721901228,-115.0382571590804,-85.14364670678908,-115.2653845988266,-157.8459909054747,-117.7738366683766,-117.433017462204,-98.5242208267446,-106.6464250990214,-86.78411271265281,-85.64873063487599,-80.26098906738409,-97.37655062028209,-111.8650894011206,-95.904308341207,-96.76674332658597,-93.10387338352695,-79.82696474147477,-76.25900366385314,-110.8786704327646,-80.83034700393,-122.2165929232094,-78.64293943866133,-101.8879831061429,-84.45868090705558,-95.38860584540468,-94.553921123406,-89.96772409297398,-86.14577519287243,-81.67498170981717,-104.8760380920924,-122.6499988726078,-83.58279590272113,-97.75218918631646,-78.90134716176378,-91.13107435015117,-82.98551536939459,-77.47555864972867,-82.44507345156472,-84.50600288588959,-122.3243561344525,-93.26779448174284,-81.68057297775356,-82.66523695875621,-87.96744389681808,-80.21012653010732,-81.33687858768732,-89.39299340202764,-83.10237073738959,-77.10106013530272,-122.4449332845752,-87.68638884644967,-89.92890346560642,-84.42206723866352,-90.24511187164218,-76.6144301277656,-79.97630742762236,-78.84869750206597,-75.13399430504757,-71.08520032015866,-74.17254908700774,-74.06857555526607,-73.925051083352],[2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619,2.82842712474619],["Santa.Ana.city..California","Riverside.city..California","Chula.Vista.city..California","Anaheim.city..California","San.Jose.city..California","Santa.Clarita.city..California","Stockton.city..California","Garland.city..Texas","Laredo.city..Texas","Fremont.city..California","Chesapeake.city..Virginia","Bakersfield.city..California","Arlington.city..Texas","Glendale.city..Arizona","Aurora.city..Colorado","Gilbert.town..Arizona","North.Las.Vegas.city..Nevada","El.Paso.city..Texas","Anchorage.municipality..Alaska","Wichita.city..Kansas","Virginia.Beach.city..Virginia","Boise.City.city..Idaho","Phoenix.city..Arizona","Fresno.city..California","San.Diego.city..California","Colorado.Springs.city..Colorado","Lincoln.city..Nebraska","Long.Beach.city..California","Sacramento.city..California","Mesa.city..Arizona","Los.Angeles.city..California","Fort.Worth.city..Texas","Oklahoma.City.city..Oklahoma","Reno.city..Nevada","Irving.city..Texas","Plano.city..Texas","Omaha.city..Nebraska","Chandler.city..Arizona","Henderson.city..Nevada","Fort.Wayne.city..Indiana","Las.Vegas.city..Nevada","Urban.Honolulu.CDP..Hawaii","Irvine.city..California","Spokane.city..Washington","San.Antonio.city..Texas","Albuquerque.city..New.Mexico","Nashville.Davidson.metropolitan.government..balance...Tennessee","Louisville.Jefferson.County.metro.government..balance...Kentucky","Winston.Salem.city..North.Carolina","Corpus.Christi.city..Texas","Scottsdale.city..Arizona","Tulsa.city..Oklahoma","Dallas.city..Texas","St..Paul.city..Minnesota","Greensboro.city..North.Carolina","Norfolk.city..Virginia","Tucson.city..Arizona","Charlotte.city..North.Carolina","Oakland.city..California","Raleigh.city..North.Carolina","Lubbock.city..Texas","Lexington.Fayette.urban.county..Kentucky","Houston.city..Texas","Kansas.City.city..Missouri","Memphis.city..Tennessee","Indianapolis.city..balance...Indiana","Jacksonville.city..Florida","Denver.city..Colorado","Portland.city..Oregon","Toledo.city..Ohio","Austin.city..Texas","Durham.city..North.Carolina","Baton.Rouge.city..Louisiana","Columbus.city..Ohio","Richmond.city..Virginia","Tampa.city..Florida","Cincinnati.city..Ohio","Seattle.city..Washington","Minneapolis.city..Minnesota","Cleveland.city..Ohio","St..Petersburg.city..Florida","Milwaukee.city..Wisconsin","Miami.city..Florida","Orlando.city..Florida","Madison.city..Wisconsin","Detroit.city..Michigan","Arlington.CDP..Virginia","San.Francisco.city..California","Chicago.city..Illinois","New.Orleans.city..Louisiana","Atlanta.city..Georgia","St..Louis.city..Missouri","Baltimore.city..Maryland","Pittsburgh.city..Pennsylvania","Buffalo.city..New.York","Philadelphia.city..Pennsylvania","Boston.city..Massachusetts","Newark.city..New.Jersey","Jersey.City.city..New.Jersey","New.York.city..New.York"],"arrange(mutate(filter(filter(cars, NAME %in% pop_100_cities), ",{"interactive":true,"className":"","pane":"tmap401","stroke":true,"color":"#666666","weight":1,"opacity":0.5,"fill":true,"fillColor":["#B74202","#B74202","#B74202","#B74202","#B74202","#B74202","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#EA6E13","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEAA38","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FEDE86","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4","#FFF8C4"],"fillOpacity":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},null,null,["<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Santa Ana city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>16.6449%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Riverside city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>13.2250%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chula Vista city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>12.9393%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Anaheim city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>12.2912%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Jose city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>11.3328%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Santa Clarita city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>11.1633%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Stockton city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>10.1698%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Garland city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>9.9326%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Laredo city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>9.8250%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fremont city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>9.0997%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chesapeake city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.9696%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Bakersfield city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.8508%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Arlington city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.1622%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Glendale city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.1400%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Aurora city, Colorado<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>8.1343%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Gilbert town, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.8992%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>North Las Vegas city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.7833%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>El Paso city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.7699%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Anchorage municipality, Alaska<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.1531%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Wichita city, Kansas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.0993%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Virginia Beach city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>7.0660%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Boise City city, Idaho<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.9713%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Phoenix city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.8085%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fresno city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.7958%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Diego city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.7795%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Colorado Springs city, Colorado<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.6656%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lincoln city, Nebraska<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.6456%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Long Beach city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.5004%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Sacramento city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.4885%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Mesa city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.3321%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Los Angeles city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.1742%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fort Worth city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>6.0285%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Oklahoma City city, Oklahoma<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.9178%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Reno city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.8199%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Irving city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.7601%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Plano city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.7356%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Omaha city, Nebraska<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.7013%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chandler city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.6957%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Henderson city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.6526%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Fort Wayne city, Indiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.6033%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Las Vegas city, Nevada<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.4727%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Urban Honolulu CDP, Hawaii<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.3278%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Irvine city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.2526%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Spokane city, Washington<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.2420%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Antonio city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.2202%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Albuquerque city, New Mexico<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.1268%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Nashville-Davidson metropolitan government (balance), Tennessee<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>5.1065%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Louisville/Jefferson County metro government (balance), Kentucky<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.9965%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Winston-Salem city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.9842%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Corpus Christi city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.9535%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Scottsdale city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.7086%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Tulsa city, Oklahoma<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.7003%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Dallas city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.6065%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>St. Paul city, Minnesota<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5864%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Greensboro city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5709%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Norfolk city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5566%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Tucson city, Arizona<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.5386%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Charlotte city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.4724%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Oakland city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.4368%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Raleigh city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.3844%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lubbock city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.3819%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Lexington-Fayette urban county, Kentucky<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.2837%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Houston city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.2485%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Kansas City city, Missouri<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.2297%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Memphis city, Tennessee<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.1987%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Indianapolis city (balance), Indiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.1563%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Jacksonville city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.1382%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Denver city, Colorado<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>4.0124%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Portland city, Oregon<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.9782%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Toledo city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.9155%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Austin city, Texas<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.8803%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Durham city, North Carolina<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.6706%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Baton Rouge city, Louisiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.5822%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Columbus city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.5390%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Richmond city, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.1471%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Tampa city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>3.0575%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Cincinnati city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.9415%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Seattle city, Washington<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.9334%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Minneapolis city, Minnesota<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.8665%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Cleveland city, Ohio<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.6267%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>St. Petersburg city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.6104%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Milwaukee city, Wisconsin<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.4552%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Miami city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.4351%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Orlando city, Florida<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.4336%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Madison city, Wisconsin<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.3439%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Detroit city, Michigan<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.2351%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Arlington CDP, Virginia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.1045%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>San Francisco city, California<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0832%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Chicago city, Illinois<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0578%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>New Orleans city, Louisiana<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0462%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Atlanta city, Georgia<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>2.0197%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>St. Louis city, Missouri<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.8567%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Baltimore city, Maryland<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.8269%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Pittsburgh city, Pennsylvania<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.5616%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Buffalo city, New York<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.5152%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Philadelphia city, Pennsylvania<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.4022%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Boston city, Massachusetts<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.2616%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Newark city, New Jersey<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>1.2484%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>Jersey City city, New Jersey<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>0.8871%<\/nobr><\/td><\/tr><\/table><\/div>","<style> div.leaflet-popup-content {width:auto !important;overflow-y:auto; overflow-x:hidden;}<\/style><div style=\"max-height:25em;padding-right:0px;\"><table>\n\t\t\t   <thead><tr><th colspan=\"2\"><b>New York city, New York<\/b><\/th><\/thead><\/tr><tr><td style=\"color: #888888;\"><nobr>Share of 4+-car households<\/nobr><\/td><td align=\"right\"><nobr>0.8098%<\/nobr><\/td><\/tr><\/table><\/div>"],null,["Santa Ana city, California","Riverside city, California","Chula Vista city, California","Anaheim city, California","San Jose city, California","Santa Clarita city, California","Stockton city, California","Garland city, Texas","Laredo city, Texas","Fremont city, California","Chesapeake city, Virginia","Bakersfield city, California","Arlington city, Texas","Glendale city, Arizona","Aurora city, Colorado","Gilbert town, Arizona","North Las Vegas city, Nevada","El Paso city, Texas","Anchorage municipality, Alaska","Wichita city, Kansas","Virginia Beach city, Virginia","Boise City city, Idaho","Phoenix city, Arizona","Fresno city, California","San Diego city, California","Colorado Springs city, Colorado","Lincoln city, Nebraska","Long Beach city, California","Sacramento city, California","Mesa city, Arizona","Los Angeles city, California","Fort Worth city, Texas","Oklahoma City city, Oklahoma","Reno city, Nevada","Irving city, Texas","Plano city, Texas","Omaha city, Nebraska","Chandler city, Arizona","Henderson city, Nevada","Fort Wayne city, Indiana","Las Vegas city, Nevada","Urban Honolulu CDP, Hawaii","Irvine city, California","Spokane city, Washington","San Antonio city, Texas","Albuquerque city, New Mexico","Nashville-Davidson metropolitan government (balance), Tennessee","Louisville/Jefferson County metro government (balance), Kentucky","Winston-Salem city, North Carolina","Corpus Christi city, Texas","Scottsdale city, Arizona","Tulsa city, Oklahoma","Dallas city, Texas","St. Paul city, Minnesota","Greensboro city, North Carolina","Norfolk city, Virginia","Tucson city, Arizona","Charlotte city, North Carolina","Oakland city, California","Raleigh city, North Carolina","Lubbock city, Texas","Lexington-Fayette urban county, Kentucky","Houston city, Texas","Kansas City city, Missouri","Memphis city, Tennessee","Indianapolis city (balance), Indiana","Jacksonville city, Florida","Denver city, Colorado","Portland city, Oregon","Toledo city, Ohio","Austin city, Texas","Durham city, North Carolina","Baton Rouge city, Louisiana","Columbus city, Ohio","Richmond city, Virginia","Tampa city, Florida","Cincinnati city, Ohio","Seattle city, Washington","Minneapolis city, Minnesota","Cleveland city, Ohio","St. Petersburg city, Florida","Milwaukee city, Wisconsin","Miami city, Florida","Orlando city, Florida","Madison city, Wisconsin","Detroit city, Michigan","Arlington CDP, Virginia","San Francisco city, California","Chicago city, Illinois","New Orleans city, Louisiana","Atlanta city, Georgia","St. Louis city, Missouri","Baltimore city, Maryland","Pittsburgh city, Pennsylvania","Buffalo city, New York","Philadelphia city, Pennsylvania","Boston city, Massachusetts","Newark city, New Jersey","Jersey City city, New Jersey","New York city, New York"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]},{"method":"addLegend","args":[{"colors":["#FFF8C4","#FEDE86","#FEAA38","#EA6E13","#B74202"],"labels":["1 % to 3 %","3 % to 5 %","5 % to 7 %","7 % to 10 %","10 % to 17 %"],"na_color":null,"na_label":"NA","opacity":1,"position":"topright","type":"unknown","title":"4+-car households","extra":null,"layerId":"legend401","className":"info legend arrange(mutate(filter(filter(cars,NAME%in%pop_100_cities),","group":"arrange(mutate(filter(filter(cars, NAME %in% pop_100_cities), "}]},{"method":"addLayersControl","args":[["Esri.WorldGrayCanvas","OpenStreetMap","Esri.WorldTopoMap"],"arrange(mutate(filter(filter(cars, NAME %in% pop_100_cities), ",{"collapsed":true,"autoZIndex":true,"position":"topleft"}]}],"limits":{"lat":[21.32935758476245,61.15058988984839],"lng":[-157.8459909054747,-71.08520032015866]},"fitBounds":[21.25503885038633,-157.9493283146047,61.484027,-70.92259799999999,[]]},"evals":[],"jsHooks":{"render":[{"code":"function(el, x, data) {\n  return (\n\t\t\t\t\t\tfunction(el, x) {\n\t\t\t\t\t\t\tvar tldiv = el.getElementsByClassName(\"leaflet-top leaflet-left\")[0];\n\t\t\t\t\t\t\tvar titlediv = document.createElement('div');\n\t\t\t\t\t\t\ttitlediv.className = \"info legend leaflet-control\";\n\t\t\t\t\t\t\ttitlediv.innerHTML = \"<b>High-car ownership in US cities<\/b>\";\n\t\t\t\t\t\t\ttldiv.insertBefore(titlediv, tldiv.childNodes[0]);\n\t\t\t\t\t\t}).call(this.getMap(), el, x, data);\n}","data":null}]}}</script>
 </div>
 <p>Some patterns appear to emerge, but let’s look at the top and bottom ten of the list in a table:</p>
 <div class="layout-chunk" data-layout="l-body">
@@ -1634,12 +1647,14 @@ Show code
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>top_bottom_vector</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span>top_bottom <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='st'>"Highest %"</span>, <span class='fl'>10</span><span class='op'>)</span>, <span class='fu'><a href='https://rdrr.io/r/base/rep.html'>rep</a></span><span class='op'>(</span><span class='st'>"Lowest %"</span>, <span class='fl'>10</span><span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>top_bottom</span> <span class='op'>&lt;-</span> <span class='va'>cars</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'>sf</span><span class='fu'>::</span><span class='fu'><a href='https://r-spatial.github.io/sf/reference/st_geometry.html'>st_drop_geometry</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>variable</span> <span class='op'>==</span> <span class='st'>"B08201_006"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>cars_4_pct <span class='op'>=</span> <span class='va'>estimate</span><span class='op'>/</span><span class='va'>summary_est</span>,</span>
-<span>         NAME <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='st'>" city"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span><span class='va'>top_bottom</span> <span class='op'>&lt;-</span> <span class='va'>cars</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>sf</span><span class='fu'>::</span><span class='fu'><a href='https://r-spatial.github.io/sf/reference/st_geometry.html'>st_drop_geometry</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>variable</span> <span class='op'>==</span> <span class='st'>"B08201_006"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    cars_4_pct <span class='op'>=</span> <span class='va'>estimate</span> <span class='op'>/</span> <span class='va'>summary_est</span>,</span>
+<span>    NAME <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='st'>" city"</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/arrange.html'>arrange</a></span><span class='op'>(</span><span class='fu'><a href='https://dplyr.tidyverse.org/reference/desc.html'>desc</a></span><span class='op'>(</span><span class='va'>cars_4_pct</span><span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
 <span><span class='va'>top</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/utils/head.html'>head</a></span><span class='op'>(</span><span class='va'>top_bottom</span>, <span class='fl'>10</span><span class='op'>)</span> <span class='op'>|&gt;</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>top_bottom <span class='op'>=</span> <span class='st'>"Highest %"</span><span class='op'>)</span></span>
@@ -1647,37 +1662,43 @@ Show code
 <span></span>
 <span><span class='va'>top_bottom_table</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>top</span>, <span class='va'>bottom</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>top_bottom_table</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='va'>estimate</span>, <span class='va'>cars_4_pct</span>, <span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_header.html'>tab_header</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"US cities with the highest and lowest % of owning 4+ cars"</span>,</span>
-<span>             subtitle <span class='op'>=</span> <span class='st'>"100 most populous cities"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/fmt_percent.html'>fmt_percent</a></span><span class='op'>(</span>columns <span class='op'>=</span> <span class='va'>cars_4_pct</span>, decimals <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/fmt_number.html'>fmt_number</a></span><span class='op'>(</span><span class='va'>estimate</span>, use_seps <span class='op'>=</span> <span class='cn'>TRUE</span>, decimals <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_spanner.html'>tab_spanner</a></span><span class='op'>(</span><span class='st'>"4+ car households"</span>, columns <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>estimate</span>, <span class='va'>cars_4_pct</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/cols_label.html'>cols_label</a></span><span class='op'>(</span>NAME <span class='op'>=</span> <span class='st'>"City"</span>, estimate <span class='op'>=</span> <span class='st'>"number"</span>, cars_4_pct <span class='op'>=</span> <span class='st'>"percent"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_source_note.html'>tab_source_note</a></span><span class='op'>(</span><span class='st'>"American Community Survey, 5-year estimates, 2017-2021. Table B08201"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>    <span class='fu'><a href='https://gt.rstudio.com/reference/opt_table_font.html'>opt_table_font</a></span><span class='op'>(</span>stack <span class='op'>=</span> <span class='st'>"industrial"</span><span class='op'>)</span></span></code></pre>
+<span><span class='va'>top_bottom_table</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='va'>estimate</span>, <span class='va'>cars_4_pct</span>, <span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_header.html'>tab_header</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"US cities with the highest and lowest % of owning 4+ cars"</span>,</span>
+<span>    subtitle <span class='op'>=</span> <span class='st'>"100 most populous cities"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/fmt_percent.html'>fmt_percent</a></span><span class='op'>(</span>columns <span class='op'>=</span> <span class='va'>cars_4_pct</span>, decimals <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/fmt_number.html'>fmt_number</a></span><span class='op'>(</span><span class='va'>estimate</span>, use_seps <span class='op'>=</span> <span class='cn'>TRUE</span>, decimals <span class='op'>=</span> <span class='fl'>0</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_spanner.html'>tab_spanner</a></span><span class='op'>(</span><span class='st'>"4+ car households"</span>, columns <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>estimate</span>, <span class='va'>cars_4_pct</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/cols_label.html'>cols_label</a></span><span class='op'>(</span>NAME <span class='op'>=</span> <span class='st'>"City"</span>, estimate <span class='op'>=</span> <span class='st'>"number"</span>, cars_4_pct <span class='op'>=</span> <span class='st'>"percent"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_source_note.html'>tab_source_note</a></span><span class='op'>(</span><span class='st'>"American Community Survey, 5-year estimates, 2017-2021. Table B08201"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/opt_table_font.html'>opt_table_font</a></span><span class='op'>(</span>stack <span class='op'>=</span> <span class='st'>"industrial"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_style.html'>tab_style</a></span><span class='op'>(</span></span>
+<span>    style <span class='op'>=</span> <span class='fu'><a href='https://gt.rstudio.com/reference/cell_text.html'>cell_text</a></span><span class='op'>(</span>weight <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span>,</span>
+<span>    locations <span class='op'>=</span> <span class='fu'><a href='https://gt.rstudio.com/reference/cells_row_groups.html'>cells_row_groups</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
 </div>
 </details>
-<div id="zgpzxpkbkb" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#zgpzxpkbkb table {
+<div id="gflluxqlwc" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gflluxqlwc table {
   font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#zgpzxpkbkb thead, #zgpzxpkbkb tbody, #zgpzxpkbkb tfoot, #zgpzxpkbkb tr, #zgpzxpkbkb td, #zgpzxpkbkb th {
+#gflluxqlwc thead, #gflluxqlwc tbody, #gflluxqlwc tfoot, #gflluxqlwc tr, #gflluxqlwc td, #gflluxqlwc th {
   border-style: none;
 }
 
-#zgpzxpkbkb p {
+#gflluxqlwc p {
   margin: 0;
   padding: 0;
 }
 
-#zgpzxpkbkb .gt_table {
+#gflluxqlwc .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1703,12 +1724,12 @@ Show code
   border-left-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_caption {
+#gflluxqlwc .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#zgpzxpkbkb .gt_title {
+#gflluxqlwc .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1720,7 +1741,7 @@ Show code
   border-bottom-width: 0;
 }
 
-#zgpzxpkbkb .gt_subtitle {
+#gflluxqlwc .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1732,7 +1753,7 @@ Show code
   border-top-width: 0;
 }
 
-#zgpzxpkbkb .gt_heading {
+#gflluxqlwc .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1744,13 +1765,13 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_bottom_border {
+#gflluxqlwc .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_col_headings {
+#gflluxqlwc .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1765,7 +1786,7 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_col_heading {
+#gflluxqlwc .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1785,7 +1806,7 @@ Show code
   overflow-x: hidden;
 }
 
-#zgpzxpkbkb .gt_column_spanner_outer {
+#gflluxqlwc .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1797,15 +1818,15 @@ Show code
   padding-right: 4px;
 }
 
-#zgpzxpkbkb .gt_column_spanner_outer:first-child {
+#gflluxqlwc .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#zgpzxpkbkb .gt_column_spanner_outer:last-child {
+#gflluxqlwc .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#zgpzxpkbkb .gt_column_spanner {
+#gflluxqlwc .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1817,11 +1838,11 @@ Show code
   width: 100%;
 }
 
-#zgpzxpkbkb .gt_spanner_row {
+#gflluxqlwc .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#zgpzxpkbkb .gt_group_heading {
+#gflluxqlwc .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1847,7 +1868,7 @@ Show code
   text-align: left;
 }
 
-#zgpzxpkbkb .gt_empty_group_heading {
+#gflluxqlwc .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1862,15 +1883,15 @@ Show code
   vertical-align: middle;
 }
 
-#zgpzxpkbkb .gt_from_md > :first-child {
+#gflluxqlwc .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#zgpzxpkbkb .gt_from_md > :last-child {
+#gflluxqlwc .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#zgpzxpkbkb .gt_row {
+#gflluxqlwc .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1889,7 +1910,7 @@ Show code
   overflow-x: hidden;
 }
 
-#zgpzxpkbkb .gt_stub {
+#gflluxqlwc .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1902,7 +1923,7 @@ Show code
   padding-right: 5px;
 }
 
-#zgpzxpkbkb .gt_stub_row_group {
+#gflluxqlwc .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1916,15 +1937,15 @@ Show code
   vertical-align: top;
 }
 
-#zgpzxpkbkb .gt_row_group_first td {
+#gflluxqlwc .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#zgpzxpkbkb .gt_row_group_first th {
+#gflluxqlwc .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#zgpzxpkbkb .gt_summary_row {
+#gflluxqlwc .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1934,16 +1955,16 @@ Show code
   padding-right: 5px;
 }
 
-#zgpzxpkbkb .gt_first_summary_row {
+#gflluxqlwc .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_first_summary_row.thick {
+#gflluxqlwc .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#zgpzxpkbkb .gt_last_summary_row {
+#gflluxqlwc .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1953,7 +1974,7 @@ Show code
   border-bottom-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_grand_summary_row {
+#gflluxqlwc .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1963,7 +1984,7 @@ Show code
   padding-right: 5px;
 }
 
-#zgpzxpkbkb .gt_first_grand_summary_row {
+#gflluxqlwc .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1973,7 +1994,7 @@ Show code
   border-top-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_last_grand_summary_row_top {
+#gflluxqlwc .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1983,11 +2004,11 @@ Show code
   border-bottom-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_striped {
+#gflluxqlwc .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#zgpzxpkbkb .gt_table_body {
+#gflluxqlwc .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1996,7 +2017,7 @@ Show code
   border-bottom-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_footnotes {
+#gflluxqlwc .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2010,7 +2031,7 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_footnote {
+#gflluxqlwc .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2019,7 +2040,7 @@ Show code
   padding-right: 5px;
 }
 
-#zgpzxpkbkb .gt_sourcenotes {
+#gflluxqlwc .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2033,7 +2054,7 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#zgpzxpkbkb .gt_sourcenote {
+#gflluxqlwc .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2041,63 +2062,63 @@ Show code
   padding-right: 5px;
 }
 
-#zgpzxpkbkb .gt_left {
+#gflluxqlwc .gt_left {
   text-align: left;
 }
 
-#zgpzxpkbkb .gt_center {
+#gflluxqlwc .gt_center {
   text-align: center;
 }
 
-#zgpzxpkbkb .gt_right {
+#gflluxqlwc .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#zgpzxpkbkb .gt_font_normal {
+#gflluxqlwc .gt_font_normal {
   font-weight: normal;
 }
 
-#zgpzxpkbkb .gt_font_bold {
+#gflluxqlwc .gt_font_bold {
   font-weight: bold;
 }
 
-#zgpzxpkbkb .gt_font_italic {
+#gflluxqlwc .gt_font_italic {
   font-style: italic;
 }
 
-#zgpzxpkbkb .gt_super {
+#gflluxqlwc .gt_super {
   font-size: 65%;
 }
 
-#zgpzxpkbkb .gt_footnote_marks {
+#gflluxqlwc .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#zgpzxpkbkb .gt_asterisk {
+#gflluxqlwc .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#zgpzxpkbkb .gt_indent_1 {
+#gflluxqlwc .gt_indent_1 {
   text-indent: 5px;
 }
 
-#zgpzxpkbkb .gt_indent_2 {
+#gflluxqlwc .gt_indent_2 {
   text-indent: 10px;
 }
 
-#zgpzxpkbkb .gt_indent_3 {
+#gflluxqlwc .gt_indent_3 {
   text-indent: 15px;
 }
 
-#zgpzxpkbkb .gt_indent_4 {
+#gflluxqlwc .gt_indent_4 {
   text-indent: 20px;
 }
 
-#zgpzxpkbkb .gt_indent_5 {
+#gflluxqlwc .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2122,7 +2143,7 @@ Show code
   </thead>
   <tbody class="gt_table_body">
     <tr class="gt_group_heading_row">
-      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Highest %">Highest %</th>
+      <th colspan="3" class="gt_group_heading" style="font-weight: bold;" scope="colgroup" id="Highest %">Highest %</th>
     </tr>
     <tr class="gt_row_group_first"><td headers="Highest %  NAME" class="gt_row gt_left">Santa Ana, California</td>
 <td headers="Highest %  estimate" class="gt_row gt_right">12,754</td>
@@ -2155,7 +2176,7 @@ Show code
 <td headers="Highest %  estimate" class="gt_row gt_right">6,791</td>
 <td headers="Highest %  cars_4_pct" class="gt_row gt_right">9.1%</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="3" class="gt_group_heading" scope="colgroup" id="Lowest %">Lowest %</th>
+      <th colspan="3" class="gt_group_heading" style="font-weight: bold;" scope="colgroup" id="Lowest %">Lowest %</th>
     </tr>
     <tr class="gt_row_group_first"><td headers="Lowest %  NAME" class="gt_row gt_left">Atlanta, Georgia</td>
 <td headers="Lowest %  estimate" class="gt_row gt_right">4,467</td>
@@ -2213,21 +2234,25 @@ Show code
 <span></span>
 <span><span class='va'>income</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://purrr.tidyverse.org/reference/map_dfr.html'>map_dfr</a></span><span class='op'>(</span><span class='va'>pop_100_states</span>, <span class='va'>get_income</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>income</span> <span class='op'>|&gt;</span> </span>
-<span>    <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>top_bottom</span>, by <span class='op'>=</span> <span class='st'>"GEOID"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>NAME.x</span>, <span class='st'>"^([^,]*)"</span><span class='op'>)</span>,</span>
-<span>          short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>short_name</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span>,</span>
-<span>          median_income <span class='op'>=</span> <span class='va'>estimate.x</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span><span class='va'>income</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>top_bottom</span>, by <span class='op'>=</span> <span class='st'>"GEOID"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>NAME.x</span>, <span class='st'>"^([^,]*)"</span><span class='op'>)</span>,</span>
+<span>    short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>short_name</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span>,</span>
+<span>    median_income <span class='op'>=</span> <span class='va'>estimate.x</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>median_income</span>, <span class='va'>cars_4_pct</span>, label <span class='op'>=</span> <span class='va'>short_name</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'>ggrepel</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_text_repel</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_x_continuous</a></span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Median household income"</span>, labels <span class='op'>=</span> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org/reference/label_dollar.html'>label_dollar</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_y_continuous</a></span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Share of 4+-car households"</span>, labels <span class='op'>=</span> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org/reference/label_percent.html'>label_percent</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://rdrr.io/pkg/hrbrthemes/man/theme_ipsum_rc.html'>theme_ipsum_rc</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"High-car households and median household income"</span>,</span>
-<span>       subtitle <span class='op'>=</span> <span class='st'>"100 largest US cities"</span>,</span>
-<span>       caption <span class='op'>=</span> <span class='st'>"Data: American Community Survey 5-year estimates, 2017-2021\nVisualization: Harald Kliems"</span><span class='op'>)</span></span></code></pre>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"High-car households and median household income"</span>,</span>
+<span>    subtitle <span class='op'>=</span> <span class='st'>"100 largest US cities"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data: American Community Survey 5-year estimates, 2017-2021\nVisualization: Harald Kliems"</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
 </div>
 </details>
 <p><img src="where-are-the-4-car-households_files/figure-html5/unnamed-chunk-4-1.png" width="960" /></p>
@@ -2249,21 +2274,25 @@ Show code
 <span></span>
 <span><span class='va'>hh_size</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://purrr.tidyverse.org/reference/map_dfr.html'>map_dfr</a></span><span class='op'>(</span><span class='va'>pop_100_states</span>, <span class='va'>get_hh_size</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>hh_size</span> <span class='op'>|&gt;</span>   </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>top_bottom</span>, by <span class='op'>=</span> <span class='st'>"GEOID"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>NAME.x</span>, <span class='st'>"^([^,]*)"</span><span class='op'>)</span>,</span>
-<span>          short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>short_name</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span>,</span>
-<span>          hh_size <span class='op'>=</span> <span class='va'>estimate.x</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span><span class='va'>hh_size</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>top_bottom</span>, by <span class='op'>=</span> <span class='st'>"GEOID"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>NAME.x</span>, <span class='st'>"^([^,]*)"</span><span class='op'>)</span>,</span>
+<span>    short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>short_name</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span>,</span>
+<span>    hh_size <span class='op'>=</span> <span class='va'>estimate.x</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>hh_size</span>, <span class='va'>cars_4_pct</span>, label <span class='op'>=</span> <span class='va'>short_name</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'>ggrepel</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_text_repel</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_x_continuous</a></span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Mean household size"</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_y_continuous</a></span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Share of 4+-car households"</span>, labels <span class='op'>=</span> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org/reference/label_percent.html'>label_percent</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://rdrr.io/pkg/hrbrthemes/man/theme_ipsum_rc.html'>theme_ipsum_rc</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>    <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"High-car households and average household size"</span>,</span>
-<span>       subtitle <span class='op'>=</span> <span class='st'>"100 largest US cities"</span>,</span>
-<span>       caption <span class='op'>=</span> <span class='st'>"Data: American Community Survey 5-year estimates, 2017-2021\nVisualization: Harald Kliems"</span><span class='op'>)</span></span></code></pre>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"High-car households and average household size"</span>,</span>
+<span>    subtitle <span class='op'>=</span> <span class='st'>"100 largest US cities"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data: American Community Survey 5-year estimates, 2017-2021\nVisualization: Harald Kliems"</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
 </div>
 </details>
 <p><img src="where-are-the-4-car-households_files/figure-html5/unnamed-chunk-5-1.png" width="960" /></p>
@@ -2285,22 +2314,26 @@ Show code
 <span></span>
 <span><span class='va'>transit</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://purrr.tidyverse.org/reference/map_dfr.html'>map_dfr</a></span><span class='op'>(</span><span class='va'>pop_100_states</span>, <span class='va'>get_transit</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>transit</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>variable</span> <span class='op'>==</span> <span class='st'>"S0801_C01_009"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>top_bottom</span>, by <span class='op'>=</span> <span class='st'>"GEOID"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>   <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>NAME.x</span>, <span class='st'>"^([^,]*)"</span><span class='op'>)</span>,</span>
-<span>          short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>short_name</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span>,</span>
-<span>          transit_share <span class='op'>=</span> <span class='va'>estimate.x</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span><span class='va'>transit</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>variable</span> <span class='op'>==</span> <span class='st'>"S0801_C01_009"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate-joins.html'>left_join</a></span><span class='op'>(</span><span class='va'>top_bottom</span>, by <span class='op'>=</span> <span class='st'>"GEOID"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span></span>
+<span>    short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_extract.html'>str_extract</a></span><span class='op'>(</span><span class='va'>NAME.x</span>, <span class='st'>"^([^,]*)"</span><span class='op'>)</span>,</span>
+<span>    short_name <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>short_name</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span>,</span>
+<span>    transit_share <span class='op'>=</span> <span class='va'>estimate.x</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/ggplot.html'>ggplot</a></span><span class='op'>(</span><span class='fu'><a href='https://ggplot2.tidyverse.org/reference/aes.html'>aes</a></span><span class='op'>(</span><span class='va'>transit_share</span>, <span class='va'>cars_4_pct</span>, label <span class='op'>=</span> <span class='va'>short_name</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'>ggrepel</span><span class='fu'>::</span><span class='fu'><a href='https://rdrr.io/pkg/ggrepel/man/geom_text_repel.html'>geom_text_repel</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/geom_point.html'>geom_point</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='co'># scale_x_continuous(name = "Median household income", labels = scales::label_dollar()) +</span></span>
 <span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/scale_continuous.html'>scale_y_continuous</a></span><span class='op'>(</span>name <span class='op'>=</span> <span class='st'>"Share of 4+-car households"</span>, labels <span class='op'>=</span> <span class='fu'>scales</span><span class='fu'>::</span><span class='fu'><a href='https://scales.r-lib.org/reference/label_percent.html'>label_percent</a></span><span class='op'>(</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span>  <span class='fu'><a href='https://rdrr.io/pkg/hrbrthemes/man/theme_ipsum_rc.html'>theme_ipsum_rc</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>+</span></span>
-<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"High-car households and transit commuting mode share"</span>,</span>
-<span>       subtitle <span class='op'>=</span> <span class='st'>"100 largest US cities"</span>,</span>
-<span>       caption <span class='op'>=</span> <span class='st'>"Data: American Community Survey 5-year estimates, 2017-2021\nVisualization: Harald Kliems"</span><span class='op'>)</span></span></code></pre>
+<span>  <span class='fu'><a href='https://ggplot2.tidyverse.org/reference/labs.html'>labs</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"High-car households and transit commuting mode share"</span>,</span>
+<span>    subtitle <span class='op'>=</span> <span class='st'>"100 largest US cities"</span>,</span>
+<span>    caption <span class='op'>=</span> <span class='st'>"Data: American Community Survey 5-year estimates, 2017-2021\nVisualization: Harald Kliems"</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
 </div>
 </details>
 <p><img src="where-are-the-4-car-households_files/figure-html5/transit-1.png" width="960" /></p>
@@ -2317,14 +2350,16 @@ Show code
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='va'>over_car_vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='fl'>10</span>, <span class='fl'>11</span>, <span class='fl'>12</span>, <span class='fl'>17</span>, <span class='fl'>18</span>, <span class='fl'>24</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>filter_vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map_chr</a></span><span class='op'>(</span><span class='va'>over_car_vars</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span><span class='op'>{</span><span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>"B08201_0"</span>, <span class='va'>x</span><span class='op'>)</span><span class='op'>}</span><span class='op'>)</span></span>
+<span><span class='va'>filter_vars</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://purrr.tidyverse.org/reference/map.html'>map_chr</a></span><span class='op'>(</span><span class='va'>over_car_vars</span>, <span class='kw'>function</span><span class='op'>(</span><span class='va'>x</span><span class='op'>)</span> <span class='op'>{</span></span>
+<span>  <span class='fu'><a href='https://rdrr.io/r/base/paste.html'>paste0</a></span><span class='op'>(</span><span class='st'>"B08201_0"</span>, <span class='va'>x</span><span class='op'>)</span></span>
+<span><span class='op'>}</span><span class='op'>)</span></span>
 <span></span>
 <span></span>
-<span><span class='va'>over_cars</span> <span class='op'>&lt;-</span> <span class='va'>cars</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'>sf</span><span class='fu'>::</span><span class='fu'><a href='https://r-spatial.github.io/sf/reference/st_geometry.html'>st_drop_geometry</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span><span class='va'>over_cars</span> <span class='op'>&lt;-</span> <span class='va'>cars</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'>sf</span><span class='fu'>::</span><span class='fu'><a href='https://r-spatial.github.io/sf/reference/st_geometry.html'>st_drop_geometry</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/filter.html'>filter</a></span><span class='op'>(</span><span class='va'>NAME</span> <span class='op'><a href='https://rdrr.io/r/base/match.html'>%in%</a></span> <span class='va'>pop_100_cities</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
-<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span>id_cols <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>GEOID</span>, <span class='va'>NAME</span><span class='op'>)</span>, names_from <span class='op'>=</span> <span class='st'>"variable"</span>, values_from <span class='op'>=</span> <span class='st'>"estimate"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/rowwise.html'>rowwise</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
+<span>  <span class='fu'><a href='https://tidyr.tidyverse.org/reference/pivot_wider.html'>pivot_wider</a></span><span class='op'>(</span>id_cols <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span><span class='op'>(</span><span class='va'>GEOID</span>, <span class='va'>NAME</span><span class='op'>)</span>, names_from <span class='op'>=</span> <span class='st'>"variable"</span>, values_from <span class='op'>=</span> <span class='st'>"estimate"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/rowwise.html'>rowwise</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
 <span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>over_car <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/sum.html'>sum</a></span><span class='op'>(</span><span class='op'>!</span><span class='op'>!</span><span class='op'>!</span><span class='fu'><a href='https://rlang.r-lib.org/reference/sym.html'>syms</a></span><span class='op'>(</span><span class='va'>filter_vars</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>/</span> <span class='va'>B08201_001</span><span class='op'>)</span></span>
 <span></span>
 <span></span>
@@ -2335,36 +2370,42 @@ Show code
 <span></span>
 <span><span class='va'>top_bottom_table</span> <span class='op'>&lt;-</span> <span class='fu'><a href='https://rdrr.io/r/base/cbind.html'>rbind</a></span><span class='op'>(</span><span class='va'>top</span>, <span class='va'>bottom</span><span class='op'>)</span></span>
 <span></span>
-<span><span class='va'>top_bottom_table</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='va'>over_car</span>, <span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>NAME <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_header.html'>tab_header</a></span><span class='op'>(</span>title <span class='op'>=</span> <span class='st'>"US cities with the highest and lowest % households with more cars than people"</span>,</span>
-<span>             subtitle <span class='op'>=</span> <span class='st'>"100 most populous cities"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/fmt_percent.html'>fmt_percent</a></span><span class='op'>(</span>columns <span class='op'>=</span> <span class='va'>over_car</span>, decimals <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/cols_label.html'>cols_label</a></span><span class='op'>(</span>NAME <span class='op'>=</span> <span class='st'>"City"</span>, over_car <span class='op'>=</span> <span class='st'>"percentage of households"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_source_note.html'>tab_source_note</a></span><span class='op'>(</span><span class='st'>"American Community Survey, 5-year estimates, 2017-2021. Table B08201"</span><span class='op'>)</span> <span class='op'>|&gt;</span> </span>
-<span>    <span class='fu'><a href='https://gt.rstudio.com/reference/opt_table_font.html'>opt_table_font</a></span><span class='op'>(</span>stack <span class='op'>=</span> <span class='st'>"industrial"</span><span class='op'>)</span></span></code></pre>
+<span><span class='va'>top_bottom_table</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/group_by.html'>group_by</a></span><span class='op'>(</span><span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/select.html'>select</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='va'>over_car</span>, <span class='va'>top_bottom</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>NAME <span class='op'>=</span> <span class='fu'><a href='https://stringr.tidyverse.org/reference/str_remove.html'>str_remove</a></span><span class='op'>(</span><span class='va'>NAME</span>, <span class='st'>" city| municipality"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/gt.html'>gt</a></span><span class='op'>(</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_header.html'>tab_header</a></span><span class='op'>(</span></span>
+<span>    title <span class='op'>=</span> <span class='st'>"US cities with the highest and lowest % households with more cars than people"</span>,</span>
+<span>    subtitle <span class='op'>=</span> <span class='st'>"100 most populous cities"</span></span>
+<span>  <span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/fmt_percent.html'>fmt_percent</a></span><span class='op'>(</span>columns <span class='op'>=</span> <span class='va'>over_car</span>, decimals <span class='op'>=</span> <span class='fl'>1</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/cols_label.html'>cols_label</a></span><span class='op'>(</span>NAME <span class='op'>=</span> <span class='st'>"City"</span>, over_car <span class='op'>=</span> <span class='st'>"percentage of households"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_source_note.html'>tab_source_note</a></span><span class='op'>(</span><span class='st'>"American Community Survey, 5-year estimates, 2017-2021. Table B08201"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/opt_table_font.html'>opt_table_font</a></span><span class='op'>(</span>stack <span class='op'>=</span> <span class='st'>"industrial"</span><span class='op'>)</span> <span class='op'>|&gt;</span></span>
+<span>  <span class='fu'><a href='https://gt.rstudio.com/reference/tab_style.html'>tab_style</a></span><span class='op'>(</span></span>
+<span>    style <span class='op'>=</span> <span class='fu'><a href='https://gt.rstudio.com/reference/cell_text.html'>cell_text</a></span><span class='op'>(</span>weight <span class='op'>=</span> <span class='st'>"bold"</span><span class='op'>)</span>,</span>
+<span>    locations <span class='op'>=</span> <span class='fu'><a href='https://gt.rstudio.com/reference/cells_row_groups.html'>cells_row_groups</a></span><span class='op'>(</span><span class='op'>)</span></span>
+<span>  <span class='op'>)</span></span></code></pre>
 </div>
 </details>
-<div id="fdrxcgagfj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#fdrxcgagfj table {
+<div id="vkkhlzbloa" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#vkkhlzbloa table {
   font-family: Bahnschrift, 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', sans-serif-condensed, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#fdrxcgagfj thead, #fdrxcgagfj tbody, #fdrxcgagfj tfoot, #fdrxcgagfj tr, #fdrxcgagfj td, #fdrxcgagfj th {
+#vkkhlzbloa thead, #vkkhlzbloa tbody, #vkkhlzbloa tfoot, #vkkhlzbloa tr, #vkkhlzbloa td, #vkkhlzbloa th {
   border-style: none;
 }
 
-#fdrxcgagfj p {
+#vkkhlzbloa p {
   margin: 0;
   padding: 0;
 }
 
-#fdrxcgagfj .gt_table {
+#vkkhlzbloa .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -2390,12 +2431,12 @@ Show code
   border-left-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_caption {
+#vkkhlzbloa .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#fdrxcgagfj .gt_title {
+#vkkhlzbloa .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -2407,7 +2448,7 @@ Show code
   border-bottom-width: 0;
 }
 
-#fdrxcgagfj .gt_subtitle {
+#vkkhlzbloa .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -2419,7 +2460,7 @@ Show code
   border-top-width: 0;
 }
 
-#fdrxcgagfj .gt_heading {
+#vkkhlzbloa .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -2431,13 +2472,13 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_bottom_border {
+#vkkhlzbloa .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_col_headings {
+#vkkhlzbloa .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2452,7 +2493,7 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_col_heading {
+#vkkhlzbloa .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2472,7 +2513,7 @@ Show code
   overflow-x: hidden;
 }
 
-#fdrxcgagfj .gt_column_spanner_outer {
+#vkkhlzbloa .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2484,15 +2525,15 @@ Show code
   padding-right: 4px;
 }
 
-#fdrxcgagfj .gt_column_spanner_outer:first-child {
+#vkkhlzbloa .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#fdrxcgagfj .gt_column_spanner_outer:last-child {
+#vkkhlzbloa .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#fdrxcgagfj .gt_column_spanner {
+#vkkhlzbloa .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -2504,11 +2545,11 @@ Show code
   width: 100%;
 }
 
-#fdrxcgagfj .gt_spanner_row {
+#vkkhlzbloa .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#fdrxcgagfj .gt_group_heading {
+#vkkhlzbloa .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2534,7 +2575,7 @@ Show code
   text-align: left;
 }
 
-#fdrxcgagfj .gt_empty_group_heading {
+#vkkhlzbloa .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -2549,15 +2590,15 @@ Show code
   vertical-align: middle;
 }
 
-#fdrxcgagfj .gt_from_md > :first-child {
+#vkkhlzbloa .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#fdrxcgagfj .gt_from_md > :last-child {
+#vkkhlzbloa .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#fdrxcgagfj .gt_row {
+#vkkhlzbloa .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2576,7 +2617,7 @@ Show code
   overflow-x: hidden;
 }
 
-#fdrxcgagfj .gt_stub {
+#vkkhlzbloa .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2589,7 +2630,7 @@ Show code
   padding-right: 5px;
 }
 
-#fdrxcgagfj .gt_stub_row_group {
+#vkkhlzbloa .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -2603,15 +2644,15 @@ Show code
   vertical-align: top;
 }
 
-#fdrxcgagfj .gt_row_group_first td {
+#vkkhlzbloa .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#fdrxcgagfj .gt_row_group_first th {
+#vkkhlzbloa .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#fdrxcgagfj .gt_summary_row {
+#vkkhlzbloa .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2621,16 +2662,16 @@ Show code
   padding-right: 5px;
 }
 
-#fdrxcgagfj .gt_first_summary_row {
+#vkkhlzbloa .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_first_summary_row.thick {
+#vkkhlzbloa .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#fdrxcgagfj .gt_last_summary_row {
+#vkkhlzbloa .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2640,7 +2681,7 @@ Show code
   border-bottom-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_grand_summary_row {
+#vkkhlzbloa .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -2650,7 +2691,7 @@ Show code
   padding-right: 5px;
 }
 
-#fdrxcgagfj .gt_first_grand_summary_row {
+#vkkhlzbloa .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2660,7 +2701,7 @@ Show code
   border-top-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_last_grand_summary_row_top {
+#vkkhlzbloa .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -2670,11 +2711,11 @@ Show code
   border-bottom-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_striped {
+#vkkhlzbloa .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#fdrxcgagfj .gt_table_body {
+#vkkhlzbloa .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -2683,7 +2724,7 @@ Show code
   border-bottom-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_footnotes {
+#vkkhlzbloa .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2697,7 +2738,7 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_footnote {
+#vkkhlzbloa .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -2706,7 +2747,7 @@ Show code
   padding-right: 5px;
 }
 
-#fdrxcgagfj .gt_sourcenotes {
+#vkkhlzbloa .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2720,7 +2761,7 @@ Show code
   border-right-color: #D3D3D3;
 }
 
-#fdrxcgagfj .gt_sourcenote {
+#vkkhlzbloa .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2728,63 +2769,63 @@ Show code
   padding-right: 5px;
 }
 
-#fdrxcgagfj .gt_left {
+#vkkhlzbloa .gt_left {
   text-align: left;
 }
 
-#fdrxcgagfj .gt_center {
+#vkkhlzbloa .gt_center {
   text-align: center;
 }
 
-#fdrxcgagfj .gt_right {
+#vkkhlzbloa .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#fdrxcgagfj .gt_font_normal {
+#vkkhlzbloa .gt_font_normal {
   font-weight: normal;
 }
 
-#fdrxcgagfj .gt_font_bold {
+#vkkhlzbloa .gt_font_bold {
   font-weight: bold;
 }
 
-#fdrxcgagfj .gt_font_italic {
+#vkkhlzbloa .gt_font_italic {
   font-style: italic;
 }
 
-#fdrxcgagfj .gt_super {
+#vkkhlzbloa .gt_super {
   font-size: 65%;
 }
 
-#fdrxcgagfj .gt_footnote_marks {
+#vkkhlzbloa .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#fdrxcgagfj .gt_asterisk {
+#vkkhlzbloa .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#fdrxcgagfj .gt_indent_1 {
+#vkkhlzbloa .gt_indent_1 {
   text-indent: 5px;
 }
 
-#fdrxcgagfj .gt_indent_2 {
+#vkkhlzbloa .gt_indent_2 {
   text-indent: 10px;
 }
 
-#fdrxcgagfj .gt_indent_3 {
+#vkkhlzbloa .gt_indent_3 {
   text-indent: 15px;
 }
 
-#fdrxcgagfj .gt_indent_4 {
+#vkkhlzbloa .gt_indent_4 {
   text-indent: 20px;
 }
 
-#fdrxcgagfj .gt_indent_5 {
+#vkkhlzbloa .gt_indent_5 {
   text-indent: 25px;
 }
 </style>
@@ -2803,7 +2844,7 @@ Show code
   </thead>
   <tbody class="gt_table_body">
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="Highest %">Highest %</th>
+      <th colspan="2" class="gt_group_heading" style="font-weight: bold;" scope="colgroup" id="Highest %">Highest %</th>
     </tr>
     <tr class="gt_row_group_first"><td headers="Highest %  NAME" class="gt_row gt_left">Chesapeake, Virginia</td>
 <td headers="Highest %  over_car" class="gt_row gt_right">15.6%</td></tr>
@@ -2826,7 +2867,7 @@ Show code
     <tr><td headers="Highest %  NAME" class="gt_row gt_left">Albuquerque, New Mexico</td>
 <td headers="Highest %  over_car" class="gt_row gt_right">11.5%</td></tr>
     <tr class="gt_group_heading_row">
-      <th colspan="2" class="gt_group_heading" scope="colgroup" id="Lowest %">Lowest %</th>
+      <th colspan="2" class="gt_group_heading" style="font-weight: bold;" scope="colgroup" id="Lowest %">Lowest %</th>
     </tr>
     <tr class="gt_row_group_first"><td headers="Lowest %  NAME" class="gt_row gt_left">Baltimore, Maryland</td>
 <td headers="Lowest %  over_car" class="gt_row gt_right">4.5%</td></tr>
