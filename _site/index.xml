@@ -7,7 +7,22 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 28 Feb 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>After the sun sets, pedestrian fatalities spike</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <dc:creator>Austin Griesbach</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/pedestrian-fatalities-soar-just-after-sunset</link>
+      <description>Pedestrian fatality data from 2001-2021 and how the time of fatal crashes varies over the day</description>
+      <category>Vision Zero</category>
+      <category>walking</category>
+      <category>transportation</category>
+      <category>pedestrian fatalities</category>
+      <category>FARS</category>
+      <guid>https://haraldkliems.netlify.app/posts/pedestrian-fatalities-soar-just-after-sunset</guid>
+      <pubDate>Tue, 05 Mar 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/pedestrian-fatalities-soar-just-after-sunset/distill-preview.png" medium="image" type="image/png" width="2112" height="1190"/>
+    </item>
     <item>
       <title>Where are the 4+-car households?</title>
       <dc:creator>Harald Kliems</dc:creator>
