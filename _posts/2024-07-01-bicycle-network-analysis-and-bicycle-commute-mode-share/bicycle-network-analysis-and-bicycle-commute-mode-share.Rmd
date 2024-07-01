@@ -1,0 +1,88 @@
+---
+title: "Bicycle Network Analysis and Bicycle Commute Mode Share"
+description: |
+  Do better bike networks lead to more bike commuters?
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2024-07-01
+categories:
+  - biking
+  - transportation
+  - American Community Survey
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+People for Bikes just published the [city rankings](http://cityratings.peopleforbikes.org/) from their Bicycle Network Analysis (BNA). Like every year, people will complain about their city scoring too high or too low, or they'll identify problems with the methodology of the rating. One criticism I have encountered is that the BNA doesn't take into account actual bike ridership. 
+
+There are many good reasons for that, but I was curious: How does a city's BNA score compare to their bicycle commute mode share? People for Bikes are very transparent about their methods and data, and so this was an easy question to answer. Just download the spreadsheet with the BNA scores, download bicycle commute data from the American Community Survey and plot them against each other.
+
+
+```{r, layout="l-body-outset", fig.width=10.5, fig.height=6}
+library(tidyverse)
+library(tidycensus)
+library(hrbrthemes)
+extrafont::loadfonts()
+
+# # AcS data for commuting
+# places_bike_commute <- get_acs(geography = "place", table = "S0801", year = 2022)
+# 
+# saveRDS(places_bike_commute,"places_bike_commute.RDS")
+places_bike_commute <- readRDS(file = "data/places_bike_commute.RDS")
+
+# BNA ratings
+bna <- read_csv("data/city-ratings-v24.4.csv")
+
+
+# data cleaning
+bna_plot <- places_bike_commute %>% 
+  mutate(GEOID = as.numeric(GEOID)) %>% 
+  filter(variable == "S0801_C01_011") %>% 
+  filter(estimate > moe) %>% 
+  inner_join(bna, by = join_by(GEOID == census_fips_code)) %>% 
+  select(NAME, city, census_population, estimate, moe, bna_overall_score, pop_size, state) %>% 
+  mutate(pop_size = case_match(pop_size, "large" ~ "large (>300k population)",
+                               "medium" ~ "medium (50k-300k population)",
+                               "small" ~ "small (<50k population)"),
+         name_label = paste0(city, ", ", state),
+         NAME = str_remove(NAME, " city"))
+  
+
+# plot
+
+bna_plot %>% 
+ggplot(aes(bna_overall_score, estimate), group = pop_size) +
+  geom_point(aes(color = pop_size), alpha = .5) +
+  geom_smooth(method = "lm") +
+  labs(x = "BNA score", y = "Bike commute share (%)",
+       title = "BNA Score and Bike Commute Mode Share",
+       caption = "Data: People for Bikes; American Community Survey 5-year estimates 2018-2022\nPlaces where the mode share estimate is smaller than the margin of error were excluded\nVisualization: Harald Kliems") +
+  theme_ipsum_rc() +
+  ggrepel::geom_label_repel(data = bna_plot %>% filter(name_label %in% c("Madison, WI", "Davis, CA", "Portland, OR", "Leadville, CO", "Mackinac Island, MI", "Chicago, IL", "Milwaukee, WI", "Mount Hope, OH", "Washburn, WI")), aes(label = name_label)) +
+  geom_point(data = bna_plot %>% filter(name_label %in% c("Madison, WI", "Davis, CA", "Portland, OR", "Leadville, CO", "Mackinac Island, MI", "Chicago, IL", "Milwaukee, WI", "Mount Hope, OH", "Washburn, WI")), color = "red") +
+  facet_wrap(~ pop_size, scales = "free_y") +
+  scale_color_ipsum() +
+  theme(legend.position = "none")
+```
+
+Note the different y-axis scales for each city size category. Highlighted are a few cities:
+
+- Chicago: As Streetsblog Chicago keeps saying [over and over again](https://chi.streetsblog.org/2024/06/17/people-for-bikes-explains-why-chicago-is-likely-getting-another-dismal-ranking-in-its-2024-city-ratings): The BNA method leads to an awfully low score, and yet, lots of people bike in Chicago
+- Milwaukee: On the other hand, Milwaukee made the top 10 of large cities in terms of BNA score; and yet, the bike commute numbers are much lower than one may expect
+- Portland tops the bike mode share and also scores high on the BNA score
+- Medium sized cities have more variability in bike commute mode share. Madison seems to perform in line with its BNA score; outliers like Davis excel in both mode share and BNA score.
+- For small cities, things are more chaotic. The bike commute mode share is probably much less reliable, and so we get weird results like Mount Hope, a tiny unincorporated community in Ohio, where supposedly almost 60% of its residents bike to work![^1] Washburn, ["the little town on the big lake,"](https://washburnchamber.com/) had the highest BNA score in all of Wisconsin, and yet few people bike to work. Whereas Leadville in Colorado has a very low BNA score but a large bike commute mode share. And then of course there's [Mackinac Island](https://www.mackinacisland.org/), the car-free bicycle paradise in Michigan.
+
+[^1]: There appears to be a large Amish population in the area, which would explain the high bike mode share.
+
+Overall it appears that BNA score and bike commute mode share are positively correlated. We can't draw any causal conclusions from this, and the plot shows that there is a lot of variability.

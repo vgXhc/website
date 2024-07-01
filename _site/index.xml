@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 05 Mar 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Bicycle Network Analysis and Bicycle Commute Mode Share</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2024-07-01-bicycle-network-analysis-and-bicycle-commute-mode-share</link>
+      <description>Do better bike networks lead to more bike commuters?</description>
+      <category>biking</category>
+      <category>transportation</category>
+      <category>American Community Survey</category>
+      <guid>https://haraldkliems.netlify.app/posts/2024-07-01-bicycle-network-analysis-and-bicycle-commute-mode-share</guid>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2024-07-01-bicycle-network-analysis-and-bicycle-commute-mode-share/bicycle-network-analysis-and-bicycle-commute-mode-share_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="2016" height="1152"/>
+    </item>
     <item>
       <title>After the sun sets, pedestrian fatalities spike</title>
       <dc:creator>Harald Kliems</dc:creator>
