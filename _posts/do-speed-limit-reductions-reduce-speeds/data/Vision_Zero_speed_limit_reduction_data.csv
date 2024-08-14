@@ -1,0 +1,36 @@
+Location,y_1,y_2,pct_y_1,pct_y_2,n_y_1,n_y_2,speed_limit_y_1,speed_limit_y_2
+"E Washington Ave at Yahara, inbound",2020,2021,8,1,1200,200,35,30
+"E Washington Ave at Yahara, outbound",2020,2021,10,0.25,1600,100,35,30
+Gammon Rd at Colony Dr,2020,2021,10,7,360,260,35,30
+Gammon Rd at Memorial High School,2020,2021,9,4.5,703,664,35,30
+Gammon Rd at Odana Rd,2020,2021,0,1.2,0,200,35,30
+McKenna Blvd at Gammon Ln,2020,2021,8,14,440,890,35,30
+McKenna Blvd at Brittany Pl,2020,2021,5.5,7.5,600,950,35,30
+McKenna Blvd at Park Ridge Dr,2020,2021,10.2,9,1280,1380,35,30
+Post Rd at Traceway Dr,2020,2021,3.4,2.3,110,70,30,25
+Post Rd at Churchill Dr,2020,2021,21,15,700,490,30,25
+Prairie Rd at Newport Cir,2020,2021,10.6,12.2,206,219,30,25
+Prairie Rd at Pioneer Rd,2020,2021,4.6,2.2,140,70,30,25
+Milwaukee St at Hiestand Park,2020,2021,16.2,11,1600,1100,35,25
+Milwaukee St at Picadilly Dr,2020,2021,38,30,1580,1250,35,25
+Milwaukee St at Swanton Rd,2020,2021,17.6,15.3,1072,1010,35,25
+Cottage Grove Rd at Maher Ave,2021,2022,1.2,0.3,70,21,35,30
+Cottage Grove Rd at Atlas Ave,2021,2022,4.3,1.8,450,180,35,30
+Cottage Grove Rd at Flora Ln,2021,2022,11.5,8.3,880,690,35,30
+S Whitney Way at Toki Elementary,2021,2022,21,17.9,780,705,30,25
+S Whitney Way at Tokay Blvd,2021,2022,2.6,0.6,150,35,35,30
+S Whitney Way at Burnett Dr,2021,2022,30,21,1600,1100,30,25
+S Park St at Chandler St,2021,2022,1.5,2.2,90,160,30,25
+S Park St at Railroad,2021,2022,19,10,1220,700,30,25
+S Park St at Dane St,2021,2022,8.2,7.3,568,576,30,25
+Mineral Point Rd at S Whitney Way,2022,2023,0.2,0,15,0,40,35
+Mineral Point Rd at Nautilus Dr,2022,2023,7.5,0,550,0,40,35
+Portage Rd at Hayes Rd,2022,2023,18,12,340,200,30,25
+Portage Rd at Donald Dr,2022,2023,12,6.5,310,170,30,25
+Old Sauk Rd at Widgeon Way,2022,2023,26,19,1800,1500,35,30
+Old Sauk Rd at Westfield Rd,2022,2023,8,6.5,570,520,35,30
+John Nolen Dr at Curve in Causeway,2022,2023,36,21,5900,3400,45,35
+John Nolen Dr at North Shore Dr,2022,2023,7.5,3.5,1200,590,45,35
+John Nolen Dr at Lakeside St,2022,2023,41,30,6400,4800,45,35
+E Washington Dr at Hagan Dr,2022,2023,5.3,2.9,840,430,40,35
+Segoe Rd at Vernon Blvd,2022,2023,3.4,0,50,0,30,25

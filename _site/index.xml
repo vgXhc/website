@@ -7,7 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Do speed limit reductions reduce speeds?</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/do-speed-limit-reductions-reduce-speeds</link>
+      <description>Comparing pre-post data in Madison, Wisconsin</description>
+      <category>Vision Zero</category>
+      <category>transportation</category>
+      <category>Madison (WI)</category>
+      <category>Vision Zero</category>
+      <guid>https://haraldkliems.netlify.app/posts/do-speed-limit-reductions-reduce-speeds</guid>
+      <pubDate>Wed, 14 Aug 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/do-speed-limit-reductions-reduce-speeds/speed_limits_pre_post_madison_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Bicycle Network Analysis and Bicycle Commute Mode Share</title>
       <dc:creator>Harald Kliems</dc:creator>

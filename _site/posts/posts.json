@@ -1,5 +1,29 @@
 [
   {
+    "path": "posts/do-speed-limit-reductions-reduce-speeds/",
+    "title": "Do speed limit reductions reduce speeds?",
+    "description": "Comparing pre-post data in Madison, Wisconsin",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2024-08-14",
+    "categories": [
+      "Vision Zero",
+      "transportation",
+      "Madison (WI)",
+      "Vision Zero"
+    ],
+    "contents": "\nThe City of Madison adopted a Vision Zero policy in 2020. Its goal: “to eliminate all fatalities and severe injuries that occur as the result of traffic collisions on city streets by 2035.” One of many measures the city took to achieve this goal were speed limit reductions. Despite evidence from other cities (e.g. Hu and Cicchino 2020), many people questioned the effectiveness of speed limit reductions without changes to the physical environment. The city compiled pre- and post data on vehicle speeds to assess the effectiveness of the speed limit reductions. The data were published as a series of charts in a pdf document. I manually extracted the data from the document and combined them into a single chart.\n\n\nShow code\n\nlibrary(tidyverse)\nlibrary(colorspace)\n\nspeed <- read_csv(\"data/Vision_Zero_speed_limit_reduction_data.csv\")\n\nchart <- speed |> \n  mutate(inc_dec = if_else(pct_y_1 > pct_y_2, \"decrease\", \"increase\"),\n         inc_dec_pct = pct_y_2 - pct_y_1,\n         volume_y_2 = pct_y_2 * n_y_2) |> \n  ggplot(aes(pct_y_1, pct_y_2, color = inc_dec_pct, size = volume_y_2)) +\n  geom_point() +\n  scale_color_continuous_divergingx(name = \"% pt decrease/increase\", palette = 'RdBu', mid = 0) +\n  # scale_color_distiller(name = \"% pt decrease/increase\", type = \"div\", palette = \"BrBG\") +\n  scale_size(name = \"Traffic volume post\") +\n  geom_abline(slope = 1, intercept = 0, linetype = 3) +\n  labs(x = \"Pre reduction\",\n       y = \"Post reduction\",\n       title = \"Pre-post comparison of speed limit reductions in Madison\",\n       subtitle = \"% of vehicles 5+ mph over initial speed limit\",\n       caption = \"Data: City of Madison\\nData extraction and visualization: Harald Kliems\") +\n  xlim(0,45) +\n  ylim(0,45) +\n    theme_minimal()\n\nchart\n\n\n\nThe chart shows that in a large majority of locations, the percentage of people going 5 mph or more over the initial speed limit dropped after the speed limit reduction. In some locations that drop was large (up to 15 percentage points), while in others the changes were more moderate. A few locations saw increases in the percentage of speeding vehicles.\nA pre-post comparison cannot establish a causal link between speed limit reductions and reductions in speeds. But given that speed limit reductions are easy and cheap, this data appears to support the city’s decision to reduce speed limits.\n\n\n\n",
+    "preview": "posts/do-speed-limit-reductions-reduce-speeds/speed_limits_pre_post_madison_files/figure-html5/unnamed-chunk-1-1.png",
+    "last_modified": "2024-08-14T07:53:03-05:00",
+    "input_file": {},
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2024-07-01-bicycle-network-analysis-and-bicycle-commute-mode-share/",
     "title": "Bicycle Network Analysis and Bicycle Commute Mode Share",
     "description": "Do better bike networks lead to more bike commuters?",
