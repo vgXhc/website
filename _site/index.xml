@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 14 Aug 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Nothing new on mode share in Madison in 2023</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2024-09-13-nothing-new-on-mode-share-in-madison-in-2023</link>
+      <description>American Community Survey one-year estimates show commute mode share remains stable</description>
+      <category>Madison (WI)</category>
+      <category>transportation</category>
+      <category>American Community Survey</category>
+      <guid>https://haraldkliems.netlify.app/posts/2024-09-13-nothing-new-on-mode-share-in-madison-in-2023</guid>
+      <pubDate>Fri, 13 Sep 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2024-09-13-nothing-new-on-mode-share-in-madison-in-2023/nothing-new-on-mode-share-in-madison-in-2023_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1536" height="949"/>
+    </item>
     <item>
       <title>Do speed limit reductions reduce speeds?</title>
       <dc:creator>Harald Kliems</dc:creator>

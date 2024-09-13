@@ -1,0 +1,222 @@
+---
+title: "Nothing new on mode share in Madison in 2023"
+description: |
+  American Community Survey one-year estimates show commute mode share remains stable
+date: 2024-09-13
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+categories:
+  - Madison (WI)
+  - transportation
+  - American Community Survey
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+One-year estimates from the American Community Survey (ACS) came out last year. As always, I keep an eye on the commute mode share numbers for Madison (WI). How did things change from 2022 to 2023? Not much.
+
+First, we a table of the share of the different modes:
+
+```{r, layout="l-page", fig.width=8, fig.asp = 0.618}
+
+library(tidycensus)
+library(tidyverse)
+library(gt)
+
+
+get_msn_mode_share <- function(year) {
+  acs_data <- get_acs(year = year, survey = "acs1", table = "S0801", geography = "place", state = 55, cache_table=T)
+  acs_data |> 
+    filter(NAME == "Madison city, Wisconsin") |> 
+    mutate(year = year)
+}
+
+
+# variable_readable = case_when(
+#   variable == "S0801_C01_002" ~ "Drive",
+#   variable == "S0801_C01_009" ~ "Transit",
+#   variable == "S0801_C01_010" ~ "Walk",
+#   variable == "S0801_C01_011" ~ "Bike",
+#   variable == "S0801_C01_013" ~ "Work from home",
+#   variable == "S0801_C02_002" ~ "Drive, male",
+#   variable == "S0801_C02_009" ~ "Transit, male",
+#   variable == "S0801_C02_010" ~ "Walk, male",
+#   variable == "S0801_C02_011" ~ "Bike, male",
+#   variable == "S0801_C02_013" ~ "Work from home, male",
+#   variable == "S0801_C03_002" ~ "Drive, female",
+#   variable == "S0801_C03_009" ~ "Transit, female",
+#   variable == "S0801_C03_010" ~ "Walk, female",
+#   variable == "S0801_C03_011" ~ "Bike, female",
+#   variable == "S0801_C03_013" ~ "Work from home, female",
+#   
+#   
+# )
+
+
+
+msn_mode_share <- map_dfr(c(2010:2019, 2021:2023), get_msn_mode_share)
+
+msn_mode_share <- msn_mode_share |> 
+  mutate(gender = case_when(str_detect(variable, "^S0801_C01") ~ "total",
+                            str_detect(variable, "^S0801_C02") ~ "male",
+                            str_detect(variable, "^S0801_C03") ~ "female"),
+         mode_readable = case_when(
+           str_detect(variable, "S0801_C0[1-3]_002") ~ "Drive",
+           str_detect(variable, "S0801_C0[1-3]_009") ~ "Transit",
+           str_detect(variable, "S0801_C0[1-3]_010") ~ "Walk",
+           str_detect(variable, "S0801_C0[1-3]_011") ~ "Bike",
+           str_detect(variable, "S0801_C0[1-3]_013") ~ "Work from home"))
+
+# data frame for the ggrepel labels on the right of the plot
+msn_mode_share_2023 <-  msn_mode_share |> 
+  filter(year == 2023 & !is.na(mode_readable))
+
+
+
+msn_mode_share |> 
+  filter(!is.na(mode_readable) & gender == "total" & year >= 2022) |> 
+  group_by(mode_readable, year) |> 
+  pivot_wider(names_from = year, values_from = c(estimate, moe)) |>
+  mutate(change = estimate_2023 - estimate_2022,
+         sig_diff = significance(estimate_2022, estimate_2023, moe_2022, moe_2023),
+         sig_diff = if_else(sig_diff == TRUE, "yes", "-")) |> 
+  select(mode_readable, estimate_2022,  moe_2022, estimate_2023, moe_2023, change, sig_diff) |>
+  ungroup() |> 
+  gt() |> 
+  tab_header(title = "Change in commute mode share in Madison (WI)") |> 
+  fmt_percent(columns = c(estimate_2022,
+                          estimate_2023,
+                          moe_2022,
+                          moe_2023), decimals = 1, scale_values = F) |> 
+  fmt_percent(columns = c(change), decimals = 1, scale_values = F, force_sign = T) |> 
+  tab_spanner(label = "2022",
+              columns = c(estimate_2022, moe_2022)) |> 
+  tab_spanner(label = "2023",
+              columns = ends_with("_2023")) |> 
+  tab_spanner(
+    label = "Mode share",
+    columns = c(estimate_2022,
+                moe_2022,
+                estimate_2023,
+                moe_2023)
+  ) |> 
+  cols_label(mode_readable = "Commute mode", 
+             estimate_2022 = "Estimate",
+             moe_2022 = "+/-",
+             estimate_2023 = "Estimate",
+             moe_2023 = "+/-",
+             change = "Change (percentage points)",
+             sig_diff = "statistically significant?") |> 
+  data_color(
+    columns = c(change),
+    colors = scales::col_numeric(
+      palette = "viridis",
+      domain = NULL )) |> 
+  tab_source_note(
+    source_note = "Data: American Community Survey 1-year estimates, Table S0801. Viz: Harald Kliems"
+  )
+
+```
+
+None of the modes saw a statistically significant changes compared to the previous year. The increase in driving and decrease in working from home are within the margins of error.
+
+Taking a longer view, we can chart the mode share since 2010:
+
+
+```{r, layout="l-page", fig.width=8, fig.asp = 0.618}
+msn_mode_share |> 
+  filter(!is.na(mode_readable) & gender == "total") |> 
+  group_by(mode_readable, year) |> 
+  ggplot(aes(year, estimate, color = mode_readable)) +
+  geom_line(size = 1.2) +
+  hrbrthemes::scale_color_ipsum(
+    #name = element_blank()
+  ) +
+  geom_pointrange(aes(ymin = estimate - moe, ymax = estimate + moe), alpha = .8,
+                  size = 1,fatten = 1) +
+  hrbrthemes::theme_ipsum_rc() +
+  scale_x_continuous(breaks = c(2010, 2015, 2019, 2023), minor_breaks = NULL, limits = c(2010, 2026.5)) +
+  ylab("estimate (%)") +
+  labs(title = "Mode share stabilized after the pandemic disruption",
+       subtitle ="City of Madison commute mode share, 2010-2023",
+       caption = "American Community Survey 1-year estimates, Table S0801\nVisualization: Harald Kliems") +
+  theme(legend.position = "none") +
+  ggrepel::geom_text_repel(data = msn_mode_share_2023 |> filter(gender == "total"), aes(label = paste0(mode_readable, " ", estimate, "%")), nudge_x = 1) 
+```
+
+We see the [big disruption](https://haraldkliems.netlify.app/posts/latest-commute-mode-share-madison-2021/) of the pandemic, but by now mode share appears to have stabilized.
+
+It's instructive to not just look at the percentages of mode share but also the absolute numbers of people getting to work.
+
+
+```{r, layout="l-page", fig.width=8, fig.asp = 0.618}
+get_commute_total <- function(year) {
+  get_acs(geography = "place",
+          state = "WI",
+          survey = "acs1",
+          year = year,
+          table = "C08006",
+          summary_var = "C08006_001",
+          cache_table = T) |> 
+    mutate(year = year,
+    )
+}
+
+
+commute_numbers <- map_dfr(c(2022, 2023), get_commute_total)
+
+commute_numbers_msn <- commute_numbers |> 
+  filter(NAME == "Madison city, Wisconsin") |> 
+  mutate(mode_readable = case_when(
+    str_detect(variable, "C08006_001") ~ "Total",
+    str_detect(variable, "C08006_002") ~ "Drive",
+    str_detect(variable, "C08006_008") ~ "Transit",
+    str_detect(variable, "C08006_009") ~ "Bike",
+    str_detect(variable, "C08006_010") ~ "Walk",
+    str_detect(variable, "C08006_012") ~ "Work from home")) |> 
+  filter(!is.na(mode_readable))
+
+commute_numbers_msn |> 
+  pivot_wider(id_cols = mode_readable, names_from = year, values_from = c(estimate, moe)) |>  
+  mutate(sig_diff = significance(estimate_2022, estimate_2023, moe_2022, moe_2023)) |> 
+  mutate(mode_readable = fct_reorder(mode_readable, estimate_2023)) |> 
+  group_by(mode_readable) |> 
+  mutate(moe_diff = moe_sum(moe = c(moe_2023, moe_2022), estimate = c(estimate_2023, estimate_2022))) |> 
+  ggplot() +
+  geom_segment(aes(x=mode_readable, xend=mode_readable, y=estimate_2022, yend=estimate_2023), color="grey", arrow = arrow(length = unit(2, "mm"))) +
+  geom_point(aes(x = mode_readable, y = estimate_2023), color = 2023) +
+  geom_point(aes(x = mode_readable, y = estimate_2022), color = 2022) +
+  geom_text(aes(x = mode_readable, 
+                y = (estimate_2023 + estimate_2022)/2, 
+                label = paste0(scales::number_format(style_positive = "plus",big.mark = ",")(estimate_2023-estimate_2022), " (±", round(moe_diff, 0), ")")),
+            nudge_x = .3)+
+  hrbrthemes::scale_color_ipsum(
+    #name = element_blank()
+  ) +
+  hrbrthemes::theme_ipsum() +
+  coord_flip() +
+  theme(panel.grid.major.y = element_blank()) +
+  ylab("number of commuters") +
+  xlab(element_blank()) +
+  labs(title = "Change in number of commuters, 2022-2023",
+       subtitle ="City of Madison. Statistically insignifant changes greyed out",
+       caption = "American Community Survey 1-year estimates, Table C08006\nVisualization: Harald Kliems") +
+  gghighlight::gghighlight(sig_diff == TRUE, use_direct_label = F)
+
+```
+
+Finally we saw some statistically significant change! The overall number of workers has increased, reflecting a growing population and a strong labor market. Of those additional workers, at lot appear to be driving to work.
+
+So overall nothing too exciting this year. The numbers for 2024 will be interesting: The Metro network redesign that made big changes to the bus network was only partially captured by the 2023 numbers, and we may see the first impact of the upcoming start of the first bus rapid transit line. Regarding bike commuting, I don't anticipate much change. New and improved bike infrastructure keeps getting built, but other factors, such as the price of gas, low unemployment, job sprawl, perceptions of traffic safety, don't seem favorable to an increase in bike mode share. We will see.
+
+
+
