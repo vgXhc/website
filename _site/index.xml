@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 13 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>#30DayMapChallenge: A boring points map</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2024-11-01-a-boring-points-map</link>
+      <description>Comparing fair market and assessed value in Madison</description>
+      <category>map</category>
+      <category>Madison (WI)</category>
+      <category>housing</category>
+      <guid>https://haraldkliems.netlify.app/posts/2024-11-01-a-boring-points-map</guid>
+      <pubDate>Fri, 01 Nov 2024 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2024-11-01-a-boring-points-map/distill-preview.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Nothing new on mode share in Madison in 2023</title>
       <dc:creator>Harald Kliems</dc:creator>

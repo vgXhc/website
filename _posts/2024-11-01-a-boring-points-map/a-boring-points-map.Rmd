@@ -1,0 +1,70 @@
+---
+title: "#30DayMapChallenge: A boring points map"
+description: |
+  Comparing fair market and assessed value in Madison
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2024-11-01
+categories:
+  - map
+  - Madison (WI)
+  - housing
+output: 
+  distill::distill_article:
+    code_folding: TRUE
+---
+
+```{r}
+library(tidyverse)
+library(tmap)
+library(sf)
+library(here)
+```
+
+Sometimes a data analysis turns out to produce boring results. For day 1 of the [30 Day Map Challenge](https://30daymapchallenge.com/) (Theme: "points"), I looked at the proportion of assessed value to fair market value for properties in Madison, Wisconsin. It turns out that there isn't really anything interesting to see. At most, the fair market value is 1% higher than the assessed value, and even that's only true for a small subset of parcels with nominal values of $100.
+
+```{r layout="l-body-outset"}
+here::i_am("_posts/2024-11-01-a-boring-points-map/a-boring-points-map.Rmd")
+# tax_roll <- readxl::read_excel(here("_posts", "2024-11-01-a-boring-points-map", "data", "TaxRoll2023.xlsx"), skip = 3)
+# 
+# tax_roll <- tax_roll |>
+#   janitor::clean_names()
+# 
+# properties <- read_sf(here("_posts", "2024-11-01-a-boring-points-map", "data", "Tax_Parcels_(Assessor_Property_Information)", "Tax_Parcels_(Assessor_Property_Information).shp"))
+# 
+# properties <- properties |>
+#   select(Parcel, geometry) |>
+#   st_centroid()
+# 
+# prop_sf <- properties |>
+#   inner_join(tax_roll, by = c("Parcel" = "prop_id"))
+
+tmap_mode("plot")
+
+format_list <- list(list(digits = 2, suffix = "%"),
+                    list(big.num.abbr = FALSE),
+                    list(big.num.abbr = FALSE))
+names(format_list) <- c("fmv_ratio", "est_fmv_total", "total_assessment")
+# 
+# prop_sf <- prop_sf |>
+#   mutate(fmv_ratio = est_fmv_total/total_assessment*100) |>
+#   filter(!is.na(fmv_ratio)) |>
+#   select(fmv_ratio, est_fmv_total, total_assessment)
+# 
+# saveRDS(prop_sf, file = here("_posts", "2024-11-01-a-boring-points-map", "data", "prop_sf.RDS"))
+prop_sf <- readRDS(file = here("_posts", "2024-11-01-a-boring-points-map", "data", "prop_sf.RDS"))
+
+prop_sf |> 
+  tm_shape() +
+  tm_dots(col = c("Fair market value ratio" = "fmv_ratio"), alpha = .7, border.lwd = 0, size = .01,
+          popup.vars = c("fmv_ratio", "est_fmv_total", "total_assessment"),
+          popup.format = format_list,
+          legend.format = list(digits = 2, suffix = "%"))
+```
+
+
+
+
+Well, maybe I should have looked at [the definition and calculation method of the estimated fair value](https://www.cityofmadison.com/assessor/fairMarket.cfm) first: "The assessed value of each parcel (except those including agricultural land) is divided by the entire taxation district’s level of assessment (Average Assessment Ratio) to arrive at the Estimated Fair Market value." By averaging over the whole city, it's no surprise that there isn't much variability in the estimated fair market value.
