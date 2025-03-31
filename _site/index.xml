@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 01 Nov 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>A 3D map of downtown Madison</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2025-03-31-a-3d-map-of-downtown-madison</link>
+      <description>Using digital surface model data and `rayshader` to create a detailed rendering</description>
+      <category>Madison (WI)</category>
+      <category>rayshader</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2025-03-31-a-3d-map-of-downtown-madison</guid>
+      <pubDate>Mon, 31 Mar 2025 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>#30DayMapChallenge: A boring points map</title>
       <dc:creator>Harald Kliems</dc:creator>
