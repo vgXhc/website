@@ -15,6 +15,7 @@ output:
   distill::distill_article:
     self_contained: false
     code_folding: false
+preview: output/madison_3d_1200.png
 ---
 
 Over the past few months I have worked on producing 3D map visualizations with the amazing [`rayshader`](https://www.rayshader.com/) package. My motivation was to produce animated renderings of a route on a multi-day bike trip through Alps. I'll have to write more about those maps at another time. In the meantime, you can check out the results as part of my YouTube videos on the trip: https://www.youtube.com/watch?v=3rYSDXiv_Aw&t=28s
@@ -23,7 +24,7 @@ The `rayshader` package has a lot of functions and parameters, and the data you 
 
 Let's start with the final result:
 
-![A square 3D render of downtown Madison, centered on the Wisconsin State Capitol and looking north. The light is low and from the west. On top there is text "Madison," at the bottom "Wisconsin"](output/madison 3d_1200.png)
+![A square 3D render of downtown Madison, centered on the Wisconsin State Capitol and looking north. The light is low and from the west. On top there is text "Madison," at the bottom "Wisconsin"](output/madison_3d_1200.png)
 Click [here](output/madison 3d.png) to get the full 16 MB 5000x5000px image.
 
 # Load packages
