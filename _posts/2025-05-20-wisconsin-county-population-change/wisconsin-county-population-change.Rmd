@@ -1,0 +1,222 @@
+---
+title: "County-level population change in Wisconsin"
+description: |
+  Which counties have gained the most population between 2020 and 2024? Which ones shrunk?
+date: 2025-05-20
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+categories:
+  - Wisconsin
+  - population
+  - map
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+---
+
+The US Census Bureau recently released the [latest population estimates](https://www.census.gov/programs-surveys/popest/data/tables.html). The estimates are available at the national, state, county, and local level. In this post, we'll take a quick look at which Wisconsin counties had the largest population gains and which ones shrunk.
+
+# One-year change: 2023 to 2024
+
+Looking just at the two most most recent years, Dane County saw the largest absolute and relative increase in population: From 2023 to 2024, the counties population grew by 1.5%, or over 8,600 people. The only other county with a 1.5% population was Menominee. But Menominee is Wisconsin least populous county, and so a 1.5% increase is just 65 people! For absolute increases, Waukesha and Milwaukee counties come in second and third. Especially for Milwaukee County this is an exciting turnaround, after many years of losing population. 
+
+Fourteen of the Wisconsin's 72 counties saw their populations shrink, but the losses were modest: Adams County saw the highest absolute and relative loses, with -0.8%, or 176 fewer people living in the county.
+
+```{r download_data, echo=FALSE,message=FALSE,results=FALSE}
+library(tidycensus)
+library(tidyverse)
+library(tmap)
+library(sf)
+library(gt)
+wi_pop_2024 <- get_estimates(geography = "county", 
+                             variables = "POPESTIMATE", 
+                             state = "WI", 
+                             geometry = TRUE, 
+                             vintage = 2024,
+                             year = 2024)
+
+wi_pop_2023 <- get_estimates(geography = "county", 
+                             variables = "POPESTIMATE", 
+                             state = "WI", 
+                             geometry = TRUE, 
+                             vintage = 2024,
+                             year = 2023)
+wi_pop_23_24 <- rbind(wi_pop_2023, wi_pop_2024)
+```
+
+
+```{r 23_24_chart, layout="l-body-outset", fig.width=10, fig.height=7}
+
+wi_pop_23_24 <- wi_pop_23_24 |> 
+  st_drop_geometry() |> 
+  pivot_wider(names_from = "year", values_from = "value", 
+              names_prefix = "pop_",
+              id_cols = "NAME") 
+
+q <- wi_pop_2024 |> 
+  select(NAME, geometry) |> 
+  left_join(wi_pop_23_24, by = "NAME") |> 
+  mutate(pop_change_abs = pop_2024 - pop_2023,
+         pop_change_pct = (pop_2024 - pop_2023)/pop_2023) |> 
+  tm_shape() +
+  tm_polygons(fill = "pop_change_abs",
+              fill.scale = tm_scale_intervals(
+                n = 5,
+                style = "pretty"
+              ),
+              fill.legend = tm_legend(
+                title = "Population change",
+                position = c("top", "right"))) +
+  tm_title(" ") +
+  tm_credits("Data: US Census Bureau Population Estimates\nVisualization: Harald Kliems", 
+             position = c("RIGHT", "BOTTOM"),
+             just = "right")
+
+
+p <- wi_pop_2024 |> 
+  select(NAME, geometry) |> 
+  left_join(wi_pop_23_24, by = "NAME") |> 
+  mutate(pop_change_abs = pop_2024 - pop_2023) |> 
+  mutate(pop_change_pct = round((pop_change_abs/pop_2023)*100, 1)) |> 
+  tm_shape() +
+  tm_polygons(fill = "pop_change_pct",
+              fill.legend = tm_legend(
+                title = "relative change (%)",
+                position = c("top", "right")
+              ))+
+  tm_title("Wisconsin 1-year county population change 2023-2024") 
+
+tmap_arrange(p,q)
+```
+
+# Four-year change: 2024 to 2024
+
+If we compare the latest estimates compare with the 2020 estimates, the picture at the very top doesn't change: Dane County again leads the pack, with a population growth of over 25,000 people, or 4.6%. For absolute growth, Waukesha County is second again, but its 2.3% relative growth doesn't even get it into the top 10. Thirteen counties lost population since 2020, none more than Milwaukee County. Almost 14,000 fewer people, or 1.5% lived in the county compared to 2020. It will be interesting to see if the one-year turnaround from 2023 to 2024 signals a larger trend!
+
+
+```{r download_2020_data, echo=FALSE, results=FALSE}
+
+wi_pop_2020 <- get_estimates(geography = "county", 
+                             variables = "POPESTIMATE", 
+                             state = "WI", 
+                             geometry = TRUE, 
+                             vintage = 2024,
+                             year = 2020)
+
+wi_pop_20_24 <- rbind(wi_pop_2020, wi_pop_2024)
+
+```
+
+```{r 2020_map, layout="l-body-outset", fig.width=10, fig.height=7}
+
+wi_pop_20_24 <- wi_pop_20_24 |> 
+  st_drop_geometry() |> 
+  pivot_wider(names_from = "year", values_from = "value", 
+              names_prefix = "pop_",
+              id_cols = "NAME") 
+
+q <- wi_pop_2024 |> 
+  select(NAME, geometry) |> 
+  left_join(wi_pop_20_24, by = "NAME") |> 
+  mutate(pop_change_abs = pop_2024 - pop_2020,
+         pop_change_pct = (pop_2024 - pop_2020)/pop_2020) |> 
+  tm_shape() +
+  tm_polygons(fill = "pop_change_abs",
+              fill.legend = tm_legend(
+                title = "absolute change",
+                position = c("top", "right"))) +
+  tm_title(" ") +
+  tm_credits("Data: US Census Bureau Population Estimates\nVisualization: Harald Kliems", 
+             position = c("RIGHT", "BOTTOM"),
+             just = "right")
+
+
+p <- wi_pop_2024 |> 
+  select(NAME, geometry) |> 
+  left_join(wi_pop_20_24, by = "NAME") |> 
+  mutate(pop_change_abs = pop_2024 - pop_2020) |> 
+  mutate(pop_change_pct = round((pop_change_abs/pop_2020)*100, 1)) |> 
+  tm_shape() +
+  tm_polygons(fill = "pop_change_pct",
+              fill.scale = tm_scale_intervals(
+                n = 6,
+                style = "pretty"
+              ),
+              fill.legend = tm_legend(
+                title = "relative change (%)",
+                position = c("top", "right")
+              ))+
+  tm_title("Wisconsin county population change 2020-2024") 
+
+tmap_arrange(p,q)
+
+
+```
+
+Here are all the numbers in a big table.
+
+```{r four-year-table}
+wi_pop_20_24 |> 
+  left_join(wi_pop_23_24 |> select(NAME, pop_2023)) |> 
+  mutate(NAME = str_remove(NAME, "County, Wisconsin"),
+         chg_20_24_abs = pop_2024 - pop_2020,
+         chg_20_24_pct = chg_20_24_abs / pop_2020,
+         chg_23_24_abs = pop_2024 - pop_2023,
+         chg_23_24_pct = chg_23_24_abs / pop_2023) |> 
+  arrange(desc(chg_20_24_pct)) |> 
+    gt() |>
+  data_color(
+    columns = c(chg_20_24_abs, 
+                chg_20_24_pct,
+                chg_23_24_abs,
+                chg_23_24_pct),
+    method = "numeric",
+    palette = "BrBG"
+  ) |>
+  cols_label(
+    NAME = "County",
+    pop_2020 = "2020",
+    pop_2023 = "2023",
+    pop_2024 = "2024",
+    chg_20_24_abs = "absolute",
+    chg_23_24_abs = "absolute",
+    chg_23_24_pct = "percent",
+    chg_20_24_pct = "percent"
+  ) |>
+  tab_spanner(
+    label = "Population estimate",
+    columns = c(pop_2020, pop_2023, pop_2024)
+  ) |>
+    tab_spanner(
+    label = "4-year change (2020-2024)",
+    columns = c(chg_20_24_abs, chg_20_24_pct)
+  ) |>
+    tab_spanner(
+      label = "1-year change (2023-2024)",
+      columns = c(chg_23_24_abs, chg_23_24_pct)
+    ) |> 
+  fmt_percent(
+    columns = ends_with("_pct"),
+    scale_value = T, decimals = 1, force_sign = T
+  ) |>
+  fmt_integer(
+    columns = c(
+      pop_2020,
+      pop_2023,
+      pop_2024,
+      chg_23_24_abs,
+      chg_20_24_abs
+    ),
+    use_seps = T
+  ) |> 
+  tab_source_note(
+    source_note = md(
+      "Data: US Census Population Estimates, Vintage 2024"
+    )
+  )
+
+```
+

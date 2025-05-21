@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 31 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 20 May 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>County-level population change in Wisconsin</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2025-05-20-wisconsin-county-population-change</link>
+      <description>Which counties have gained the most population between 2020 and 2024? Which ones shrunk?</description>
+      <category>Wisconsin</category>
+      <category>population</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2025-05-20-wisconsin-county-population-change</guid>
+      <pubDate>Tue, 20 May 2025 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2025-05-20-wisconsin-county-population-change/wisconsin-county-population-change_files/figure-html5/23_24_chart-1.png" medium="image" type="image/png" width="1920" height="1344"/>
+    </item>
     <item>
       <title>A 3D map of downtown Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
