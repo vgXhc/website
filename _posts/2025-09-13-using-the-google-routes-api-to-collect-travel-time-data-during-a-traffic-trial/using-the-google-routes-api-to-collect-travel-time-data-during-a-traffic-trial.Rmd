@@ -14,6 +14,7 @@ output:
   distill::distill_article:
     self_contained: false
     code_folding: true
+preview: img/travel_delay_chart.png
 ---
 
 The City of Madison just started [a traffic trial](https://www.cityofmadison.com/news/2025-09-05/city-of-madison-to-test-removal-of-williamson-street-peak-hour-travel-lanes-to): Williamson Street is a local street on the east side of the isthmus. It has seen [some high-profile crashes](https://www.wortfm.org/mother-fools-crash-renews-calls-for-action/) in which drivers ended up crashing their cars into buildings. It also more generally has a higher crash rate than comparable city streets. The street has one travel lane and one curb lane in each direction. The curb lane is used for car parking for most of the day, except during rush hour: During those times parking was prohibited and it became an additional travel lane. In response to the crashes and community requests, the city has changed this on a trial basis: During the trial the curb lanes will remain parking lanes at all times. No more rush hour travel lanes.
