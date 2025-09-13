@@ -7,7 +7,17 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 20 May 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 13 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>What happens when you remove rush-hour travel lanes?</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2025-09-13-using-the-google-routes-api-to-collect-travel-time-data-during-a-traffic-trial</link>
+      <description>Using the Google Maps API to collect travel time data during a traffic trial</description>
+      <category>Madison (WI)</category>
+      <category>transportation</category>
+      <guid>https://haraldkliems.netlify.app/posts/2025-09-13-using-the-google-routes-api-to-collect-travel-time-data-during-a-traffic-trial</guid>
+      <pubDate>Sat, 13 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>County-level population change in Wisconsin</title>
       <dc:creator>Harald Kliems</dc:creator>
