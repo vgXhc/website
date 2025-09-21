@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 13 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>How many cars are there in Madison?</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2025-09-21-how-many-cars-are-there-in-madison</link>
+      <description>Using American Community Survey data to look at car ownership in Madison over time.</description>
+      <category>American Community Survey</category>
+      <category>transportation</category>
+      <category>Madison (WI)</category>
+      <guid>https://haraldkliems.netlify.app/posts/2025-09-21-how-many-cars-are-there-in-madison</guid>
+      <pubDate>Sun, 21 Sep 2025 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2025-09-21-how-many-cars-are-there-in-madison/how-many-cars-are-there-in-madison_files/figure-html5/plot-car-1.png" medium="image" type="image/png" width="1920" height="1344"/>
+    </item>
     <item>
       <title>What happens when you remove rush-hour travel lanes?</title>
       <dc:creator>Harald Kliems</dc:creator>
@@ -129,18 +141,6 @@
       <guid>https://haraldkliems.netlify.app/posts/2024-02-28-madisons-largest-temperature-swings</guid>
       <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
       <media:content url="https://haraldkliems.netlify.app/posts/2024-02-28-madisons-largest-temperature-swings/madisons-largest-temperature-swings_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1536" height="844"/>
-    </item>
-    <item>
-      <title>How many cars are there in Madison?</title>
-      <dc:creator>Harald Kliems</dc:creator>
-      <link>https://haraldkliems.netlify.app/posts/2025-09-21-how-many-cars-are-there-in-madison</link>
-      <description>Using American Community Survey data to look at car ownership in Madison over time.</description>
-      <category>American Community Survey</category>
-      <category>transportation</category>
-      <category>Madison (WI)</category>
-      <guid>https://haraldkliems.netlify.app/posts/2025-09-21-how-many-cars-are-there-in-madison</guid>
-      <pubDate>Wed, 28 Feb 2024 00:00:00 +0000</pubDate>
-      <media:content url="https://haraldkliems.netlify.app/posts/2025-09-21-how-many-cars-are-there-in-madison/how-many-cars-are-there-in-madison_files/figure-html5/plot-car-1.png" medium="image" type="image/png" width="1920" height="1344"/>
     </item>
     <item>
       <title>Comparing counts from Strava Metro and loop counters</title>
