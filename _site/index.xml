@@ -7,7 +7,17 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 21 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 29 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Travel times on Willy Street</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/travel-times-on-willy-street</link>
+      <description>A preliminary look at the data during the rush hour lane closure trial</description>
+      <category>transportation</category>
+      <category>Madison (WI)</category>
+      <guid>https://haraldkliems.netlify.app/posts/travel-times-on-willy-street</guid>
+      <pubDate>Mon, 29 Sep 2025 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>How many cars are there in Madison?</title>
       <dc:creator>Harald Kliems</dc:creator>
