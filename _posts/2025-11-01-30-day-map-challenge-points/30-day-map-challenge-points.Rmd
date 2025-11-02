@@ -10,6 +10,7 @@ date: 2025-11-01
 categories:
   - map
   - Madison (WI)
+preview: img/resto_map.png
 output: 
   distill::distill_article:
     code_folding: TRUE
