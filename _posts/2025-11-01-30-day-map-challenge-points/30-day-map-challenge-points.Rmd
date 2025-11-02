@@ -1,0 +1,75 @@
+---
+title: "#30 Day Map Challenge: Points"
+description: |
+  Madison restaurants and their cuisine
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2025-11-01
+categories:
+  - map
+  - Madison (WI)
+output: 
+  distill::distill_article:
+    code_folding: TRUE
+---
+
+For day 1 of [#30DayMapChallenge](https://30daymapchallenge.com/), here's a quick points map of restaurants in and around Madison and their cuisine. 
+
+The data come from [OpenStreetMap](https://openstreetmap.org/copyright), via the Overpass API, via the `osmdata` package. As evidenced by the many NA values, there's clearly room for improving the completeness of the `cuisine` tag in OpenStreetMap...
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r}
+library(tmap)
+library(osmdata)
+library(sf)
+library(tigris)
+library(tidyverse)
+```
+
+```{r layout="l-body-outset", fig.width=10, fig.height=7}
+plces <- tigris::places(state = "Wisconsin")
+
+madison <-  plces |>
+  filter(NAME == "Madison")
+
+bbox <- st_bbox(madison)
+
+restaurants <- opq(bbox = bbox) |>
+  add_osm_feature(key = "amenity", value = "restaurant") |>
+  osmdata_sf()
+
+poly_rest <- restaurants$osm_polygons |>
+  st_centroid() |>
+  select(name, cuisine)
+
+point_rest <- restaurants$osm_points |> select(name, cuisine)
+
+all_rest <- rbind(poly_rest, point_rest) |>
+  filter(!is.na(name)) |> 
+  mutate(cuisine = fct_lump_n(cuisine, 10),
+         cuisine = fct_infreq(cuisine))
+
+counts <- all_rest |>
+  st_drop_geometry() |>
+  count(cuisine)
+
+all_rest <- all_rest |> left_join(counts) |>
+  mutate(
+    cuisine_with_count = paste0(cuisine, " (", n, ")"),
+    cuisine_with_count = fct_infreq(cuisine_with_count)
+  )
+
+
+tm_basemap() +
+  tm_shape(all_rest) +
+  tm_dots(fill = "cuisine_with_count", fill.legend = tm_legend(title = "Cuisine")) +
+  tm_credits("Data: OpenStreetMap (https://openstreetmap.org/copyright)") +
+  tm_title("Restaurants in Madison", position = tm_pos_in("center"))
+```
+
