@@ -7,7 +7,17 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 01 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 03 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Travel times on Willy Street, Part 2</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/travel-times-on-willy-street-part-2</link>
+      <description>Another look at travel time estimates, now including the JND construction</description>
+      <category>transportation</category>
+      <category>Madison (WI)</category>
+      <guid>https://haraldkliems.netlify.app/posts/travel-times-on-willy-street-part-2</guid>
+      <pubDate>Mon, 03 Nov 2025 00:00:00 +0000</pubDate>
+    </item>
     <item>
       <title>#30 Day Map Challenge: Points</title>
       <dc:creator>Harald Kliems</dc:creator>
