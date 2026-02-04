@@ -7,7 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Mon, 03 Nov 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Speed limits on tertiary highways and traffic stress</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-02-03-speed-limits-tertiary-higways-traffic-stress</link>
+      <description>A look at OpenStreetMap data in Madison and Milwaukee</description>
+      <category>transportation</category>
+      <category>Madison (WI)</category>
+      <category>Milwaukee (WI)</category>
+      <category>OpenStreetMap</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-02-03-speed-limits-tertiary-higways-traffic-stress</guid>
+      <pubDate>Tue, 03 Feb 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-02-03-speed-limits-tertiary-higways-traffic-stress/analysis_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>Travel times on Willy Street, Part 2</title>
       <dc:creator>Harald Kliems</dc:creator>
