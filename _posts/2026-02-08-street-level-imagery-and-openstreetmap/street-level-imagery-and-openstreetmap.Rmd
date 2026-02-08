@@ -1,0 +1,36 @@
+---
+title: "Street level imagery and OpenStreetMap"
+description: |
+  I gave a talk at Mapping USA 2026
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2026-02-08
+creative_commons: CC BY-SA
+categories:
+  - OpenStreetMap
+  - map
+output:
+  distill::distill_article:
+    self_contained: false
+preview: img/Mapping_usa_preview.png
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+Last year I got an [OpenStreetMap US/Mapillary camera grant](https://blog.mapillary.com/update/2025/04/10/announcing-camera-grant-program-v2). The grant provides with a [GoPro Max](https://amzn.to/4bNVsbL) (affiliate link) 360 degree camera, and so I've been out collecting street-level images in Madison and surrounding areas for a few months. At the virtual conference [Mapping USA](https://openstreetmap.us/events/mapping-usa/2026/), my fellow grant recipient and OpenStreetMap nerd Sean shared some of our experiences with the grant program and how we use street-level imagery to improve the map. A recording of the talk is now on YouTube:
+
+<iframe width="560" height="360" src="https://www.youtube-nocookie.com/embed/V-_8kceZzy0?si=6l7KT_K2xDXz8ovA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+At the end of the talk, we mention some links/resources. Here they are:
+
+- OSMUS Slack #street-level-imagery channel https://join.slack.com/t/osmus/shared_invite/zt-3o5jqm7br-yI5j52M4For~QH25WoNN_Q
+- Mapillary forums https://forum.mapillary.com
+- [Mapillary’s how-to guide](https://help.mapillary.com/hc/en-us/articles/115001477865-The-Complete-How-To-Guide-on-getting-great-Mapillary-imagery)
+- Camera grant application form https://docs.google.com/forms/d/e/1FAIpQLScxF6g4yep_4AUwO775K3Ff5fSfHU3C05KL9f80fIo9EfaoEw/viewform
+- 2025 State of Panoramax (SOTM-EU talk): https://peertube.amicale.net/w/x6VwVUSc9DsQi1iqLXqPtm

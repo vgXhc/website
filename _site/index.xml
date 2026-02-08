@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 03 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 08 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Street level imagery and OpenStreetMap</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-02-08-street-level-imagery-and-openstreetmap</link>
+      <description>I gave a talk at Mapping USA 2026</description>
+      <category>OpenStreetMap</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-02-08-street-level-imagery-and-openstreetmap</guid>
+      <pubDate>Sun, 08 Feb 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-02-08-street-level-imagery-and-openstreetmap/img/Mapping_usa_preview.png" medium="image" type="image/png" width="1956" height="1066"/>
+    </item>
     <item>
       <title>Speed limits on tertiary highways and traffic stress</title>
       <dc:creator>Harald Kliems</dc:creator>

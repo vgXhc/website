@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2026-02-08-street-level-imagery-and-openstreetmap/",
+    "title": "Street level imagery and OpenStreetMap",
+    "description": "I gave a talk at Mapping USA 2026",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2026-02-08",
+    "categories": [
+      "OpenStreetMap",
+      "map"
+    ],
+    "contents": "\nLast year I got an OpenStreetMap US/Mapillary camera grant. The grant provides with a GoPro Max (affiliate link) 360 degree camera, and so I’ve been out collecting street-level images in Madison and surrounding areas for a few months. At the virtual conference Mapping USA, my fellow grant recipient and OpenStreetMap nerd Sean shared some of our experiences with the grant program and how we use street-level imagery to improve the map. A recording of the talk is now on YouTube:\n\n\nAt the end of the talk, we mention some links/resources. Here they are:\nOSMUS Slack #street-level-imagery channel https://join.slack.com/t/osmus/shared_invite/zt-3o5jqm7br-yI5j52M4For~QH25WoNN_Q\nMapillary forums https://forum.mapillary.com\nMapillary’s how-to guide\nCamera grant application form https://docs.google.com/forms/d/e/1FAIpQLScxF6g4yep_4AUwO775K3Ff5fSfHU3C05KL9f80fIo9EfaoEw/viewform\n2025 State of Panoramax (SOTM-EU talk): https://peertube.amicale.net/w/x6VwVUSc9DsQi1iqLXqPtm\n\n\n\n",
+    "preview": "posts/2026-02-08-street-level-imagery-and-openstreetmap/img/Mapping_usa_preview.png",
+    "last_modified": "2026-02-08T10:17:54-06:00",
+    "input_file": "street-level-imagery-and-openstreetmap.knit.md",
+    "preview_width": 1956,
+    "preview_height": 1066
+  },
+  {
     "path": "posts/2026-02-03-speed-limits-tertiary-higways-traffic-stress/",
     "title": "Speed limits on tertiary highways and traffic stress",
     "description": "A look at OpenStreetMap data in Madison and Milwaukee",
