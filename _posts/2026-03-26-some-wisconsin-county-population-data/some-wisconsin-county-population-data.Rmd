@@ -1,0 +1,154 @@
+---
+title: "Some Wisconsin County Level Population Data"
+description: |
+  The 2025 Census Bureau Population Estimates are out
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2023-04-06
+creative_commons: CC BY-SA
+categories:
+  - Wisconsin
+  - population
+  - US Census Bureau
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+---
+
+```{r}
+library(tidyverse)
+library(tinythemes)
+```
+
+
+Like [every year](https://haraldkliems.netlify.app/posts/2025-05-20-wisconsin-county-population-change/), the US Census Bureau released [new population estimates](https://www.census.gov/programs-surveys/popest/data/tables.html). The estimates are for July 2025 and  include estimates for every year since the last decennial census, i.e. 2020. This is a quick look at the county-level trends for Wisconsin. 
+
+# Dane County leads in population growth
+
+As has been the case for a long time: Absolute population growth is fastest in Dane County, Wisconsin second-most populous county. Other than a small dip during the pandemic, population has been solidly increasing year over year, getting close to 600,000 people. 
+
+```{r layout="l-body-outset"}
+pop <- read_csv("data/co-est2025-alldata.csv")
+
+pop |> 
+  filter(STATE == 55 & COUNTY == "025") |> 
+  pivot_longer(cols = starts_with("POPESTIMATE"), values_to = "value", names_to = "year") |> 
+  mutate(year = as.numeric(str_remove(year, "POPESTIMATE"))) |> 
+  select(value, year) |> 
+  ggplot(aes(year, value)) +
+  geom_point() +
+  geom_line() +
+  geom_text(aes(label = value), nudge_y = 15000) +
+  labs(title = "Dane County continues its population growth",
+       subtitle = "Population estimates 2020–2025",
+       caption = "Data: US Census Bureau") +
+  scale_y_continuous(limits = c(400000,NA),
+                     labels = scales::label_number_auto()) +
+  ylab("Population") +
+  tinythemes::theme_ipsum_rc() 
+```
+
+If we compare Dane County with the states other most populous counties, Dane comes out ahead by far in absolute growth. Milwaukee's population is less than it was in 2020, and counties like Waukesha or Brown have less growth than Dane.
+
+
+
+```{r layout="l-body-outset"}
+library(ggrepel)
+pop |> 
+  filter(STATE == 55) |> 
+  filter(POPESTIMATE2025 > 150000) |> 
+  mutate(CTYNAME = fct_reorder(CTYNAME, -POPESTIMATE2025),
+         CTYNAME = str_remove(CTYNAME, " County")) |> 
+  pivot_longer(cols = starts_with("POPESTIMATE"), values_to = "value", names_to = "year") |> 
+  mutate(year = as.numeric(str_remove(year, "POPESTIMATE"))) |> 
+  select(CTYNAME, value, year) |> 
+  filter(CTYNAME != "Wisconsin") |> 
+  ggplot(aes(year, value, color = CTYNAME)) +
+  geom_line() +
+  geom_point() +
+  labs(title = "Population estimates for Wisconsin counties",
+       subtitle = "Only counties over 150,000 population included",
+       caption = "Data: US Census Bureau") +
+  scale_y_continuous(labels = scales::label_number_auto(),
+                     limits = c(0, NA)) +
+  scale_color_discrete(name = "County") +
+  ylab("Population") +
+  tinythemes::theme_ipsum_rc()
+```
+
+If we look at population change between 2020 and 2025 across all counties, we see winners and losers. Dane County added much more population than any other county.
+
+```{r layout="l-body-outset"}
+
+pop |> 
+  filter(STATE == 55) |> 
+  filter(CTYNAME != "Wisconsin") |> 
+  mutate(growth_20_25 = POPESTIMATE2025 - POPESTIMATE2020,
+          CTYNAME = str_remove(CTYNAME, " County")) |> 
+  mutate(CTYNAME = fct_reorder(CTYNAME, growth_20_25)) |> 
+  arrange(desc(growth_20_25)) |> 
+  head(10) |> 
+  ggplot(aes(CTYNAME, growth_20_25)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Wisconsin counties with the largest population gain",
+       subtitle = "2020–2025",
+       caption = "Data: US Census Bureau") +
+  scale_y_continuous(labels = scales::label_number_auto()) +
+  xlab("County") +
+  ylab("Population change") +
+  tinythemes::theme_ipsum_rc()+
+  theme(panel.grid.major = element_blank())
+```
+
+On the other end of the spectrum, many counties have lost population over the past 5 years, none as much as Milwaukee:
+
+```{r layout="l-body-outset"}
+
+pop |> 
+  filter(STATE == 55) |> 
+  filter(CTYNAME != "Wisconsin") |> 
+  mutate(growth_20_25 = POPESTIMATE2025 - POPESTIMATE2020) |> 
+  mutate(
+          CTYNAME = str_remove(CTYNAME, " County"),
+          CTYNAME = fct_reorder(CTYNAME, -growth_20_25)) |> 
+  arrange(desc(growth_20_25)) |> 
+  tail(10) |> 
+  ggplot(aes(CTYNAME, growth_20_25)) +
+  geom_col() +
+  coord_flip() +
+  labs(title = "Wisconsin counties with the largest population loss",
+       subtitle = "2020–2025",
+       caption = "Data: US Census Bureau") +
+  scale_y_continuous(labels = scales::label_number_auto()) +
+  xlab("") +
+  ylab("Population change") +
+  tinythemes::theme_ipsum_rc() 
+```
+
+Of course Milwaukee County is still by far the largest county. Population losses in other countries are mostly on the scale of less than 1,000 people. 
+
+Overall, Wisconsin population grew very modestly, from about 5.89 million to 5.97 million, or 1.2%. 
+
+```{r layout="l-body-outset"}
+pop |> 
+  filter(STATE == 55 & CTYNAME == "Wisconsin") |> 
+  pivot_longer(cols = starts_with("POPESTIMATE"), values_to = "value", names_to = "year") |> 
+  mutate(year = as.numeric(str_remove(year, "POPESTIMATE"))) |> 
+  select(value, year) |> 
+  ggplot(aes(year, value)) +
+  geom_point() +
+  geom_line() +
+  geom_text(aes(label = value), nudge_y = 100000) +
+  labs(title = "Population estimates for Wisconsin",
+       caption = "Data: US Census Bureau") +
+  scale_y_continuous(limits = c(5500000,NA),
+                     labels = scales::label_number(scale = .000001, accuracy = .1)) +
+  ylab("Population (million)") +
+  tinythemes::theme_ipsum_rc() 
+```
+
+It's important to remember that population estimates are indeed _estimates_. The Wisconsin Department of Administration also [releases population estimates](https://doa.wi.gov/Pages/LocalGovtsGrants/Population_Estimates.aspx), and they often differ from the Census Bureau's numbers. 
