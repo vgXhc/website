@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Thu, 26 Mar 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Impervious areas in Madison</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-04-28-impermeable-areas-as-a-waffle-chart</link>
+      <description>Data viz with waffle charts, or not</description>
+      <category>Madison (WI)</category>
+      <category>chart</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-04-28-impermeable-areas-as-a-waffle-chart</guid>
+      <pubDate>Tue, 28 Apr 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-04-28-impermeable-areas-as-a-waffle-chart/impermeable-areas-as-a-waffle-chart_files/figure-html5/unnamed-chunk-4-1.png" medium="image" type="image/png" width="1536" height="1536"/>
+    </item>
     <item>
       <title>Some Wisconsin County Level Population Data</title>
       <dc:creator>Harald Kliems</dc:creator>
@@ -18,7 +29,7 @@
       <category>US Census Bureau</category>
       <guid>https://haraldkliems.netlify.app/posts/2026-03-26-some-wisconsin-county-population-data</guid>
       <pubDate>Thu, 26 Mar 2026 00:00:00 +0000</pubDate>
-      <media:content url="https://haraldkliems.netlify.app/posts/2026-03-26-some-wisconsin-county-population-data/some-wisconsin-county-population-data_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1248" height="768"/>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-03-26-some-wisconsin-county-population-data/some-wisconsin-county-population-data_files/figure-html5/unnamed-chunk-2-1.png" medium="image" type="image/png" width="1536" height="1536"/>
     </item>
     <item>
       <title>Street level imagery and OpenStreetMap</title>

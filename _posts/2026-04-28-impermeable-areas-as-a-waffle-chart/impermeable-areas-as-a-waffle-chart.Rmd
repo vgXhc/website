@@ -1,0 +1,124 @@
+---
+title: "Impervious areas in Madison"
+description: |
+  Data viz with waffle charts, or not
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2026-04-28
+creative_commons: CC BY-SA
+categories:
+  - Madison (WI)
+  - chart
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+---
+
+Madison is having a wet year. The cumulative precipitation for 2026 has been close to [record highs](https://github.com/vgXhc/madison-weather/raw/main/graphs/AnnualCumulativePrecipitation_USW00014837.png), and several rain events led to localized flooding. Impervious surfaces like building roofs or parking lots contribute to this flooding. The city of Madison has an [open data set of those areas](https://data-cityofmadison.opendata.arcgis.com/datasets/2ed52d3fe98740a787c67c9c6af3d0a2_7/about), inspiring me to a little data visualization exercise. 
+
+```{r}
+library(tidyverse)
+
+library(waffle)
+library(gt)
+imp <- read_csv("data/Stormwater_Modeling_Impervious_Land_Cover_Type.csv")
+glimpse(imp)
+```
+
+First we need to do some cleanup. The `source_area_dest` variable is the human readable description of the type of impervious area. It has `r length(imp$source_area_desc)` values:
+
+```{r}
+imp |> 
+  distinct(source_area_desc)
+```
+
+We consolidate the two different roof types into one and don't distinguish between paved and unpaved parking. The area is provided in square feet and we'll convert to square miles. 
+
+```{r}
+
+df <- imp |> 
+  mutate(source_area_desc = fct_recode(
+    source_area_desc, 
+    Buildings = "Sloped Roof", 
+    Buildings = "Flat Roof",
+    Parking = "Unpaved Parking"
+  )) |> 
+  group_by(source_area_desc) |> 
+  summarize(area = sum(ShapeSTArea)) |> 
+  mutate(area_sq_mi = area * 3.587006e-8)
+
+df
+```
+
+This would make for a perfectly fine table (and we'll make that later), but why not have a little fun and turn it into a waffle chart? The [`waffle`](https://github.com/hrbrmstr/waffle/) package makes that relatively easy. "Relatively" because in practice you need to do a lot of tinkering to get a truly nice looking chart. Pick a sensible number of categories, units, comprehensible (but included in the free Fontawesome icon set!) icons, arrange rows and columns, scale everything just right, etc. Here's my solution:
+
+```{r layout="l-body-outset", fig.width = 8, fig.height= 8}
+df |> 
+  mutate(source_area_desc = if_else(
+    source_area_desc %in% (df %>% slice_min(area, n = 7) %>% pull(source_area_desc)),
+    "other",
+    source_area_desc
+  )) %>%
+  summarise(area = sum(area_sq_mi*5), .by = source_area_desc) |> 
+  arrange(desc(area)) |> 
+  mutate(source_area_desc = fct_reorder(source_area_desc, -area)) |> 
+  ggplot(aes(label = source_area_desc, values = area)) +
+  geom_pictogram(
+    size = 8, 
+    n_rows = 10,
+    aes(colour = source_area_desc),
+    flip = TRUE
+     #make_proportional = TRUE
+  ) +
+  scale_label_pictogram(
+  name = NULL,
+  values = c("building", "road", "parking", "warehouse", "water", "walking", "map"),
+  labels = c("Buildings", "Streets", "Parking", "Driveways", "Water body areas", "Sidewalks", "other")
+) +
+  scale_color_manual(
+    name = NULL,
+    values = viridisLite::viridis(7, option = "D"),
+    labels = c("Buildings", "Streets", "Parking", "Driveways", "Water body areas", "Sidewalks", "other")
+  ) +
+  coord_equal() +
+  hrbrthemes::theme_ipsum_rc(grid="") +
+  waffle::theme_enhance_waffle() +
+  labs(title = "Impervious surface in Madison",
+       subtitle = "Each symbol represents ~1/5 square mile",
+       caption = "Data: City of Madison Stormwater Modeling Impervious Land Cover Type") +
+  theme(
+    legend.key.height = unit(2.25, "line"),
+    legend.text = element_text(size = 10, hjust = 0, vjust = 0.75)
+  ) 
+```
+
+Now as I said, the waffle chart/pictogram looks cool. But if we're being honest, this waffle chart could have been a table. So let's make a nice one. 
+
+```{r}
+df |> 
+  mutate(source_area_desc = if_else(
+    source_area_desc %in% (df %>% slice_min(area, n = 7) %>% pull(source_area_desc)),
+    "other",
+    source_area_desc
+  )) %>%
+  mutate(total_area = sum(area)) |> 
+  summarise(area_pct = sum(area/total_area), area = sum(area_sq_mi), .by = source_area_desc) |> 
+  arrange(desc(area)) |> 
+  gt() |> 
+  cols_label(source_area_desc = "Type",
+             area = html("Total area (mi<sup>2</sup>)"),
+             area_pct = "% of total impervious area") |> 
+  cols_move(columns = area_pct, after = area) |> 
+  fmt_percent(columns = "area_pct",
+              decimals = 1) |> 
+  fmt_number(columns = area, decimals = 2) |> 
+  tab_header(title = paste0("Madison has ", round(df |> summarize(total = sum(area_sq_mi)) |> pull(total), 1), " square miles of impervious surface"),
+             subtitle = "Buildings and streets make up over half of that") |> 
+  tab_source_note("Data: City of Madison")
+  
+```
+
+Depending on the audience and the story you're trying to tell, either form of presenting the data could be appropriate. For example, if the exact proportions in each category matter, a table probably is the better choice. But to get a quick glimpse of the major types of impervious surfaces, the waffle chart is a good looking visualization. 
