@@ -1,0 +1,291 @@
+---
+title: "Madison bike crashes peak in September"
+description: |
+  A closer look at the data
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2026-09-05
+categories:
+  - biking
+  - transportation
+  - Madison (WI)
+  - Vision Zero
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+
+---
+
+```{r}
+library(tidyverse)
+library(tmap)
+library(sf)
+library(gghighlight)
+library(jsonlite)
+library(gt)
+
+download_crashes <- function(year) {
+  uri <- paste0("https://CommunityMaps.wi.gov/crash/public/crashesKML.do?filetype=json&startyear=", 
+                year, 
+                "&endyear=", 
+                year, 
+                "&injsvr=K&injsvr=A&injsvr=B&injsvr=C&injsvr=O&county=dane")
+  download.file(uri, "crashes_hist.json")
+  
+  df_hist <- st_read("crashes_hist.json")
+  
+#if there are no crashes, return NULL so that the function doesn't throw an error  
+  if (nrow(df_hist) == 0) {
+    return(NULL)
+  }
+  
+  # to access the various flags in the data, we need to parse the json once more
+  # and then add that to the original crashes data frame
+  crashesJSON <- fromJSON("crashes_hist.json")
+  crashes_hist <- df_hist %>%
+    add_column(crashesJSON$features$properties$flags)
+  crashes_hist |> 
+    select(-flags)
+}
+
+# crashes_all_dane <- map_dfr(2017:year(today()), download_crashes)
+
+# read a saved version of the crash data
+crashes_all_dane <- read_rds("data/crashes_all_dane.RDS")
+
+
+crashes_all_dane <- crashes_all_dane |> 
+  mutate(date = mdy(date),
+         year = year(date),
+         severity = case_when(injsvr == "K" ~ "fatal crash",
+                              injsvr == "A" ~ "serious injury crash",
+                              injsvr == "B" ~ "minor injury crash",
+                              injsvr == "C" ~ "suspected injury crash",
+                              injsvr == "O" ~ "no injury crash"
+         ),
+         severity = factor(severity, levels = c("fatal crash",
+                                                "serious injury crash",
+                                                "minor injury crash",
+                                                "suspected injury crash",
+                                                "no injury crash"))
+  )
+```
+
+
+```{r main-chart, layout="l-body-outset", fig.width = 8, fig.height= 6}
+crashes_all_dane |> 
+  st_drop_geometry() |> 
+  filter(muniname == "MADISON" & 
+           bikeflag == "Y" &
+           year < 2026) |> 
+  group_by(month = lubridate::month(date, abbr = T, label = TRUE)) |> 
+  tally() |> 
+  ggplot(aes(month, n)) +
+  geom_col() +
+  gghighlight::gghighlight(month == "Sep") +
+  ylab("Number of reported bike crashes") +
+  xlab("") +
+  tinythemes::theme_ipsum_rc() +
+  labs(title = "September is the most dangerous month for biking in Madison",
+       subtitle = paste0("Police-reported bike crashes in Madison, 2017–2025"),
+       caption = "Data: Wisconsin Traffic Operations and Safety (TOPS)
+Laboratory\nVisualization: Harald Kliems") +
+  theme(panel.grid.major.x = element_blank())
+
+```
+
+
+A few years ago I started looking at the monthly distribution of bike crashes in Madison. It turned out that September was the month with the highest number of crashesm and this was consistent over the years.  Whenever I shared the graph, people asked questions: Is biking actually more dangerous in September or are there just more people biking? How reliable is the count of crashes? Is it _all_ bike crashes or just serious or fatal ones? What's the explanation for this peak? I'll try to provide some answers, grounded in data.
+
+# The crash data: What is and isn't included
+The chart is based on data from the Traffic Operations and Safety (TOPS) lab at UW–Madison. They in turn use data from crash report forms. And the crash report forms are a [legally required](https://docs.legis.wisconsin.gov/statutes/statutes/346/xi/70) for any crash that:
+
+- involves a vehicle (bicycles are vehicles)
+- results in injury _or_ property damage of over $1000
+
+While the legal requirement applies to all crashes that fit the above criteria, the TOPS Lab data only include reports that were completed by a police officer. So if police were not called to the scene, the crash won't be in the data set. Thus, overall the data does not include all bike crashes.
+
+# Crashes over time
+The chart sums up crashes over the years, starting in 2017. Why 2017? Because the criteria for reporting crash severity changed that year. While this isn't relevant for this chart, it matters for a lot of my [other crash data analyses](https://haraldkliems.shinyapps.io/msn_vision_zero_dashboard/) and therefore I always use this cut-off. 
+
+
+Let's look at the monthly distribution of crashes over the years. This allows us to check if the September peak is consistent over time.
+
+```{r monthly-line-chart-by-year, layout="l-body-outset", fig.width = 8, fig.height= 8}
+crashes_all_dane |> 
+  st_drop_geometry() |> 
+  filter(muniname == "MADISON" & 
+           bikeflag == "Y" &
+           year < 2026) |> 
+  group_by(month = lubridate::month(date, abbr = T, label = TRUE), year) |> 
+  tally() |> 
+  group_by(year) |> 
+  mutate(peak_month = month[which.max(n)]) |> 
+  ggplot(aes(month, n, group = year, color = factor(year))) +
+  geom_line() +
+  gghighlight(peak_month == "Sep", label_key = year) +
+  ylab("Number of reported bike crashes") +
+  xlab("") +
+  tinythemes::theme_ipsum_rc() +
+  labs(title = "In 5 out of 9 years, September had the highest number of bike crashes",
+       subtitle = paste0("Years in which September had the highest number of crashes highlighted"),
+       caption = "Data: Wisconsin Traffic Operations and Safety (TOPS)
+Laboratory\nVisualization: Harald Kliems") +
+  theme(panel.grid.major.x = element_blank())
+```
+
+The chart is a little busy. Here's a table that's easier to read:
+
+```{r peak-month-table}
+crashes_all_dane |> 
+  st_drop_geometry() |> 
+  filter(muniname == "MADISON" & 
+           bikeflag == "Y" &
+           year < 2026) |> 
+  group_by(month = lubridate::month(date, abbr = T, label = TRUE), year) |> 
+  tally() |> 
+  group_by(year) |> 
+  mutate(peak_month = month[which.max(n)]) |> 
+  ungroup() |> 
+  reframe(peak_month, .by = year) |> 
+  distinct(year, peak_month) |> 
+  gt() |> 
+  cols_label(
+    year = "Year",
+    peak_month = "Month"
+  ) |> 
+  gt::tab_header(title = "Month with highest number of bike crashes") |> 
+  gt::tab_style(
+    style = list(
+      cell_fill(color = "lightcyan")
+      ),
+      locations = cells_body(
+        rows = peak_month == "Sep"
+      )
+    )
+
+```
+
+We confirm: In most years, September is indeed the peak for bike crashes. June and August share the second place, far behind. 
+
+# Where crashes happen: Is it the students?
+
+A common explanation for the September peak is the start of the semester at UW–Madison. This brings thousands of people to town, many of them new to biking or driving in a city. If you spend time on campus, it's like a switch has been turned, and streets and path that were empty during summer break suddenly teem with activity. September also usually has good biking weather---not as humid and hot as July and August but still warm enough.
+
+To shed more light on the "it's the students" hypothesis, we need to look at where crashes are happening. If the hypothesis is true, we would expect to see a pattern for crashes on or near campus.
+
+```{r crash-map}
+tmap_mode("view")
+crashes_all_dane |>
+  filter(muniname == "MADISON" &
+           bikeflag == "Y" &
+           year < 2026) |>
+  mutate(september = if_else(month(date) == 9, "September", "Other months")) |>
+  tm_shape() +
+  tm_dots() +
+  tm_facets(by = "september")
+  
+
+```
+
+It's difficult to see a clear spatial pattern on the map. Rather than a map, we can use the city's plan areas to compare.  
+
+```{r area-plan-map, message=FALSE, layout="l-body-outset"}
+
+areas <- st_read("data/Area_Plans.geojson")
+
+tmap_mode("view")
+tm_shape(areas) +
+  tm_polygons("District_Name", fill_alpha = 0.3,
+              fill.legend = tm_legend(show = FALSE)) +
+  tm_text(text = "District_Name") 
+```
+
+
+If you're not familiar with Madison's geography, the UW campus as well as most of student housing is Near West and Downtown. 
+
+```{r crashes-by-plan-area, layout="l-body-outset", fig.width = 8, fig.height= 8}
+crashes_all_dane |>
+  filter(muniname == "MADISON" &
+           bikeflag == "Y" &
+           year < 2026) |>
+  st_join(areas) |>
+  st_drop_geometry() |>
+  group_by(District_Name, month = lubridate::month(date, abbr = T, label = TRUE)) |>
+  tally() |>
+  ggplot(aes(month, n)) +
+  geom_col() +
+  gghighlight::gghighlight(month == "Sep", calculate_per_facet = TRUE) +
+  facet_wrap(facets = "District_Name") +
+  tinythemes::theme_ipsum_rc() +
+  xlab("") +
+  labs(title = "Bike crashes 2017-2025 by plan area")
+```
+
+Across the whole year, most bike crashes happen Downtown, Near East, and Near West. And when look at the monthly peaks,  in the Near West Area, the September peak is most pronounced. While Downtown doesn't have a peak in September, the monthly crash numbers in that month are still among the highest. This is pretty strong support for "it's the students!"
+
+# Do people just bike more in September?
+Is biking really more dangerous in September on an indidual level or do people just bike more during that month? That's a key question, and unfortunately we have limited data to answer it. There is no citywide data on bicyclee miles traveled or bike trips taken, not annual let alone by month. The best we have are counts from a few permanent bike counters. They track every bike that passes by. The two counters with the most complete data over the years are on the Southwest Path near the Camp Randall stadium (Near West) and on the Cap City Trail at North Shore Drive (Downtown Area). The data is currently not available on the city's open data portal, but fortunately I locally have files for the data from 2016 to 2022. Good enough.
+
+```{r bike-counts-by-month, layout="l-body-outset", fig.width = 8, fig.height= 5}
+cc_counts <- read_csv("data/Eco-Totem_Capital_City_Trail_Bike_Counts(3).csv", col_types = "ci-") %>% mutate(location = "Cap City at North Shore")
+sw_counts <- read_csv("data/Eco-Totem_Southwest_Path_Bike_Counts(2).csv", col_types = "ci-") %>% mutate(location = "SW Path at Randall")
+#combine two counter locations
+counts <- bind_rows(cc_counts, sw_counts)
+#some data prep for counts
+counts2 <- counts %>% 
+  drop_na %>% 
+  mutate(date_count = mdy_hm(Count_Date), #fix date and time
+         location = as.factor(location),
+         # Count = ifelse(Count == 0, 1, Count), #convert 0 counts to 1 to allow log transform
+         # log_count = log(Count), #create value for log of count
+         dayofweek = wday(date_count),
+         weekendind = ifelse(dayofweek %in% c(1:5), "weekday", "weekend"),
+         month_count = month(date_count, label = T, abbr = T)
+         ) |> 
+  select(-Count_Date) |> 
+  rename(count_hourly = Count) |> 
+  filter(date_count < ymd_hms("2022-01-01 00:00:00"))
+
+counts_2022 <- readxl::read_excel("data/EcoCounter_2022.xlsx", skip = 3,
+                   col_names = c("time_count", "count_cap_city", "count_sw_path")) |> 
+  mutate(date_count = floor_date(time_count, unit = "hours")) |> 
+  summarize(across(starts_with("count_"), ~ sum(.x, na.rm = T)), .by = date_count) |> 
+  pivot_longer(cols = starts_with("count_"), names_to = "location", values_to = "count_hourly") |> 
+  mutate(location = case_when(location == "count_cap_city" ~ "Cap City at North Shore",
+                              location == "count_sw_path" ~ "SW Path at Randall"),
+         dayofweek = wday(date_count),
+         weekendind = ifelse(dayofweek %in% c(1:5), "weekday", "weekend"),
+         month_count = month(date_count, label = T, abbr = T)) 
+
+
+rbind(counts2, counts_2022) |> 
+  mutate(year_count = year(date_count),
+         month = lubridate::month(date_count, label = TRUE, abbr = TRUE)) |> 
+  filter(year_count >= 2016) |> 
+  summarize(count_monthly_by_location = sum(count_hourly), .by = c(location, month)) |>
+  # reframe(location, month, count_monthly_by_location, count_monthly = sum(count_monthly_by_location), .by = month) |> 
+  ggplot(aes(month, count_monthly_by_location, group = location)) +
+  geom_col() +
+  facet_wrap(~ location) +
+  gghighlight(month == "Sep", calculate_per_facet = TRUE) +
+  hrbrthemes::scale_fill_ipsum(name = "Location") +
+  hrbrthemes::theme_ipsum() +
+  ylab("Number of cyclists") +
+  xlab("") +
+  labs(title = "Bike counts peak in July",
+       subtitle = "Counts at permanent Eco Counter locations, 2016–2022",
+       caption = "Data: City of Madison\nVisualization: Harald Kliems") +
+  theme(legend.position = "right") +
+  scale_y_continuous(labels = scales::label_number_auto())
+```
+
+At both locations, the highest monthly counts are in July. September is still high but definitely not the highest. Ideally, we'd have counter data from a location on campus. There are some count locations, but the data from there is too incomplete to be useful. So the peak in crashes in September is probably not merely the result of more biking. 
+
+# It's really about the students, probably
+
+What's the conclusion? I think we have enough evidence to say that the start of the semester at UW is likely leading to more bike crashes overall as well as more bike crashes per trip. There are probably other factors as well: September has later sunrises and earlier sunsets than any other of the high bike activity months. The K12 school year also starts. Motor vehicle volumes may be different too (I don't have data on this). 
+

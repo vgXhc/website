@@ -7,7 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Tue, 28 Apr 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 05 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>Madison bike crashes peak in September</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-09-05-madison-bike-crashes-peak-in-september</link>
+      <description>A closer look at the data</description>
+      <category>biking</category>
+      <category>transportation</category>
+      <category>Madison (WI)</category>
+      <category>Vision Zero</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-09-05-madison-bike-crashes-peak-in-september</guid>
+      <pubDate>Sat, 05 Sep 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-09-05-madison-bike-crashes-peak-in-september/madison-bike-crashes-peak-in-september_files/figure-html5/main-chart-1.png" medium="image" type="image/png" width="1536" height="1152"/>
+    </item>
     <item>
       <title>Impervious areas in Madison</title>
       <dc:creator>Harald Kliems</dc:creator>
