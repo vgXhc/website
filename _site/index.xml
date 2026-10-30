@@ -7,7 +7,21 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sat, 05 Sep 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>A quick look at the 2025 commute mode share data</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-10-30-a-quick-look-at-the-2025-commute-mode-share-data</link>
+      <description>No changes in Madison, but what about other cities?</description>
+      <category>Madison (WI)</category>
+      <category>Milwaukee (WI)</category>
+      <category>Cambridge (MA)</category>
+      <category>transportation</category>
+      <category>American Community Survey</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-10-30-a-quick-look-at-the-2025-commute-mode-share-data</guid>
+      <pubDate>Fri, 30 Oct 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-10-30-a-quick-look-at-the-2025-commute-mode-share-data/a-quick-look-at-the-2025-commute-mode-share-data_files/figure-html5/madison-chart-1.png" medium="image" type="image/png" width="1536" height="949"/>
+    </item>
     <item>
       <title>Madison bike crashes peak in September</title>
       <dc:creator>Harald Kliems</dc:creator>
