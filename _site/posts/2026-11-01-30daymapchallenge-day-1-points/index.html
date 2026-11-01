@@ -2193,6 +2193,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </div>
 
 <div class="d-article">
+<p><strong>Edit: A previous version of this post had the colors of the dots inverted</strong></p>
 <figure>
 <img src="little-free-library.png" alt="A Little Free Library public book case in the shape of a house" />
 <figcaption aria-hidden="true">A Little Free Library public book case in the shape of a house</figcaption>
@@ -2236,7 +2237,7 @@ Show code
 <div class="sourceCode">
 <pre class="sourceCode r"><code class="sourceCode r"><span><span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tmap_mode.html'>tmap_mode</a></span><span class='op'>(</span><span class='st'>"plot"</span><span class='op'>)</span></span>
 <span><span class='va'>bookcases</span> <span class='op'>&lt;-</span> <span class='va'>bookcases</span> <span class='op'>|&gt;</span> </span>
-<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>photo <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>panoramax</span><span class='op'>)</span>, <span class='st'>"photo"</span>, <span class='st'>"no photo"</span><span class='op'>)</span><span class='op'>)</span></span>
+<span>  <span class='fu'><a href='https://dplyr.tidyverse.org/reference/mutate.html'>mutate</a></span><span class='op'>(</span>photo <span class='op'>=</span> <span class='fu'><a href='https://dplyr.tidyverse.org/reference/if_else.html'>if_else</a></span><span class='op'>(</span><span class='fu'><a href='https://rdrr.io/r/base/NA.html'>is.na</a></span><span class='op'>(</span><span class='va'>panoramax</span><span class='op'>)</span>, <span class='st'>"no photo"</span>, <span class='st'>"photo"</span><span class='op'>)</span><span class='op'>)</span></span>
 <span></span>
 <span>  <span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tm_basemap.html'>tm_basemap</a></span><span class='op'>(</span>server <span class='op'>=</span> <span class='st'>"Stadia.StamenTonerLite"</span>, api <span class='op'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/Sys.getenv.html'>Sys.getenv</a></span><span class='op'>(</span><span class='st'>"STADIA_API_KEY"</span><span class='op'>)</span><span class='op'>)</span> <span class='op'>+</span></span>
 <span><span class='fu'><a href='https://r-tmap.github.io/tmap/reference/tm_shape.html'>tm_shape</a></span><span class='op'>(</span><span class='va'>madison</span><span class='op'>)</span> <span class='op'>+</span></span>
