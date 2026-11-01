@@ -7,7 +7,19 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Fri, 30 Oct 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>#30DayMapChallenge Day 1: Points</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-11-01-30daymapchallenge-day-1-points</link>
+      <description>Public book cases in Madison, Wisconsin</description>
+      <category>OpenStreetMap</category>
+      <category>Madison (WI)</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-11-01-30daymapchallenge-day-1-points</guid>
+      <pubDate>Sun, 01 Nov 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-11-01-30daymapchallenge-day-1-points/30daymapchallenge-day-1-points_files/figure-html5/unnamed-chunk-1-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>A quick look at the 2025 commute mode share data</title>
       <dc:creator>Harald Kliems</dc:creator>

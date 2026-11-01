@@ -1,0 +1,4825 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-turbo",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2026-11-01T14:09:21Z",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "node/1596592505",
+      "properties": {
+        "@id": "node/1596592505",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2025-09-13",
+        "name": "Little Free Library",
+        "panoramax": "6c46c937-fc12-4622-9977-9f13ab86a33c",
+        "ref": "0017"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4237211,
+          43.0682921
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3288092004",
+      "properties": {
+        "@id": "node/3288092004",
+        "addr:housenumber": "1221",
+        "addr:street": "Williamson Street",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2024-03-31",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3630813,
+          43.083702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3708586632",
+      "properties": {
+        "@id": "node/3708586632",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-06-26",
+        "name": "Little Free Library",
+        "operator": "Little Free Library",
+        "panoramax": "baca32de-9d37-4414-82a0-52c260d47245",
+        "ref": "28992"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4239939,
+          43.0708859
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3715191205",
+      "properties": {
+        "@id": "node/3715191205",
+        "amenity": "public_bookcase",
+        "check_date": "2025-09-14",
+        "nobrand": "yes",
+        "noname": "yes",
+        "panoramax": "cfb9648e-0501-4e60-8c81-d496800f735d"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4269965,
+          43.0711964
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3722069088",
+      "properties": {
+        "@id": "node/3722069088",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-10-07",
+        "name": "Little Free Library",
+        "panoramax": "28960a50-acd2-4658-b313-d54ad738ade3",
+        "ref": "0578"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4197511,
+          43.0652885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3782771495",
+      "properties": {
+        "@id": "node/3782771495",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "noname": "yes",
+        "panoramax": "48f711dd-37b1-4e51-a617-5c40ee9c1e2a",
+        "ref": "5711"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4254535,
+          43.0633532
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3785535702",
+      "properties": {
+        "@id": "node/3785535702",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "operator": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4878429,
+          43.0881348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/3835834674",
+      "properties": {
+        "@id": "node/3835834674",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "operator": "Little Free Library",
+        "ref": "23517",
+        "website": "https://www.littlefreelibrary.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.419828,
+          43.0700338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4391213980",
+      "properties": {
+        "@id": "node/4391213980",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4989828,
+          43.0706669
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4641123717",
+      "properties": {
+        "@id": "node/4641123717",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4266174,
+          43.0577544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4689623091",
+      "properties": {
+        "@id": "node/4689623091",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4042142,
+          43.0696379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4785293155",
+      "properties": {
+        "@id": "node/4785293155",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4865602,
+          43.064184
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/4883987432",
+      "properties": {
+        "@id": "node/4883987432",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.504826,
+          43.0406915
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5033143537",
+      "properties": {
+        "@id": "node/5033143537",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4968927,
+          43.0663303
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5285248014",
+      "properties": {
+        "@id": "node/5285248014",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-02-15",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3726737,
+          43.0923381
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5620099200",
+      "properties": {
+        "@id": "node/5620099200",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.529098,
+          43.0281574
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/5706990798",
+      "properties": {
+        "@id": "node/5706990798",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "website": "https://littlefreelibrary.org/"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3236605,
+          43.0801609
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6270126868",
+      "properties": {
+        "@id": "node/6270126868",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4486942,
+          43.0326091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/6530509984",
+      "properties": {
+        "@id": "node/6530509984",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3704402,
+          43.0775807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9129119199",
+      "properties": {
+        "@id": "node/9129119199",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4513812,
+          43.0562088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9301678889",
+      "properties": {
+        "@id": "node/9301678889",
+        "amenity": "public_bookcase",
+        "check_date": "2026-10-06"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4519325,
+          43.0741775
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9338746722",
+      "properties": {
+        "@id": "node/9338746722",
+        "amenity": "public_bookcase",
+        "check_date": "2026-04-26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4528045,
+          43.0673516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9667199097",
+      "properties": {
+        "@id": "node/9667199097",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4422365,
+          43.0454977
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9920251665",
+      "properties": {
+        "@id": "node/9920251665",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-02-15",
+        "name": "Little Free Library",
+        "public_bookcase:type": "wooden_cabinet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3668749,
+          43.0896426
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9920251678",
+      "properties": {
+        "@id": "node/9920251678",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-06-15",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3682174,
+          43.0886806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/9938328999",
+      "properties": {
+        "@id": "node/9938328999",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2024-11-23",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3704163,
+          43.0802246
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/10772022084",
+      "properties": {
+        "@id": "node/10772022084",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2025-07-26",
+        "name": "Little Free Library",
+        "panoramax": "e2b00737-f7c6-4dcd-8f4c-cbf99a4c7553"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4189525,
+          43.0681065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11035108038",
+      "properties": {
+        "@id": "node/11035108038",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5174191,
+          43.0578706
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11077590967",
+      "properties": {
+        "@id": "node/11077590967",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-06-16",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3601484,
+          43.0854593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11077669511",
+      "properties": {
+        "@id": "node/11077669511",
+        "amenity": "public_bookcase",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-10-25",
+        "nobrand": "yes",
+        "panoramax": "629d2c38-a334-46bd-a322-925f71a57b26"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4163392,
+          43.0617842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11077669512",
+      "properties": {
+        "@id": "node/11077669512",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-04-15",
+        "name": "Little Free Library",
+        "panoramax": "ac3b704f-8875-4a39-99ee-0bd910d97d0f",
+        "ref": "100825"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.416681,
+          43.0660483
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11822907379",
+      "properties": {
+        "@id": "node/11822907379",
+        "addr:housenumber": "1314",
+        "addr:street": "Jenifer Street",
+        "amenity": "public_bookcase",
+        "check_date": "2026-06-13"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3611342,
+          43.0843991
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/11999412528",
+      "properties": {
+        "@id": "node/11999412528",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3514747,
+          43.1104089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12070625268",
+      "properties": {
+        "@id": "node/12070625268",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.385733,
+          43.0740485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12070625786",
+      "properties": {
+        "@id": "node/12070625786",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3563582,
+          43.0840049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12086066434",
+      "properties": {
+        "@id": "node/12086066434",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4841317,
+          43.0864647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12091395379",
+      "properties": {
+        "@id": "node/12091395379",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4476016,
+          43.0628948
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12778484400",
+      "properties": {
+        "@id": "node/12778484400",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2567555,
+          43.0982945
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12842620061",
+      "properties": {
+        "@id": "node/12842620061",
+        "amenity": "public_bookcase",
+        "capacity": "10",
+        "nobrand": "yes"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2758344,
+          43.0869534
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12879121853",
+      "properties": {
+        "@id": "node/12879121853",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4444519,
+          43.0467249
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/12964994713",
+      "properties": {
+        "@id": "node/12964994713",
+        "amenity": "public_bookcase",
+        "brand:wikidata": "Q6650101",
+        "nobrand": "yes",
+        "panoramax": "02b70ce0-fb08-4c80-9dc6-33a1b4a140cc"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4213254,
+          43.0693105
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13128903907",
+      "properties": {
+        "@id": "node/13128903907",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3445824,
+          43.0900799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13241197254",
+      "properties": {
+        "@id": "node/13241197254",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3509005,
+          43.0948652
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13265331863",
+      "properties": {
+        "@id": "node/13265331863",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3667001,
+          43.0799849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335079858",
+      "properties": {
+        "@id": "node/13335079858",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "public_bookcase:type": "reading_box"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4113713,
+          43.0621926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335079859",
+      "properties": {
+        "@id": "node/13335079859",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4087985,
+          43.0643355
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335079860",
+      "properties": {
+        "@id": "node/13335079860",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4050447,
+          43.0610585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335079861",
+      "properties": {
+        "@id": "node/13335079861",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4041983,
+          43.0656283
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335079862",
+      "properties": {
+        "@id": "node/13335079862",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.403928,
+          43.0666417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335079863",
+      "properties": {
+        "@id": "node/13335079863",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.406501,
+          43.0676401
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13335079864",
+      "properties": {
+        "@id": "node/13335079864",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4035198,
+          43.0568115
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13430780601",
+      "properties": {
+        "@id": "node/13430780601",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.38836,
+          43.0385053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13551131550",
+      "properties": {
+        "@id": "node/13551131550",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4923598,
+          43.0096301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13551131551",
+      "properties": {
+        "@id": "node/13551131551",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4897212,
+          43.0097076
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13551131552",
+      "properties": {
+        "@id": "node/13551131552",
+        "amenity": "public_bookcase"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4878013,
+          43.0148257
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13563274397",
+      "properties": {
+        "@id": "node/13563274397",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "public_bookcase:type": "wooden_cabinet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4907224,
+          43.0129192
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13590605252",
+      "properties": {
+        "@id": "node/13590605252",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "mapillary": "2383122002128639",
+        "public_bookcase:type": "wooden_cabinet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5577583,
+          43.0395958
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13608420168",
+      "properties": {
+        "@id": "node/13608420168",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4964839,
+          43.0145046
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13626736251",
+      "properties": {
+        "@id": "node/13626736251",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "public_bookcase:type": "wooden_cabinet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4937176,
+          43.0075293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553110",
+      "properties": {
+        "@id": "node/13723553110",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4069336,
+          43.070854
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553111",
+      "properties": {
+        "@id": "node/13723553111",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3994823,
+          43.0661951
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553112",
+      "properties": {
+        "@id": "node/13723553112",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3922828,
+          43.0549807
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553113",
+      "properties": {
+        "@id": "node/13723553113",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3901519,
+          43.0533984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553114",
+      "properties": {
+        "@id": "node/13723553114",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3904385,
+          43.0530065
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553115",
+      "properties": {
+        "@id": "node/13723553115",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3842641,
+          43.054351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553116",
+      "properties": {
+        "@id": "node/13723553116",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4174145,
+          43.048079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553117",
+      "properties": {
+        "@id": "node/13723553117",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4100523,
+          43.0447064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553118",
+      "properties": {
+        "@id": "node/13723553118",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3990236,
+          43.0410334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723553119",
+      "properties": {
+        "@id": "node/13723553119",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.387091,
+          43.0436488
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723598359",
+      "properties": {
+        "@id": "node/13723598359",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3853044,
+          43.0684328
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723598360",
+      "properties": {
+        "@id": "node/13723598360",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-06-12",
+        "name": "Little Free Library",
+        "public_bookcase:type": "building"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3879404,
+          43.0771972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723598361",
+      "properties": {
+        "@id": "node/13723598361",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3837393,
+          43.0764128
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723598362",
+      "properties": {
+        "@id": "node/13723598362",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3803886,
+          43.078616
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723646844",
+      "properties": {
+        "@id": "node/13723646844",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3813587,
+          43.0822527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723646845",
+      "properties": {
+        "@id": "node/13723646845",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.362186,
+          43.0817605
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723646846",
+      "properties": {
+        "@id": "node/13723646846",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3721371,
+          43.0864641
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723646847",
+      "properties": {
+        "@id": "node/13723646847",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3733521,
+          43.0902934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723646848",
+      "properties": {
+        "@id": "node/13723646848",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3719771,
+          43.0923261
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723646849",
+      "properties": {
+        "@id": "node/13723646849",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3676492,
+          43.0903019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723690353",
+      "properties": {
+        "@id": "node/13723690353",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3594611,
+          43.0827675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723690354",
+      "properties": {
+        "@id": "node/13723690354",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3552195,
+          43.0845125
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723690355",
+      "properties": {
+        "@id": "node/13723690355",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3563897,
+          43.0852411
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723696757",
+      "properties": {
+        "@id": "node/13723696757",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3470684,
+          43.0905169
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723696758",
+      "properties": {
+        "@id": "node/13723696758",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3469436,
+          43.0914204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723696759",
+      "properties": {
+        "@id": "node/13723696759",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3447445,
+          43.0930253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723745749",
+      "properties": {
+        "@id": "node/13723745749",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3564627,
+          43.0906089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723745750",
+      "properties": {
+        "@id": "node/13723745750",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3524645,
+          43.0883102
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723745751",
+      "properties": {
+        "@id": "node/13723745751",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.352888,
+          43.0890057
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723745752",
+      "properties": {
+        "@id": "node/13723745752",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3568118,
+          43.0950986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13723745753",
+      "properties": {
+        "@id": "node/13723745753",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3563488,
+          43.0947453
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135457",
+      "properties": {
+        "@id": "node/13835135457",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3497534,
+          43.0948199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135458",
+      "properties": {
+        "@id": "node/13835135458",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3485599,
+          43.0969753
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135459",
+      "properties": {
+        "@id": "node/13835135459",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3474825,
+          43.0953822
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135460",
+      "properties": {
+        "@id": "node/13835135460",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3471978,
+          43.0964033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135461",
+      "properties": {
+        "@id": "node/13835135461",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3486069,
+          43.0956463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135462",
+      "properties": {
+        "@id": "node/13835135462",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3427532,
+          43.0920783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135463",
+      "properties": {
+        "@id": "node/13835135463",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3410293,
+          43.0923917
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135464",
+      "properties": {
+        "@id": "node/13835135464",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3423715,
+          43.091019
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835135465",
+      "properties": {
+        "@id": "node/13835135465",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3423641,
+          43.0909209
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835486539",
+      "properties": {
+        "@id": "node/13835486539",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "panoramax": "552ab219-8bb9-4cda-9a92-9899b6ad74d7",
+        "ref": "39846"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4190118,
+          43.0724119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835486540",
+      "properties": {
+        "@id": "node/13835486540",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "panoramax": "063802fe-01b4-4063-85e9-8f5141d80291",
+        "ref": "10056"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4202942,
+          43.0711876
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835486542",
+      "properties": {
+        "@id": "node/13835486542",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "panoramax": "3cd1bcb5-8762-4015-9dc2-b35d02f4ceea"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.416953,
+          43.0659933
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835486543",
+      "properties": {
+        "@id": "node/13835486543",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "panoramax": "7a081555-c55e-41fa-aff1-c977b21cc17e",
+        "ref": "38364"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4176722,
+          43.0632581
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835553365",
+      "properties": {
+        "@id": "node/13835553365",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "panoramax": "c83de693-ba50-465d-91eb-5a34eaea7bc6",
+        "ref": "77129"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.422513,
+          43.0645526
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835553366",
+      "properties": {
+        "@id": "node/13835553366",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "panoramax": "c9f899a4-ef8d-4a2c-a0dc-f6b6edde3ebb"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4245883,
+          43.0655342
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835553367",
+      "properties": {
+        "@id": "node/13835553367",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library",
+        "panoramax": "42709365-f3e4-417a-80f2-a5d9c038a500",
+        "ref": "0009"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4290943,
+          43.0573177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835553368",
+      "properties": {
+        "@id": "node/13835553368",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4302904,
+          43.0570554
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835553369",
+      "properties": {
+        "@id": "node/13835553369",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4322183,
+          43.0576835
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835553370",
+      "properties": {
+        "@id": "node/13835553370",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4362926,
+          43.054461
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835581596",
+      "properties": {
+        "@id": "node/13835581596",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4319255,
+          43.0721829
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835581597",
+      "properties": {
+        "@id": "node/13835581597",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4319354,
+          43.0705262
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835581598",
+      "properties": {
+        "@id": "node/13835581598",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4349833,
+          43.0698962
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835581599",
+      "properties": {
+        "@id": "node/13835581599",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4380101,
+          43.0702738
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835581600",
+      "properties": {
+        "@id": "node/13835581600",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4458881,
+          43.0712348
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835591801",
+      "properties": {
+        "@id": "node/13835591801",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4481714,
+          43.0737588
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835591802",
+      "properties": {
+        "@id": "node/13835591802",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4498525,
+          43.0689699
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835591803",
+      "properties": {
+        "@id": "node/13835591803",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4500018,
+          43.0675173
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835591804",
+      "properties": {
+        "@id": "node/13835591804",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4462492,
+          43.0678654
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848591",
+      "properties": {
+        "@id": "node/13835848591",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4467209,
+          43.0645222
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848592",
+      "properties": {
+        "@id": "node/13835848592",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4478302,
+          43.0643676
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848593",
+      "properties": {
+        "@id": "node/13835848593",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4456715,
+          43.0629445
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848594",
+      "properties": {
+        "@id": "node/13835848594",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4415102,
+          43.0647519
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848595",
+      "properties": {
+        "@id": "node/13835848595",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4383707,
+          43.0642186
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848596",
+      "properties": {
+        "@id": "node/13835848596",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4373785,
+          43.0633344
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848597",
+      "properties": {
+        "@id": "node/13835848597",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4372197,
+          43.0626589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835848598",
+      "properties": {
+        "@id": "node/13835848598",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4399896,
+          43.0610171
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835850729",
+      "properties": {
+        "@id": "node/13835850729",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.444297,
+          43.0597839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835850730",
+      "properties": {
+        "@id": "node/13835850730",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4446431,
+          43.0575527
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835850731",
+      "properties": {
+        "@id": "node/13835850731",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.446874,
+          43.0573217
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835850732",
+      "properties": {
+        "@id": "node/13835850732",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4468897,
+          43.0564637
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835850733",
+      "properties": {
+        "@id": "node/13835850733",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4403377,
+          43.0565323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835850734",
+      "properties": {
+        "@id": "node/13835850734",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4480453,
+          43.0540146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835953580",
+      "properties": {
+        "@id": "node/13835953580",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4457296,
+          43.0533039
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835953581",
+      "properties": {
+        "@id": "node/13835953581",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4467697,
+          43.0533419
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835953582",
+      "properties": {
+        "@id": "node/13835953582",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4498958,
+          43.0495433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835953583",
+      "properties": {
+        "@id": "node/13835953583",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4491226,
+          43.050516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835953584",
+      "properties": {
+        "@id": "node/13835953584",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4479745,
+          43.0503965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835990998",
+      "properties": {
+        "@id": "node/13835990998",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4420675,
+          43.0413984
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13835990999",
+      "properties": {
+        "@id": "node/13835990999",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4435387,
+          43.0427912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13836000266",
+      "properties": {
+        "@id": "node/13836000266",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4395002,
+          43.0460808
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13836000267",
+      "properties": {
+        "@id": "node/13836000267",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4478696,
+          43.0422198
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13836000268",
+      "properties": {
+        "@id": "node/13836000268",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4448195,
+          43.0409589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13836000269",
+      "properties": {
+        "@id": "node/13836000269",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4445881,
+          43.0411268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13863609481",
+      "properties": {
+        "@id": "node/13863609481",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.436518,
+          43.0881881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13863846396",
+      "properties": {
+        "@id": "node/13863846396",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5151125,
+          43.0829033
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13863846397",
+      "properties": {
+        "@id": "node/13863846397",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4927976,
+          43.0769675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13863846398",
+      "properties": {
+        "@id": "node/13863846398",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4939662,
+          43.0746836
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13863846399",
+      "properties": {
+        "@id": "node/13863846399",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4899387,
+          43.0750215
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894839727",
+      "properties": {
+        "@id": "node/13894839727",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5101491,
+          43.0731026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894839728",
+      "properties": {
+        "@id": "node/13894839728",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.509062,
+          43.072576
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894839729",
+      "properties": {
+        "@id": "node/13894839729",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5146271,
+          43.0725195
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894839730",
+      "properties": {
+        "@id": "node/13894839730",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5201424,
+          43.0717918
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894839731",
+      "properties": {
+        "@id": "node/13894839731",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.516364,
+          43.0681429
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894839732",
+      "properties": {
+        "@id": "node/13894839732",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5185144,
+          43.0658211
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894853460",
+      "properties": {
+        "@id": "node/13894853460",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.5018095,
+          43.0662454
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894853461",
+      "properties": {
+        "@id": "node/13894853461",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4989769,
+          43.0706252
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894853462",
+      "properties": {
+        "@id": "node/13894853462",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4954443,
+          43.0660163
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894853463",
+      "properties": {
+        "@id": "node/13894853463",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4933307,
+          43.0699036
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894867948",
+      "properties": {
+        "@id": "node/13894867948",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4804338,
+          43.05061
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894867949",
+      "properties": {
+        "@id": "node/13894867949",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4769139,
+          43.080926
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894867950",
+      "properties": {
+        "@id": "node/13894867950",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4684751,
+          43.0778826
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894867951",
+      "properties": {
+        "@id": "node/13894867951",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4661616,
+          43.077338
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894888437",
+      "properties": {
+        "@id": "node/13894888437",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4925087,
+          43.061151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894888438",
+      "properties": {
+        "@id": "node/13894888438",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4717544,
+          43.0507648
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894888439",
+      "properties": {
+        "@id": "node/13894888439",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4699673,
+          43.048289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894888440",
+      "properties": {
+        "@id": "node/13894888440",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.466391,
+          43.0534811
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894889740",
+      "properties": {
+        "@id": "node/13894889740",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4712354,
+          43.0647906
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894889741",
+      "properties": {
+        "@id": "node/13894889741",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4691697,
+          43.0679089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13894889742",
+      "properties": {
+        "@id": "node/13894889742",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4640573,
+          43.0638369
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895851925",
+      "properties": {
+        "@id": "node/13895851925",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3539927,
+          43.10035
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895851926",
+      "properties": {
+        "@id": "node/13895851926",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3547381,
+          43.1014025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895851927",
+      "properties": {
+        "@id": "node/13895851927",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3524033,
+          43.1044518
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895851928",
+      "properties": {
+        "@id": "node/13895851928",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3469467,
+          43.1098987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895851929",
+      "properties": {
+        "@id": "node/13895851929",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3403366,
+          43.1076583
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895851931",
+      "properties": {
+        "@id": "node/13895851931",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3629989,
+          43.105562
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895904209",
+      "properties": {
+        "@id": "node/13895904209",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.357722,
+          43.1164493
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895904210",
+      "properties": {
+        "@id": "node/13895904210",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3635763,
+          43.1193978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895904211",
+      "properties": {
+        "@id": "node/13895904211",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3673045,
+          43.1172089
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895904212",
+      "properties": {
+        "@id": "node/13895904212",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3631925,
+          43.1220566
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895904213",
+      "properties": {
+        "@id": "node/13895904213",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3676652,
+          43.1215502
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895914574",
+      "properties": {
+        "@id": "node/13895914574",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3599396,
+          43.1298911
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895914575",
+      "properties": {
+        "@id": "node/13895914575",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.323969,
+          43.1139407
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895914576",
+      "properties": {
+        "@id": "node/13895914576",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3308888,
+          43.113119
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921793",
+      "properties": {
+        "@id": "node/13895921793",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3449576,
+          43.0984571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921794",
+      "properties": {
+        "@id": "node/13895921794",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.34068,
+          43.0985183
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921795",
+      "properties": {
+        "@id": "node/13895921795",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3369895,
+          43.0967026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921796",
+      "properties": {
+        "@id": "node/13895921796",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2916753,
+          43.1161667
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921797",
+      "properties": {
+        "@id": "node/13895921797",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2960345,
+          43.1116981
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921798",
+      "properties": {
+        "@id": "node/13895921798",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3129567,
+          43.1294487
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921799",
+      "properties": {
+        "@id": "node/13895921799",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.311213,
+          43.1319817
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13895921800",
+      "properties": {
+        "@id": "node/13895921800",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3079405,
+          43.1327138
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896006001",
+      "properties": {
+        "@id": "node/13896006001",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3102215,
+          43.1383524
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896006002",
+      "properties": {
+        "@id": "node/13896006002",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3097117,
+          43.1433601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786523",
+      "properties": {
+        "@id": "node/13896786523",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3596344,
+          43.1358374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786524",
+      "properties": {
+        "@id": "node/13896786524",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3618248,
+          43.135319
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786525",
+      "properties": {
+        "@id": "node/13896786525",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3572268,
+          43.1417268
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786526",
+      "properties": {
+        "@id": "node/13896786526",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.381791,
+          43.1364066
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786527",
+      "properties": {
+        "@id": "node/13896786527",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3854674,
+          43.140201
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786528",
+      "properties": {
+        "@id": "node/13896786528",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4004151,
+          43.1367575
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786529",
+      "properties": {
+        "@id": "node/13896786529",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3991464,
+          43.1434002
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786530",
+      "properties": {
+        "@id": "node/13896786530",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3880874,
+          43.1429683
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786531",
+      "properties": {
+        "@id": "node/13896786531",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3826604,
+          43.145782
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786532",
+      "properties": {
+        "@id": "node/13896786532",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3689753,
+          43.1426284
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786533",
+      "properties": {
+        "@id": "node/13896786533",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3803092,
+          43.1534219
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786534",
+      "properties": {
+        "@id": "node/13896786534",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3734676,
+          43.1530513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896786535",
+      "properties": {
+        "@id": "node/13896786535",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3627896,
+          43.1518845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896975889",
+      "properties": {
+        "@id": "node/13896975889",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2892653,
+          43.1446247
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896975890",
+      "properties": {
+        "@id": "node/13896975890",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3313985,
+          43.0961485
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896975891",
+      "properties": {
+        "@id": "node/13896975891",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3288547,
+          43.0972693
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896975892",
+      "properties": {
+        "@id": "node/13896975892",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3278905,
+          43.0972413
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13896975893",
+      "properties": {
+        "@id": "node/13896975893",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3211708,
+          43.0952475
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897120230",
+      "properties": {
+        "@id": "node/13897120230",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3023182,
+          43.0895471
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897120231",
+      "properties": {
+        "@id": "node/13897120231",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2988555,
+          43.0886296
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897120232",
+      "properties": {
+        "@id": "node/13897120232",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2992126,
+          43.0866544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897120233",
+      "properties": {
+        "@id": "node/13897120233",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2941586,
+          43.0903322
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897120234",
+      "properties": {
+        "@id": "node/13897120234",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.287771,
+          43.0877703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897124449",
+      "properties": {
+        "@id": "node/13897124449",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3252885,
+          43.0907762
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897124450",
+      "properties": {
+        "@id": "node/13897124450",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.32831,
+          43.0898343
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897124451",
+      "properties": {
+        "@id": "node/13897124451",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3269924,
+          43.088883
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897124452",
+      "properties": {
+        "@id": "node/13897124452",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3165737,
+          43.091289
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897124453",
+      "properties": {
+        "@id": "node/13897124453",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3060018,
+          43.1031225
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897124454",
+      "properties": {
+        "@id": "node/13897124454",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3068362,
+          43.0980143
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897124455",
+      "properties": {
+        "@id": "node/13897124455",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2910337,
+          43.0970253
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203033",
+      "properties": {
+        "@id": "node/13897203033",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2883411,
+          43.0824867
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203034",
+      "properties": {
+        "@id": "node/13897203034",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2925767,
+          43.0815862
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203035",
+      "properties": {
+        "@id": "node/13897203035",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2968576,
+          43.0780582
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203036",
+      "properties": {
+        "@id": "node/13897203036",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2997806,
+          43.0768489
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203037",
+      "properties": {
+        "@id": "node/13897203037",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3046743,
+          43.0747234
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203038",
+      "properties": {
+        "@id": "node/13897203038",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.301071,
+          43.0734594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203039",
+      "properties": {
+        "@id": "node/13897203039",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2935237,
+          43.074761
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203040",
+      "properties": {
+        "@id": "node/13897203040",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2927972,
+          43.0722399
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897203041",
+      "properties": {
+        "@id": "node/13897203041",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2957688,
+          43.0687334
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897221309",
+      "properties": {
+        "@id": "node/13897221309",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3221848,
+          43.0827373
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13897221310",
+      "properties": {
+        "@id": "node/13897221310",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3128533,
+          43.0788311
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13906130196",
+      "properties": {
+        "@id": "node/13906130196",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3941576,
+          43.0673943
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13908474267",
+      "properties": {
+        "@id": "node/13908474267",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.316822,
+          43.0772194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13908474268",
+      "properties": {
+        "@id": "node/13908474268",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3130445,
+          43.0743212
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13908474269",
+      "properties": {
+        "@id": "node/13908474269",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3167287,
+          43.0729531
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13908474270",
+      "properties": {
+        "@id": "node/13908474270",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3209267,
+          43.0730746
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13908474271",
+      "properties": {
+        "@id": "node/13908474271",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3254854,
+          43.0759776
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13908507973",
+      "properties": {
+        "@id": "node/13908507973",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.312085,
+          43.068507
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13908507974",
+      "properties": {
+        "@id": "node/13908507974",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3219278,
+          43.0632097
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13910893289",
+      "properties": {
+        "@id": "node/13910893289",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.355375,
+          43.048294
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13910920047",
+      "properties": {
+        "@id": "node/13910920047",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3126514,
+          43.0583145
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13910920048",
+      "properties": {
+        "@id": "node/13910920048",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "name": "Little Free Library"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3185109,
+          43.0585758
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13932262176",
+      "properties": {
+        "@id": "node/13932262176",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3877703,
+          43.0771593
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13932557061",
+      "properties": {
+        "@id": "node/13932557061",
+        "amenity": "public_bookcase",
+        "covered": "no",
+        "indoor": "no"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.38427,
+          43.0765773
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13938872293",
+      "properties": {
+        "@id": "node/13938872293",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-06-14"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3520492,
+          43.0939712
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13943612702",
+      "properties": {
+        "@id": "node/13943612702",
+        "addr:housenumber": "802",
+        "addr:street": "East Gorham Street",
+        "amenity": "public_bookcase",
+        "check_date": "2026-06-15",
+        "public_bookcase:type": "building"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3788945,
+          43.0840857
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13943821797",
+      "properties": {
+        "@id": "node/13943821797",
+        "addr:housenumber": "1028",
+        "addr:street": "East Dayton Street",
+        "amenity": "public_bookcase",
+        "check_date": "2026-06-15",
+        "public_bookcase:type": "wooden_cabinet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3727581,
+          43.0857477
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13944128481",
+      "properties": {
+        "@id": "node/13944128481",
+        "addr:housenumber": "1237",
+        "addr:street": "East Dayton Street",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "public_bookcase:type": "wooden_cabinet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3686636,
+          43.0883612
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13946096526",
+      "properties": {
+        "@id": "node/13946096526",
+        "amenity": "public_bookcase",
+        "check_date": "2026-06-16",
+        "description": "\"made by kids for kids.\"",
+        "name": "Family Friendly Books",
+        "public_bookcase:type": "reading_box"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.406776,
+          43.0588707
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13946521919",
+      "properties": {
+        "@id": "node/13946521919",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-06-16",
+        "description": "Donated by friends of the Give It Forward Team (GIFT).",
+        "public_bookcase:type": "reading_box"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4062974,
+          43.0597912
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13946521920",
+      "properties": {
+        "@id": "node/13946521920",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "public_bookcase:type": "reading_box"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4070197,
+          43.061032
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13946521921",
+      "properties": {
+        "@id": "node/13946521921",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "check_date": "2026-06-16",
+        "public_bookcase:type": "reading_box"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3622933,
+          43.0835843
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13982108738",
+      "properties": {
+        "@id": "node/13982108738",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.329032,
+          43.1142994
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/13990932450",
+      "properties": {
+        "@id": "node/13990932450",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3565597,
+          43.0971174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14024581897",
+      "properties": {
+        "@id": "node/14024581897",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "panoramax": "5fd9deac-c987-47d5-953c-d6a29989fede",
+        "ref": "85153"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.2871892,
+          43.0343965
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14082419118",
+      "properties": {
+        "@id": "node/14082419118",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "noname": "yes",
+        "panoramax": "e70e585b-c9f8-4b63-ab80-172c7a971ed9"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.393104,
+          43.0561766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14093090004",
+      "properties": {
+        "@id": "node/14093090004",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "public_bookcase:type": "wooden_cabinet"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.302889,
+          43.0884544
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14138345685",
+      "properties": {
+        "@id": "node/14138345685",
+        "amenity": "public_bookcase",
+        "noname": "yes",
+        "panoramax": "dc2b2140-0cd1-4653-8d8d-0472a2a6e499"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.3689415,
+          43.0871849
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14156078929",
+      "properties": {
+        "@id": "node/14156078929",
+        "amenity": "public_bookcase",
+        "noname": "yes",
+        "panoramax": "f9cf8f11-1265-4e20-9139-7f8cb2d39f3e"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4770233,
+          43.0392767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14294935832",
+      "properties": {
+        "@id": "node/14294935832",
+        "amenity": "public_bookcase",
+        "noname": "yes",
+        "panoramax": "64a20f0d-e235-4ae3-bef0-951b3d66caef"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4280416,
+          43.0672062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14297889307",
+      "properties": {
+        "@id": "node/14297889307",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "noname": "yes",
+        "panoramax": "30f99fe7-c4ee-4704-9a88-6d42dc1b7d48",
+        "ref": "195117"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4257213,
+          43.0694783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14304732732",
+      "properties": {
+        "@id": "node/14304732732",
+        "amenity": "public_bookcase",
+        "name": "Little Math Free Library",
+        "panoramax": "a2e92a78-4b47-4e02-b6b7-0b30c9baceb2"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4180903,
+          43.065497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14324294560",
+      "properties": {
+        "@id": "node/14324294560",
+        "amenity": "public_bookcase",
+        "brand": "Little Free Library",
+        "brand:wikidata": "Q6650101",
+        "ref": "26492"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4205185,
+          43.0674315
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "node/14331771808",
+      "properties": {
+        "@id": "node/14331771808",
+        "amenity": "public_bookcase",
+        "nobrand": "yes",
+        "noname": "yes",
+        "panoramax": "c27e439c-ea6a-450a-82dd-570700836135"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -89.4250247,
+          43.0702394
+        ]
+      }
+    }
+  ]
+}
