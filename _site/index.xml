@@ -7,7 +7,20 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Sun, 01 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 02 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>#30DayMapChallenge Day 2: Lines</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-11-02-traveling-free-bookcase-salesman</link>
+      <description>The traveling free book salesman problem</description>
+      <category>OpenStreetMap</category>
+      <category>Madison (WI)</category>
+      <category>map</category>
+      <category>GraphHopper</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-11-02-traveling-free-bookcase-salesman</guid>
+      <pubDate>Mon, 02 Nov 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-11-02-traveling-free-bookcase-salesman/traveling-free-bookcase-salesman_files/figure-html5/map-static-1.png" medium="image" type="image/png" width="1248" height="768"/>
+    </item>
     <item>
       <title>#30DayMapChallenge Day 1: Points</title>
       <dc:creator>Harald Kliems</dc:creator>

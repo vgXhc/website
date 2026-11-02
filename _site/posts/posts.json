@@ -1,5 +1,29 @@
 [
   {
+    "path": "posts/2026-11-02-traveling-free-bookcase-salesman/",
+    "title": "#30DayMapChallenge Day 2: Lines",
+    "description": "The traveling free book salesman problem",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2026-11-02",
+    "categories": [
+      "OpenStreetMap",
+      "Madison (WI)",
+      "map",
+      "GraphHopper"
+    ],
+    "contents": "\n\n\nShow code\n\nlibrary(httr2)\nlibrary(jsonlite)\nlibrary(tidyverse)\nlibrary(sf)\nlibrary(tmap)\n\n\n“Lines” is the theme for day 2 of the #30DayMapChallenge. I figured I should do a follow up to yesterday’s post about public bookcases. After making my post I went out for a walk to collect photos of a few more bookcases. I half-jokingly told my SO that maybe I should use a traveling salesman algorithm to optimize my Sunday walk. Well, I didn’t do it before my walk, but why don’t I do for today’s challenge?\nI’m using the GraphHopper Route Optimization API. They have a free tier available but you do need an API key.\nConstruct the query\nI’ll use an updated dataset of the bookcases, taking into account the bookcases for which I added photos yesterday and a few new ones I found. To speed things up I filter for nodes without photos right in the Overpass query:\n  [out:json][timeout:60];\n  {{geocodeArea:Madison, Wisconsin}}->.a;\n  node[\"amenity\"=\"public_bookcase\"][!panoramax](area.a);\n  out center;\nThis results in 228 bookcases without photo.\n\n\nShow code\n\nbookcases <- st_read(\"data/overpass_export.geojson\")\n\nReading layer `overpass_export' from data source \n  `/Users/kliems/website/_posts/2026-11-02-traveling-free-bookcase-salesman/data/overpass_export.geojson' \n  using driver `GeoJSON'\nSimple feature collection with 228 features and 19 fields\nGeometry type: POINT\nDimension:     XY\nBounding box:  xmin: -89.55776 ymin: 43.00753 xmax: -89.25676 ymax: 43.15342\nGeodetic CRS:  WGS 84\n\nThere doesn’t seem to be an up-to-date package for interacting with the Graphhopper route optimization API endpoint from R and so I need to use httr2. The API needs json with the locations as its input. I’m going to do this quick and dirty, and just copy and paste together some stuff. Here’s the code to create the list of destinations (called “services” in the API) from the Overpass output:\n\n\nShow code\n\nlocation_json <- bookcases |> \n  # head(3) |> \n  mutate(id = str_remove(id, \"node/\")) |> \n  rowwise() |> \n  mutate(address = tibble(\n    location_id = \"test\",\n    lon = st_coordinates(geometry)[1],\n    lat = st_coordinates(geometry)[2]\n  )) |> \n  select(id, name, address) |> \n  st_drop_geometry() |> \n  jsonify::to_json() |> \n  clipr::write_clip()\n\n\nThen there’s a bunch of json to specify the type of vehicle, start location, etc. I save all this and the locations in json file.\nNow we feed the file to the API and save the response:\n\n\nShow code\n\nbase_url <- \"https://graphhopper.com/api/1/vrp\"\nkey <- Sys.getenv(\"GRAPHHOPPER_API\")\n\nreq <- request(base_url) |> \n  req_url_query(\n    key = key) |> \n  req_body_file(\"data/bookcase.json\", type = \"application/json\") |> \n    req_error(is_error = \\(r) FALSE)   # let us inspect 400s ourselves\n\nresp <- req |> req_perform()\n\n\nNext I parse the response into two sf objects: One multi-linestring of all segments between the bookcases, as the crow flies. And one dataframe with the ordered stops themselves. I’m really not good at parsing and converting deeply nested json and used an LLM to help with this part of the code.\n\n\nShow code\n\nsolution <- resp_body_json(resp)\n\n# multilinestring\nroute <- solution$solution$routes[[1]]\n\ncoords <- map(route$activities, \\(a) c(a$address$lon, a$address$lat)) |>\n  do.call(rbind, args = _)\n\nsegments <- lapply(seq_len(nrow(coords) - 1), \\(i) coords[i:(i + 1), ])\n\nroute_sf <- st_sf(\n  vehicle_id = route$vehicle_id,\n  distance_m = route$distance,\n  geometry   = st_sfc(st_multilinestring(segments), crs = 4326)\n)\n\n# stop locations\nstops <- as_tibble(coords) |> \n  rowid_to_column(var = \"stop\") |> \n  rename(lat = V1, \n         lon = V2) |> \n  st_as_sf(coords = c(\"lat\", \"lon\")) \n\n\nNow we can make a map! First a static map with just the lines:\n\n\nShow code\n\ntmap_mode(\"plot\")\ntm_basemap(server = \"Stadia.StamenTonerLite\", api = Sys.getenv(\"STADIA_API_KEY\")) +\n  tm_shape(route_sf) +\n  tm_lines(col = \"orange\", lwd = 2) +\n  tm_title(\"Shortest bike route to all Madison public book cases that don't have a photo\")\n\n\n\nAnd now an interactive one that includes the stops and the number for the order they’re in:\n\n\nShow code\n\ntmap_mode(\"view\")\ntm_shape(route_sf) +\n  tm_lines(col = \"orange\", lwd = 2) +\n  tm_shape(stops) +\n  tm_dots(fill = \"darkblue\", size = .4) +\n  tm_text(text = \"stop\", col = \"darkblue\", xmod = .08) +\n  tm_title(\"Shortest bike route to all Madison public book cases that don't have a photo\")\n\n\n\nThe full route would be 207.9 km (129.1830725 mi) long (the actual bike route, not the as-the-crow flies route shown on the map).\n\n\n\n",
+    "preview": "posts/2026-11-02-traveling-free-bookcase-salesman/traveling-free-bookcase-salesman_files/figure-html5/map-static-1.png",
+    "last_modified": "2026-11-02T09:56:15-06:00",
+    "input_file": "traveling-free-bookcase-salesman.knit.md",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2026-11-01-30daymapchallenge-day-1-points/",
     "title": "#30DayMapChallenge Day 1: Points",
     "description": "Public book cases in Madison, Wisconsin",
