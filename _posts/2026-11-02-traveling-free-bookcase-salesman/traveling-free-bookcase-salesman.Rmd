@@ -7,6 +7,7 @@ author:
     orcid_id: 0000-0003-2542-0047
     url: https://haraldkliems.netlify.app/
 date: 2026-11-02
+last_modified: 2026-11-04
 categories:
   - OpenStreetMap
   - Madison (WI)
@@ -80,7 +81,7 @@ key <- Sys.getenv("GRAPHHOPPER_API")
 req <- request(base_url) |> 
   req_url_query(
     key = key) |> 
-  req_body_file("data/bookcase.json", type = "application/json") |> 
+  req_body_file("/Users/kliems/website/_posts/2026-11-02-traveling-free-bookcase-salesman/data/bookcase.json", type = "application/json") |> 
     req_error(is_error = \(r) FALSE)   # let us inspect 400s ourselves
 
 resp <- req |> req_perform()
@@ -139,3 +140,37 @@ tm_shape(route_sf) +
 ```
 
 The full route would be `r route$distance/1000` km (`r route$distance/1000*0.6213712` mi) long (the actual bike route, not the as-the-crow flies route shown on the map). 
+
+# Edit Nov 4
+Someone had questions about the actual routes rather than the as-the-crow-flies connections between points. This requires modifying the body of the API call.
+
+```{r routes-interactive, layout="l-body-outset"}
+req <- request(base_url) |> 
+  req_url_query(
+    key = key) |> 
+  req_body_file("data/bookcase_with_routes.json", type = "application/json") |> 
+  req_throttle(capacity = 1, fill_time_s = 30)
+
+resp <- req |> req_perform()
+
+solution <- resp_body_json(resp)
+
+route <- fromJSON(resp_body_string(resp), simplifyVector = FALSE)$solution$routes[[1]]
+
+legs <- map(route$points, \(p) do.call(rbind, map(p$coordinates, \(x) c(x[[1]], x[[2]]))))
+
+route_sf <- st_sf(
+  vehicle_id = route$vehicle_id,
+  distance_m = route$distance,
+  geometry   = st_sfc(st_multilinestring(legs), crs = 4326)
+)
+
+
+tm_shape(route_sf) +
+  tm_lines(col = "orange", lwd = 2) +
+  tm_shape(stops) +
+  tm_dots(fill = "darkblue", size = .4) +
+  tm_text(text = "stop", col = "darkblue", xmod = .08) +
+  tm_title("Shortest bike route to all Madison public book cases that don't have a photo")
+```
+
