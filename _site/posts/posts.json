@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2026-11-03-30daymapchallenge-polygons/",
+    "title": "#30DayMapChallenge Day 3: Polygons",
+    "description": "What are Madison's most complexly shaped tax parcels?",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2026-11-04",
+    "categories": [
+      "Madison (WI)",
+      "map"
+    ],
+    "contents": "\nI’m a little behind with the #30DayMapChallenge. Here’s what I have for day 3, polygons. I wanted to do something with the City of Madison tax parcel dataset but it took me a while to figure out what to do. Madison’s largest parcels? The most valuable ones? The densest? Those all lend themselves to a choropleth map (which is not a theme in this year’s challenge!). Instead I looked at the shape of parcels. I wanted to find weirdly shaped ones. First I tried doing something with the LotWidth and LotDepth variables, but that didn’t yield anything interesting. Eventually I settled on the number of vertices of the parcels. Parcels with more vertices generally should have a more “complex” shape. The mapview package has a function to count the number of points/vertices/nodes of a geometry.\n\n\nShow code\n\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(tmap)\n\n\nLet’s look at the top 10 of “complex” shapes:\n\n\nShow code\n\nparcels <- read_rds(\"data/parcels.RDS\")\n\nparcels2 <- parcels |>\n  rowwise() |>\n  mutate(nodes = mapview::npts(geometry),\n         nodes_label = paste0(nodes, \" vertices\")) |>\n  select(nodes, Parcel, nodes_label) |>\n  arrange(desc(nodes)) |>\n  head(10)\n\ntm_shape(parcels2) +\n  # tm_text(text = \"nodes\") +\n  tm_polygons(fill = \"nodes\", title = \"Vertices\") +\n  tm_facets(by = \"nodes\") +\n  tm_title(\"The most complex tax parcels in Madison, Wisconsin by number of vertices\")\n\n\n\nSome of them look complex whereas some just have somewhat rounded shapes that are approximated with a lot of vertices.\nLet’s see where the “complex” parcels are located in the city:\n\n\nShow code\n\nttm()\ntm_shape(parcels2) +\n  # tm_text(text = \"nodes\") +\n  tm_polygons(fill = \"nodes\", title = \"Vertices\") +\n  tm_title(\"The most complex tax parcels in Madison, Wisconsin\")\n\n\n\nSeveral of them are adjacent to each other, Makes sense: One complexly shaped parcel makes it likely that a parcel it shares a border with also has a complex shape.\n\n\n\n",
+    "preview": "posts/2026-11-03-30daymapchallenge-polygons/30daymapchallenge-polygons_files/figure-html5/top10-1.png",
+    "last_modified": "2026-11-04T08:36:07-06:00",
+    "input_file": "30daymapchallenge-polygons.knit.md",
+    "preview_width": 1248,
+    "preview_height": 768
+  },
+  {
     "path": "posts/2026-11-02-traveling-free-bookcase-salesman/",
     "title": "#30DayMapChallenge Day 2: Lines",
     "description": "The traveling free book salesman problem",

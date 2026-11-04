@@ -1,0 +1,61 @@
+---
+title: "#30DayMapChallenge Day 3: Polygons"
+description: |
+  What are Madison's most complexly shaped tax parcels?
+author:
+  - name: Harald Kliems 
+    orcid_id: 0000-0003-2542-0047
+    url: https://haraldkliems.netlify.app/
+date: 2026-11-04
+categories:
+  - Madison (WI)
+  - map
+output:
+  distill::distill_article:
+    self_contained: false
+    code_folding: true
+
+---
+
+
+I'm a little behind with the #30DayMapChallenge. Here's what I have for day 3, polygons. I wanted to do something with the City of Madison [tax parcel dataset](https://data-cityofmadison.opendata.arcgis.com/datasets/0338b0638e4749c395f8d38b39a5c466_0/explore) but it took me a while to figure out _what_ to do. Madison's largest parcels? The most valuable ones? The densest? Those all lend themselves to a choropleth map (which is not a theme in this year's challenge!). Instead I looked at the shape of parcels. I wanted to find weirdly shaped ones. First I tried doing something with the `LotWidth` and `LotDepth` variables, but that didn't yield anything interesting. Eventually I settled on the number of vertices of the parcels. Parcels with more vertices generally should have a more "complex" shape. The [`mapview` package has a function to count the number of points/vertices/nodes](https://r-spatial.github.io/mapview/reference/npts.html) of a geometry. 
+
+```{r setup, results='hide', warning=FALSE}
+library(sf)
+library(tidyverse)
+library(tmap)
+```
+
+Let's look at the top 10 of "complex" shapes:
+
+```{r top10, layout="l-body-outset"}
+parcels <- read_rds("data/parcels.RDS")
+
+parcels2 <- parcels |>
+  rowwise() |>
+  mutate(nodes = mapview::npts(geometry),
+         nodes_label = paste0(nodes, " vertices")) |>
+  select(nodes, Parcel, nodes_label) |>
+  arrange(desc(nodes)) |>
+  head(10)
+
+tm_shape(parcels2) +
+  # tm_text(text = "nodes") +
+  tm_polygons(fill = "nodes", title = "Vertices") +
+  tm_facets(by = "nodes") +
+  tm_title("The most complex tax parcels in Madison, Wisconsin by number of vertices")
+```
+
+Some of them look complex whereas some just have somewhat rounded shapes that are approximated with a lot of vertices. 
+
+Let's see where the "complex" parcels are located in the city:
+
+```{r interactive-map, layout="l-body-outset"}
+ttm()
+tm_shape(parcels2) +
+  # tm_text(text = "nodes") +
+  tm_polygons(fill = "nodes", title = "Vertices") +
+  tm_title("The most complex tax parcels in Madison, Wisconsin")
+```
+
+Several of them are adjacent to each other, Makes sense: One complexly shaped parcel makes it likely that a parcel it shares a border with also has a complex shape. 
