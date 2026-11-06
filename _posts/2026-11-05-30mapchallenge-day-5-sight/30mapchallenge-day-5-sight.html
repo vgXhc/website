@@ -1551,9 +1551,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 
 <div class="d-article">
 <p>The day 5 theme of #30DayMapChallenge is sight. And what helps with sight at night? Streetlights!</p>
-<p>In Madison, streetlights are operated either by city or by one of the two utility companies serving the area. There are datasets for both on the city’s open data portal.</p>
+<p>In Madison, streetlights are operated either by <a href="https://data-cityofmadison.opendata.arcgis.com/datasets/739a2d9d83e040208cc3e5c75a7ac0bc_28/explore">the city</a> or <a href="https://data-cityofmadison.opendata.arcgis.com/datasets/8b8554a589944387a795556ca2cca081_26/explore">by one of the two utility companies serving the area</a>. There are datasets for both on the city’s open data portal.</p>
 <p>The variables available for city vs utility lights are not the same. For the city dataset, one interesting variable is the color temperature of the lights. The city has gradually replaced high pressure sodium lights with LED lights. LED lights are more efficient but early versions produced light with high color temperature, lookin blue-ish and potentially messing with human and animal night vision, circadian rhythms, and more. Another variable of interest is the Wattage of the lights. The wattage is available for all lights, in both datasets.</p>
-<p>First we read in and combine the two datasets and reduce them to the common variables of interest. There are also a few lights far outside of city limits. We’ll remove those</p>
+<p>First we read in and combine the two datasets and reduce them to the common variables of interest. There are also a few lights far outside of city limits. We’ll remove those.</p>
 <div class="layout-chunk" data-layout="l-body">
 <details>
 <summary>
