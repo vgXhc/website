@@ -1,5 +1,27 @@
 [
   {
+    "path": "posts/2026-11-05-30mapchallenge-day-5-sight/",
+    "title": "#30MapChallenge Day 5: Sight",
+    "description": "Streetlights in Madison, Wisconsin",
+    "author": [
+      {
+        "name": "Harald Kliems",
+        "url": "https://haraldkliems.netlify.app/"
+      }
+    ],
+    "date": "2026-11-05",
+    "categories": [
+      "Madison (WI)",
+      "map"
+    ],
+    "contents": "\nThe day 5 theme of #30DayMapChallenge is sight. And what helps with sight at night? Streetlights!\nIn Madison, streetlights are operated either by city or by one of the two utility companies serving the area. There are datasets for both on the city’s open data portal.\nThe variables available for city vs utility lights are not the same. For the city dataset, one interesting variable is the color temperature of the lights. The city has gradually replaced high pressure sodium lights with LED lights. LED lights are more efficient but early versions produced light with high color temperature, lookin blue-ish and potentially messing with human and animal night vision, circadian rhythms, and more. Another variable of interest is the Wattage of the lights. The wattage is available for all lights, in both datasets.\nFirst we read in and combine the two datasets and reduce them to the common variables of interest. There are also a few lights far outside of city limits. We’ll remove those\n\n\nShow code\n\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(tmap)\nlibrary(tigris)\n\n\n\ncity_lights <- st_read(\"data/City_Maintained_Street_Lights_-_Luminaire.geojson\")\nutility_lights <- st_read(\"data/Utility_Maintained_Street_Lights.geojson\")\n\nmadison <- places(state = 55, cb = TRUE) |> \n  filter(NAME == \"Madison\") |> \n  st_transform(crs = st_crs(city_lights))\n\nlights <- city_lights |> \n  select(Color_Temp, Wattage) |> \n  mutate(operator = \"City of Madison\",\n             Color_Temp = as.factor(str_remove(Color_Temp, \"K\"))) |> \n  rbind(\n    utility_lights |> \n  rename(Wattage = Watt2,\n         operator = Utility) |>\n  mutate(Color_Temp = NA) |> \n  select(Color_Temp, Wattage, operator)\n  ) |> \n  st_filter(madison)\n\nglimpse(lights)\n\n\nBefore we make the map, there are a few intermediate steps: I wanted to show the lights that have a color temperature value in the actual color that they have. This requires converting the color temperature to an RGB value with the “Tanner Helland approximation”.\n\n\nShow code\n\ncity_lights |>\n  filter(!is.na(Color_Temp)) |> \n  mutate(\n    T = as.numeric(str_remove(Color_Temp, \"K\")) / 100,\n    R = if_else(T <= 66, \n                255, \n                329.698727446 * (T - 60)^(-0.1332047592)),\n    G = if_else(\n      T <= 66,\n      99.4708025861 * log(T) - 161.1195681661,\n      288.1221695283 * (T - 60)^(-0.0755148492)\n    ),\n    B = case_when(\n      T <= 19 ~ 0,\n      T > 10 &\n        T < 66 ~ 138.5177312231 * log(T - 10) - 305.0447927307,\n      T >= 66 ~ 255\n    ),\n    hex = rgb(\n      red = R,\n      green = G,\n      blue = B,\n      maxColorValue = 255\n    )\n  ) |> \n  distinct(Color_Temp, hex)\n\n  Color_Temp     hex\n1      2700K #FFA657\n2      3000K #FFB16D\n3      4000K #FFCDA6\n\nThe dataset only has three different light temperatures. Now we can combine this all into one pretty map, with size representing wattage, and the color either showing the color temperature, when available, or the operator otherwise.\n\n\nShow code\n\ntmap_mode(\"plot\")\ntm_shape(lights |> filter(is.na(Color_Temp))) +\n  tm_bubbles(\n    fill = \"operator\",\n    col = \"white\",\n    lwd = 0,\n    fill_alpha = .2,\n    fill.legend = tm_legend(title = \"Operator\"),\n    size = \"Wattage\",\n    size.scale = tm_scale(values.scale = .3),\n    size.legend = tm_legend(show = FALSE)\n  ) +\n  tm_shape(lights |> filter(!is.na(Color_Temp))) +\n  tm_bubbles(\n    fill = \"Color_Temp\",\n    fill.legend = tm_legend(title = \"Color temperature (K)\"),\n    fill.scale = tm_scale_categorical(\n      values = c(\n        \"2700\" = \"#FFA657\",\n        \"3000\" = \"#FFB16D\",\n        \"4000\" = \"#FFCDA6\"\n      ),\n      value.na = \"white\"\n    ),\n    fill_alpha = .8,\n    size = \"Wattage\",\n    size.legend = tm_legend(title = \"Power (W)\"),\n    size.scale = tm_scale(values.scale = .3),\n    col = \"white\",\n    lwd = 0\n  ) +\n  tm_title(text = \"Madison at night: Streetlights\",\n           fontface = \"bold\",\n           fontfamily = \"Futura\") +\n  tm_options(\n    bg = TRUE,\n    bg.color = \"black\",\n    legend.position = tm_pos_out(\"center\", \"bottom\"),\n    legend.stack = \"horizontal\",\n    legend.width = 15,\n    legend.frame.lwd = 0\n  ) +\n  tm_layout(outer.margins = c(.02, .02, .02, .02), asp = 0)\n\n\n\n\n\n\n",
+    "preview": "posts/2026-11-05-30mapchallenge-day-5-sight/30mapchallenge-day-5-sight_files/figure-html5/map-static-1.png",
+    "last_modified": "2026-11-05T21:39:51-06:00",
+    "input_file": "30mapchallenge-day-5-sight.knit.md",
+    "preview_width": 1536,
+    "preview_height": 1728
+  },
+  {
     "path": "posts/2026-11-03-30daymapchallenge-polygons/",
     "title": "#30DayMapChallenge Day 3: Polygons",
     "description": "What are Madison's most complexly shaped tax parcels?",

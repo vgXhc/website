@@ -7,7 +7,18 @@
     <description>My personal website, with #rstats, transportation, open data, Madison, biking, and some health research
 </description>
     <generator>Distill</generator>
-    <lastBuildDate>Wed, 04 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 05 Nov 2026 00:00:00 +0000</lastBuildDate>
+    <item>
+      <title>#30MapChallenge Day 5: Sight</title>
+      <dc:creator>Harald Kliems</dc:creator>
+      <link>https://haraldkliems.netlify.app/posts/2026-11-05-30mapchallenge-day-5-sight</link>
+      <description>Streetlights in Madison, Wisconsin</description>
+      <category>Madison (WI)</category>
+      <category>map</category>
+      <guid>https://haraldkliems.netlify.app/posts/2026-11-05-30mapchallenge-day-5-sight</guid>
+      <pubDate>Thu, 05 Nov 2026 00:00:00 +0000</pubDate>
+      <media:content url="https://haraldkliems.netlify.app/posts/2026-11-05-30mapchallenge-day-5-sight/30mapchallenge-day-5-sight_files/figure-html5/map-static-1.png" medium="image" type="image/png" width="1536" height="1728"/>
+    </item>
     <item>
       <title>#30DayMapChallenge Day 3: Polygons</title>
       <dc:creator>Harald Kliems</dc:creator>
